@@ -1,0 +1,52 @@
+#+TITLE: Assignment 1
+#+SETUPFILE: ~/main.org
+
+All information sourced from [[https://wiki.dominionstrategy.com/][wiki.dominionstrategy.com]] under the Creative Commons Attribution Non-Commercial Share Alike License.
+
+-----
+
+* Smithy
+
+#+ATTR_LATEX: :width 0.25\linewidth
+[[./assets/smithy.jpg]]
+
+An action card with a cost of 4. When played, allows the player to draw an additional 3 cards into their hand.
+
+-----
+
+* Adventurer
+
+#+ATTR_LATEX: :width 0.25\linewidth
+[[./assets/adventurer.jpg]]
+
+An action card with a cost of 6. When played, the player must reveal cards from their deck until 2 treasure cards are found (e.g. Copper, Silver, Gold). The remanining revealed cards are then discarded.
+
+-----
+
+* Ambassador
+
+
+#+ATTR_LATEX: :width 0.25\linewidth
+[[./assets/ambassador.jpg]]
+
+An action-attack card with a cost of 3. Allows the player to transfer up to 2 copies of a particular card from their hand to their supply. Then each opponent receives 1 copy of that card.
+
+-----
+
+* Gardens
+
+
+#+ATTR_LATEX: :width 0.25\linewidth
+[[./assets/gardens.jpg]]
+
+A victory card with a cost of 4. At the end of the round, it adds 1 victory point for every 10 cards in the player's hand.
+
+-----
+
+* Village
+
+
+#+ATTR_LATEX: :width 0.25\linewidth
+[[./assets/village.jpg]]
+
+An action card with a cost of 3. Allows the player to draw 1 extra card from the deck, and play 2 additional actions.
