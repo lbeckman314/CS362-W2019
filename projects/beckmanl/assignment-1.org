@@ -1,16 +1,13 @@
 #+TITLE: Assignment 1
 #+SETUPFILE: ~/main.org
 
-All information sourced from [[https://wiki.dominionstrategy.com/][wiki.dominionstrategy.com]] under the Creative Commons Attribution Non-Commercial Share Alike License.
-
------
 
 * Smithy
 
 #+ATTR_LATEX: :width 0.25\linewidth
 [[./assets/smithy.jpg]]
 
-An action card with a cost of 4. When played, allows the player to draw an additional 3 cards into their hand.
+An action card with a cost of 4. When played, allows the player to draw an additional 3 cards into their hand (1). The smithy is a part of the Base set (6).
 
 -----
 
@@ -19,7 +16,7 @@ An action card with a cost of 4. When played, allows the player to draw an addit
 #+ATTR_LATEX: :width 0.25\linewidth
 [[./assets/adventurer.jpg]]
 
-An action card with a cost of 6. When played, the player must reveal cards from their deck until 2 treasure cards are found (e.g. Copper, Silver, Gold). The remanining revealed cards are then discarded.
+An action card with a cost of 6. When played, the player must reveal cards from their deck until 2 treasure cards are found (e.g. Copper, Silver, Gold). The remanining revealed cards are then discarded (2). The adventurer is a part of the Base set (6).
 
 -----
 
@@ -29,7 +26,7 @@ An action card with a cost of 6. When played, the player must reveal cards from 
 #+ATTR_LATEX: :width 0.25\linewidth
 [[./assets/ambassador.jpg]]
 
-An action-attack card with a cost of 3. Allows the player to transfer up to 2 copies of a particular card from their hand to their supply. Then each opponent receives 1 copy of that card.
+An action-attack card with a cost of 3. Allows the player to transfer up to 2 copies of a particular card from their hand to their supply (3). Then each opponent receives 1 copy of that card (3). The ambassador is a part of the Seaside set (7).
 
 -----
 
@@ -39,7 +36,7 @@ An action-attack card with a cost of 3. Allows the player to transfer up to 2 co
 #+ATTR_LATEX: :width 0.25\linewidth
 [[./assets/gardens.jpg]]
 
-A victory card with a cost of 4. At the end of the round, it adds 1 victory point for every 10 cards in the player's hand.
+A victory card with a cost of 4. At the end of the round, it adds 1 victory point for every 10 cards in the player's hand (4). The gardens are a part of the Base set (6).
 
 -----
 
@@ -49,4 +46,19 @@ A victory card with a cost of 4. At the end of the round, it adds 1 victory poin
 #+ATTR_LATEX: :width 0.25\linewidth
 [[./assets/village.jpg]]
 
-An action card with a cost of 3. Allows the player to draw 1 extra card from the deck, and play 2 additional actions.
+An action card with a cost of 3. Allows the player to draw 1 extra card from the deck, and play 2 additional actions (5). The village is a part of the Base set (6).
+
+
+-----
+
+* Sources 
+
+All information sourced from [[http://wiki.dominionstrategy.com/index.php/Main_Page][wiki.dominionstrategy.com]] under the Creative Commons Attribution Non-Commercial Share Alike License.
+
+- (1) http://wiki.dominionstrategy.com/index.php/Smithy
+- (2) http://wiki.dominionstrategy.com/index.php/Adventurer
+- (3) http://wiki.dominionstrategy.com/index.php/Ambassador
+- (4) http://wiki.dominionstrategy.com/index.php/Gardens
+- (5) http://wiki.dominionstrategy.com/index.php/Village
+- (6) http://wiki.dominionstrategy.com/index.php/Base
+- (7) http://wiki.dominionstrategy.com/index.php/Seaside
