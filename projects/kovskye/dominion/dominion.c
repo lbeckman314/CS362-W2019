@@ -691,7 +691,7 @@ int playSmithy(struct gameState *state, int currentPlayer, int handPos)
 int playBaron(struct gameState *state, int currentPlayer, int choice1)
 {
 	state->numBuys++; //Increase buys by 1!
-	if (choice1 > 0) { //Boolean true or going to discard an estate
+	if (choice1 < 0) { //Boolean true or going to discard an estate
 		int p = 0; //Iterator for hand!
 		int card_not_discarded = 1; //Flag for discard set!
 
