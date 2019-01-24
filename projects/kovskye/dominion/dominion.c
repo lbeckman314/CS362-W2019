@@ -655,7 +655,7 @@ int playAdventurer(int drawntreasure, struct gameState *state, int currentPlayer
 
 		drawCard(currentPlayer, state);
 		// top card of hand is most recently drawn card.
-		int cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]];
+		int cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];
 		if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold) {
 			drawntreasure++;
 		} else {
@@ -678,7 +678,7 @@ int playAdventurer(int drawntreasure, struct gameState *state, int currentPlayer
 int playSmithy(struct gameState *state, int currentPlayer, int handPos)
 {
 	// +3 Cards
-	for (int i = 0; i <= 3; i++) {
+	for (int i = 0; i < 3; i++) {
 		drawCard(currentPlayer, state);
 	}
 
@@ -691,7 +691,7 @@ int playSmithy(struct gameState *state, int currentPlayer, int handPos)
 int playBaron(struct gameState *state, int currentPlayer, int choice1)
 {
 	state->numBuys++; //Increase buys by 1!
-	if (choice1 < 0) { //Boolean true or going to discard an estate
+	if (choice1 > 0) { //Boolean true or going to discard an estate
 		int p = 0; //Iterator for hand!
 		int card_not_discarded = 1; //Flag for discard set!
 
@@ -754,7 +754,7 @@ int playVillage(struct gameState *state, int currentPlayer, int handPos)
 int playGreatHall(struct gameState *state, int currentPlayer, int handPos)
 {
 	// +1 Card
-	drawCard(&currentPlayer, state);
+	drawCard(currentPlayer, state);
 
 	// +1 Actions
 	state->numActions++;
