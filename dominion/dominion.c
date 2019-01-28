@@ -655,7 +655,9 @@ int myAdventurer(int drawntreasure, int currentPlayer, int temphand[], struct ga
         }
         drawCard(currentPlayer, state);
         cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
-        if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+        // BUG: copper is now counted toward drawntreasure
+        //if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+        if (cardDrawn == silver || cardDrawn == gold)
             drawntreasure++;
         else{
             temphand[z]=cardDrawn;
@@ -680,7 +682,9 @@ int myCouncil_room(int currentPlayer, int handPos, struct gameState *state)
     }
 
     //+1 Buy
-    state->numBuys++;
+    // BUG: number of buys is decremented where it should be incremented.
+    //state->numBuys++;
+    state->numBuys--;
 
     //Each other player draws a card
     for (i = 0; i < state->numPlayers; i++)
@@ -701,6 +705,7 @@ int myFeast(int currentPlayer, int temphand[], struct gameState *state, int choi
 {
     int i;
     int x;
+    
     //gain card with cost up to 5
     //Backup hand
     for (i = 0; i <= state->handCount[currentPlayer]; i++){
@@ -734,7 +739,9 @@ int myFeast(int currentPlayer, int temphand[], struct gameState *state, int choi
                 printf("Deck Count: %d\n", state->handCount[currentPlayer] + state->deckCount[currentPlayer] + state->discardCount[currentPlayer]);
             }
 
-            gainCard(choice1, state, 0, currentPlayer);//Gain the card
+            // BUG: Add card to currentPlayer's deck instead of discard pile.
+            // gainCard(choice1, state, 0, currentPlayer);//Gain the card
+            gainCard(choice1, state, 1, currentPlayer);//Gain the card
             x = 0;//No more buying cards
 
             if (DEBUG){
@@ -754,10 +761,20 @@ int myFeast(int currentPlayer, int temphand[], struct gameState *state, int choi
     return 0;
 }		
 
-int myGardens()
+int mySmithy(int currentPlayer, struct gameState *state, int handPos)
 {
-    return -1;
-}		
+	int i;
+
+	//+3 Cards
+	for (i = 0; i < 3; i++)
+	{
+		drawCard(currentPlayer, state);
+	}
+			
+	//discard card from hand
+	discardCard(handPos, currentPlayer, state, 0);
+	return 0;
+}
 
 int myMine(int currentPlayer, struct gameState *state, int choice1, int choice2, int handPos)
 {
@@ -829,7 +846,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
           myFeast(currentPlayer, temphand, state, choice1);
 
       case gardens:
-          myGardens();
+	      return -1;
 
       case mine:
           myMine(currentPlayer, state, choice1, choice2, handPos);
@@ -861,26 +878,18 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 		
     case smithy:
-      //+3 Cards
-      for (i = 0; i < 3; i++)
-	{
-	  drawCard(currentPlayer, state);
-	}
+	    mySmithy(currentPlayer, state, handPos);
+
+	case village:
+		//+1 Card
+		drawCard(currentPlayer, state);
 			
-      //discard card from hand
-      discardCard(handPos, currentPlayer, state, 0);
-      return 0;
-		
-    case village:
-      //+1 Card
-      drawCard(currentPlayer, state);
+		//+2 Actions
+		state->numActions = state->numActions + 2;
 			
-      //+2 Actions
-      state->numActions = state->numActions + 2;
-			
-      //discard played card from hand
-      discardCard(handPos, currentPlayer, state, 0);
-      return 0;
+		//discard played card from hand
+		discardCard(handPos, currentPlayer, state, 0);
+		return 0;
 		
     case baron:
       state->numBuys++;//Increase buys by 1!
