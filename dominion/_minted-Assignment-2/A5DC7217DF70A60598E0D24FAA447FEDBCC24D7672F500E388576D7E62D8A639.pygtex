@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// BUG: card will not be placed in to played pile.}
+\PYG{c+c1}{// ORIGNAL: discardCard(handPos, currentPlayer, state, 0);}
+\PYG{n}{discardCard}\PYG{p}{(}\PYG{n}{handPos}\PYG{p}{,} \PYG{n}{currentPlayer}\PYG{p}{,} \PYG{n}{state}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{);}
+\end{Verbatim}

@@ -1,0 +1,615 @@
+
+dominion/interface.c,1074
+void cardNumToName(int card, char *name){cardNumToName16,211
+int getCardCost(int card) {getCardCost80,1692
+void printHand(int player, struct gameState *game) {printHand147,3109
+void printDeck(int player, struct gameState *game) {printDeck163,3544
+void printPlayed(int player, struct gameState *game) {printPlayed177,3978
+void printDiscard(int player, struct gameState *game) {printDiscard193,4440
+void printSupply(struct gameState *game) {printSupply210,4917
+void printState(struct gameState *game) {printState226,5400
+void printScores(struct gameState *game) {printScores237,5807
+void printHelp(void) {printHelp247,6115
+void phaseNumToName(int phase, char *name) {phaseNumToName266,6823
+int addCardToHand(int player, int card, struct gameState *game) {addCardToHand278,7055
+void selectKingdomCards(int randomSeed, int kingCards[NUM_K_CARDS]) {selectKingdomCards290,7348
+int countHandCoins(int player, struct gameState *game) {countHandCoins313,7849
+void executeBotTurn(int player, int *turnNum, struct gameState *game) {executeBotTurn331,8251
+
+dominion/testDrawCard.dSYM/Contents/Info.plist,449
+		<key>CFBundleDevelopmentRegion</key>CFBundleDevelopmentRegion5,181
+		<key>CFBundleIdentifier</key>CFBundleIdentifier7,247
+		<key>CFBundleInfoDictionaryVersion</key>CFBundleInfoDictionaryVersion9,332
+		<key>CFBundlePackageType</key>CFBundlePackageType11,398
+		<key>CFBundleSignature</key>CFBundleSignature13,455
+		<key>CFBundleShortVersionString</key>CFBundleShortVersionString15,510
+		<key>CFBundleVersion</key>CFBundleVersion17,573
+
+dominion/badTestDrawCard.c,162
+#define DEBUG DEBUG8,130
+#define NOISY_TEST NOISY_TEST9,146
+int checkDrawCard(int p, struct gameState *post) {checkDrawCard11,168
+int main () {main17,262
+
+dominion/supplyTest.c,90
+#define DEBUG DEBUG8,130
+#define NOISY_TEST NOISY_TEST9,146
+int main () {main11,168
+
+dominion/testInit.c,45
+int main (int argc, char** argv) {main6,80
+
+dominion/unittest1.c,43
+int main(int argc, char* argv[])main4,42
+
+dominion/rt.c,44
+int main(int argc, char** argv) {main5,59
+
+dominion/rngs.c,739
+#define MODULUS MODULUS39,1837
+#define MULTIPLIER MULTIPLIER40,1914
+#define CHECK CHECK41,1991
+#define STREAMS STREAMS42,2068
+#define A256 A25643,2145
+#define DEFAULT DEFAULT44,2222
+static long seed[STREAMS] = {DEFAULT};  /* current state of each stream   */seed46,2306
+static int  stream        = 0;          /* stream index, 0 is the default */stream47,2383
+static int  initialized   = 0;          /* test for stream initialization */initialized48,2460
+   double Random(void)Random51,2539
+   void PlantSeeds(long x)PlantSeeds71,3081
+   void PutSeed(long x)PutSeed101,4163
+   void GetSeed(long *x)GetSeed129,5157
+   void SelectStream(int index)SelectStream140,5487
+   void TestRandom(void)TestRandom153,5996
+
+dominion/badTestDrawCard.dSYM/Contents/Info.plist,449
+		<key>CFBundleDevelopmentRegion</key>CFBundleDevelopmentRegion5,181
+		<key>CFBundleIdentifier</key>CFBundleIdentifier7,247
+		<key>CFBundleInfoDictionaryVersion</key>CFBundleInfoDictionaryVersion9,335
+		<key>CFBundlePackageType</key>CFBundlePackageType11,401
+		<key>CFBundleSignature</key>CFBundleSignature13,458
+		<key>CFBundleShortVersionString</key>CFBundleShortVersionString15,513
+		<key>CFBundleVersion</key>CFBundleVersion17,576
+
+dominion/dominion.c,2229
+int compare(const void* a, const void* b) {compare8,128
+struct gameState* newGame() {newGame16,270
+int* kingdomCards(int k1, int k2, int k3, int k4, int k5, int k6, int k7,kingdomCards21,373
+int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,initializeGame37,661
+int shuffle(int player, struct gameState *state) {shuffle201,4034
+int playCard(int handPos, int choice1, int choice2, int choice3, struct gameState *state) playCard231,4802
+int buyCard(int supplyPos, struct gameState *state) {buyCard272,5652
+int numHandCards(struct gameState *state) {numHandCards311,6849
+int handCard(int handPos, struct gameState *state) {handCard315,6943
+int supplyCount(int card, struct gameState *state) {supplyCount320,7085
+int fullDeckCount(int player, int card, struct gameState *state) {fullDeckCount324,7176
+int whoseTurn(struct gameState *state) {whoseTurn346,7634
+int endTurn(struct gameState *state) {endTurn350,7705
+int isGameOver(struct gameState *state) {isGameOver390,8768
+int scoreFor (int player, struct gameState *state) {scoreFor417,9163
+int getWinners(int players[MAX_PLAYERS], struct gameState *state) {getWinners457,10891
+int drawCard(int player, struct gameState *state)drawCard525,11989
+int getCost(int cardNumber)getCost583,13719
+int myAdventurer(int drawntreasure, int currentPlayer, int temphand[], struct gameState *state)myAdventurer647,14726
+int myCouncil_room(int currentPlayer, int handPos, struct gameState *state)myCouncil_room675,15884
+int myFeast(int currentPlayer, int temphand[], struct gameState *state, int choice1)myFeast704,16496
+int mySmithy(int currentPlayer, struct gameState *state, int handPos)mySmithy764,18366
+int myMine(int currentPlayer, struct gameState *state, int choice1, int choice2, int handPos)myMine779,18616
+int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState *state, int hacardEffect818,19524
+int discardCard(int handPos, int currentPlayer, struct gameState *state, int trashFlag)discardCard1267,30709
+int gainCard(int supplyPos, struct gameState *state, int toFlag, int player)gainCard1305,31888
+int updateCoins(int player, struct gameState *state, int bonus)updateCoins1342,32791
+
+dominion/myAssert.h,67
+#define MYASSERT_HMYASSERT_H2,19
+#define myAssert(myAssert4,39
+
+dominion/testDrawCard.c,163
+#define DEBUG DEBUG8,130
+#define NOISY_TEST NOISY_TEST9,146
+int checkDrawCard(int p, struct gameState *post) {checkDrawCard11,168
+int main () {main42,1203
+
+dominion/myAssert.c,104
+int passed(char *expression, int line)passed5,61
+int failed(char *expression, int line)failed10,225
+
+dominion/color.h,275
+#define normal normal3,20
+#define red red4,46
+#define green green5,70
+#define yellow yellow6,96
+#define blue blue7,123
+#define magenta magenta8,148
+#define cyan cyan9,176
+#define white white10,201
+#define boldon boldon11,227
+#define boldoff boldoff12,253
+
+dominion/betterTestDrawCard.c,162
+#define DEBUG DEBUG8,130
+#define NOISY_TEST NOISY_TEST9,146
+int checkDrawCard(int p, struct gameState *post) {checkDrawCard11,168
+int main () {main19,282
+
+dominion/dominion.h,2354
+#define _DOMINION_H_DOMINION_H2,20
+#define MAX_HAND MAX_HAND6,102
+#define MAX_DECK MAX_DECK7,123
+#define MAX_PLAYERS MAX_PLAYERS9,145
+#define DEBUG DEBUG11,168
+enum CARDCARD18,359
+  {curse = 0,curse19,369
+   estate,estate20,383
+   duchy,duchy21,394
+   province,province22,404
+   copper,copper24,418
+   silver,silver25,429
+   gold,gold26,440
+   adventurer,adventurer28,450
+   council_room,council_room30,528
+   feast, /* choice1 is supply # of card gained) */feast31,545
+   gardens,gardens32,597
+   mine, /* choice1 is hand# of money to trash, choice2 is supply# ofmine33,609
+   remodel, /* choice1 is hand# of card to remodel, choice2 is supply# */remodel35,708
+   smithy,smithy36,782
+   village,village37,793
+   baron, /* choice1: boolean for discard of estate */baron39,806
+   great_hall,great_hall41,919
+   minion, /* choice1:  1 = +2 coin, 2 = redraw */minion42,934
+   steward, /* choice1: 1 = +2 card, 2 = +2 coin, 3 = trash 2 (choice2,3) */steward43,985
+   tribute,tribute44,1062
+   ambassador, /* choice1 = hand#, choice2 = number to return to supply */ambassador46,1075
+   cutpurse,cutpurse47,1150
+   embargo, /* choice1 = supply# */embargo48,1163
+   outpost,outpost49,1199
+   salvager, /* choice1 = hand# to trash */salvager50,1211
+   sea_hag,sea_hag51,1255
+   treasure_maptreasure_map52,1267
+struct gameState {gameState55,1289
+  int numPlayers; //number of playersnumPlayers56,1308
+  int supplyCount[treasure_map+1];  //this is the amount of a specific type of card given a spesupplyCount57,1346
+  int embargoTokens[treasure_map+1];embargoTokens58,1455
+  int outpostPlayed;outpostPlayed59,1492
+  int outpostTurn;outpostTurn60,1513
+  int whoseTurn;whoseTurn61,1532
+  int phase;phase62,1549
+  int numActions; /* Starts at 1 each turn */numActions63,1562
+  int coins; /* Use as you see fit! */coins64,1608
+  int numBuys; /* Starts at 1 each turn */numBuys65,1647
+  int hand[MAX_PLAYERS][MAX_HAND];hand66,1690
+  int handCount[MAX_PLAYERS];handCount67,1725
+  int deck[MAX_PLAYERS][MAX_DECK];deck68,1755
+  int deckCount[MAX_PLAYERS];deckCount69,1790
+  int discard[MAX_PLAYERS][MAX_DECK];discard70,1820
+  int discardCount[MAX_PLAYERS];discardCount71,1858
+  int playedCards[MAX_DECK];playedCards72,1891
+  int playedCardCount;playedCardCount73,1920
+
+dominion/Assignment-2.tex,1603
+\section{Refactor}Refactor32,672
+\label{sec:org945b52d}sec:org945b52d33,691
+\subsection{Original Implementation in Switch Statement}Original Implementation in Switch Statement47,1302
+\label{sec:org1809fad}sec:org1809fad48,1359
+\subsection{Refactored Implementation in Seperate Function}Refactored Implementation in Seperate Function67,1675
+\label{sec:orgd7ab4d8}sec:orgd7ab4d868,1735
+\section{Bugs}Bugs94,2147
+\label{sec:org24710bb}sec:org24710bb95,2162
+\subsection{Bug Breakdown by Function}Bug Breakdown by Function97,2186
+\label{sec:org546e8b2}sec:org546e8b298,2225
+\subsubsection{myAdventurer}myAdventurer100,2249
+\label{sec:org7268d4d}sec:org7268d4d101,2278
+\subsubsection{myCouncil\_room}myCouncil  _room112,2777
+\label{sec:org79f919e}sec:org79f919e113,2809
+\subsubsection{myFeast}myFeast123,3247
+\label{sec:org70bf80e}sec:org70bf80e124,3271
+\subsubsection{mySmithy}mySmithy134,3652
+\label{sec:org8070788}sec:org8070788135,3677
+\subsection{Program Execution}Program Execution145,4047
+\label{sec:orgda8257e}sec:orgda8257e146,4078
+\subsubsection{Original File (No Alterations Made)}Original File  No Alterations Made 150,4372
+\label{sec:org526629d}sec:org526629d151,4424
+\subsubsection{Refactored Function Implementations (No Bugs Introduced Yet)}Refactored Function Implementations  No Bugs Introduced Yet 161,4541
+\label{sec:org12dbbad}sec:org12dbbad162,4618
+\subsubsection{Bug Introductions}Bug Introductions172,4734
+\label{sec:org8ce9f95}sec:org8ce9f95173,4768
+\section{Sources}Sources183,4884
+\label{sec:org3e40217}sec:org3e40217184,4902
+
+dominion/Makefile,689
+CFLAGS= -Wall -fpic -coverage -lm -std=c99CFLAGS1,0
+rngs.o: rngs.h rngs.crngs.o3,44
+dominion.o: dominion.h dominion.c rngs.odominion.o6,96
+playdom: dominion.o playdom.cplaydom9,171
+testDrawCard: testDrawCard.c dominion.o rngs.otestDrawCard12,345
+badTestDrawCard: badTestDrawCard.c dominion.o rngs.obadTestDrawCard15,462
+testBuyCard: testDrawCard.c dominion.o rngs.otestBuyCard18,590
+testAll: dominion.o testSuite.ctestAll21,705
+interface.o: interface.h interface.cinterface.o24,800
+runtests: testDrawCard runtests27,872
+unittests: myAssert.h myAssert.cunittests32,1017
+player: player.c interface.oplayer35,1092
+all: playdom player all38,1190
+clean:clean40,1212
+
+dominion/player.c,96
+int main2(int argc, char *argv[]) {main223,329
+int main(int argc, char* argv[]) {main33,614
+
+dominion/player.dSYM/Contents/Info.plist,449
+		<key>CFBundleDevelopmentRegion</key>CFBundleDevelopmentRegion5,181
+		<key>CFBundleIdentifier</key>CFBundleIdentifier7,247
+		<key>CFBundleInfoDictionaryVersion</key>CFBundleInfoDictionaryVersion9,326
+		<key>CFBundlePackageType</key>CFBundlePackageType11,392
+		<key>CFBundleSignature</key>CFBundleSignature13,449
+		<key>CFBundleShortVersionString</key>CFBundleShortVersionString15,504
+		<key>CFBundleVersion</key>CFBundleVersion17,567
+
+dominion/testBuyCard.c,163
+#define DEBUG DEBUG8,130
+#define NOISY_TEST NOISY_TEST9,146
+int checkDrawCard(int p, struct gameState *post) {checkDrawCard11,168
+int main () {main42,1203
+
+dominion/dominion_helpers.h,53
+#define _DOMINION_HELPERS_H_DOMINION_HELPERS_H2,28
+
+dominion/testShuffle.c,25
+int main () {main7,104
+
+dominion/rngs.h,29
+#define _RNGS__RNGS_10,355
+
+dominion/playdom.c,45
+int main (int argc, char** argv) {main6,80
+
+dominion/interface.h,2565
+#define _INTERFACE_H_INTERFACE_H10,94
+#define NUM_TOTAL_K_CARDS NUM_TOTAL_K_CARDS17,212
+#define NUM_K_CARDS NUM_K_CARDS18,257
+#define NUM_V_CARDS_2 NUM_V_CARDS_219,280
+#define NUM_V_CARDS_3or4 NUM_V_CARDS_3or420,304
+#define NUM_C_CARDS_2 NUM_C_CARDS_221,332
+#define NUM_C_CARDS_3 NUM_C_CARDS_322,357
+#define NUM_C_CARDS_4 NUM_C_CARDS_423,382
+#define NUM_COPPER NUM_COPPER24,407
+#define NUM_SILVER NUM_SILVER25,429
+#define NUM_GOLD NUM_GOLD26,451
+#define UNUSED UNUSED27,471
+#define START_COPPER START_COPPER28,489
+#define START_ESTATE START_ESTATE29,512
+#define HANDSIZE HANDSIZE30,535
+#define COMPARE(COMPARE32,555
+#define MAX_STRING_LENGTH MAX_STRING_LENGTH33,618
+#define TRUE TRUE34,647
+#define FALSE FALSE35,662
+#define SUCCESS SUCCESS37,679
+#define FAILURE FAILURE38,697
+#define MATCH MATCH40,717
+#define WINNER WINNER41,733
+#define NOT_WINNER NOT_WINNER42,750
+#define ACTION_PHASE ACTION_PHASE45,790
+#define BUY_PHASE BUY_PHASE46,813
+#define CLEANUP_PHASE CLEANUP_PHASE47,833
+#define COPPER_VALUE COPPER_VALUE49,858
+#define SILVER_VALUE SILVER_VALUE50,881
+#define GOLD_VALUE GOLD_VALUE51,904
+#define COPPER_COST COPPER_COST54,955
+#define SILVER_COST SILVER_COST55,977
+#define GOLD_COST GOLD_COST56,999
+#define ESTATE_COST ESTATE_COST57,1019
+#define DUCHY_COST DUCHY_COST58,1041
+#define PROVINCE_COST PROVINCE_COST59,1062
+#define CURSE_COST CURSE_COST60,1086
+#define ADVENTURER_COST ADVENTURER_COST61,1107
+#define COUNCIL_ROOM_COST COUNCIL_ROOM_COST62,1133
+#define FEAST_COST FEAST_COST63,1161
+#define GARDEN_COST GARDEN_COST64,1182
+#define MINE_COST MINE_COST65,1204
+#define MONEYLENDER_COST MONEYLENDER_COST66,1224
+#define REMODEL_COST REMODEL_COST67,1251
+#define SMITHY_COST SMITHY_COST68,1274
+#define VILLAGE_COST VILLAGE_COST69,1296
+#define WOODCUTTER_COST WOODCUTTER_COST70,1319
+#define BARON_COST BARON_COST71,1345
+#define GREAT_HALL_COST GREAT_HALL_COST72,1366
+#define MINION_COST MINION_COST73,1392
+#define SHANTY_TOWN_COST SHANTY_TOWN_COST74,1414
+#define STEWARD_COST STEWARD_COST75,1441
+#define TRIBUTE_COST TRIBUTE_COST76,1464
+#define WISHING_WELL_COST WISHING_WELL_COST77,1487
+#define AMBASSADOR_COST AMBASSADOR_COST78,1515
+#define CUTPURSE_COST CUTPURSE_COST79,1541
+#define EMBARGO_COST EMBARGO_COST80,1565
+#define OUTPOST_COST OUTPOST_COST81,1588
+#define SALVAGER_COST SALVAGER_COST82,1611
+#define SEA_HAG_COST SEA_HAG_COST83,1635
+#define TREASURE_MAP_COST TREASURE_MAP_COST84,1658
+#define ONETHOUSAND ONETHOUSAND85,1686
+
+dominion/playdom.dSYM/Contents/Info.plist,449
+		<key>CFBundleDevelopmentRegion</key>CFBundleDevelopmentRegion5,181
+		<key>CFBundleIdentifier</key>CFBundleIdentifier7,247
+		<key>CFBundleInfoDictionaryVersion</key>CFBundleInfoDictionaryVersion9,327
+		<key>CFBundlePackageType</key>CFBundlePackageType11,393
+		<key>CFBundleSignature</key>CFBundleSignature13,450
+		<key>CFBundleShortVersionString</key>CFBundleShortVersionString15,505
+		<key>CFBundleVersion</key>CFBundleVersion17,568
+
+projects/roberwen/dominion/interface.c,1074
+void cardNumToName(int card, char *name){cardNumToName16,211
+int getCardCost(int card) {getCardCost80,1692
+void printHand(int player, struct gameState *game) {printHand147,3109
+void printDeck(int player, struct gameState *game) {printDeck163,3544
+void printPlayed(int player, struct gameState *game) {printPlayed177,3978
+void printDiscard(int player, struct gameState *game) {printDiscard193,4440
+void printSupply(struct gameState *game) {printSupply210,4917
+void printState(struct gameState *game) {printState226,5400
+void printScores(struct gameState *game) {printScores237,5807
+void printHelp(void) {printHelp247,6115
+void phaseNumToName(int phase, char *name) {phaseNumToName266,6823
+int addCardToHand(int player, int card, struct gameState *game) {addCardToHand278,7055
+void selectKingdomCards(int randomSeed, int kingCards[NUM_K_CARDS]) {selectKingdomCards290,7348
+int countHandCoins(int player, struct gameState *game) {countHandCoins313,7849
+void executeBotTurn(int player, int *turnNum, struct gameState *game) {executeBotTurn331,8251
+
+projects/roberwen/dominion/testDrawCard.dSYM/Contents/Info.plist,449
+		<key>CFBundleDevelopmentRegion</key>CFBundleDevelopmentRegion5,181
+		<key>CFBundleIdentifier</key>CFBundleIdentifier7,247
+		<key>CFBundleInfoDictionaryVersion</key>CFBundleInfoDictionaryVersion9,332
+		<key>CFBundlePackageType</key>CFBundlePackageType11,398
+		<key>CFBundleSignature</key>CFBundleSignature13,455
+		<key>CFBundleShortVersionString</key>CFBundleShortVersionString15,510
+		<key>CFBundleVersion</key>CFBundleVersion17,573
+
+projects/roberwen/dominion/badTestDrawCard.c,162
+#define DEBUG DEBUG8,130
+#define NOISY_TEST NOISY_TEST9,146
+int checkDrawCard(int p, struct gameState *post) {checkDrawCard11,168
+int main () {main17,262
+
+projects/roberwen/dominion/supplyTest.c,90
+#define DEBUG DEBUG8,130
+#define NOISY_TEST NOISY_TEST9,146
+int main () {main11,168
+
+projects/roberwen/dominion/testInit.c,45
+int main (int argc, char** argv) {main6,80
+
+projects/roberwen/dominion/rt.c,44
+int main(int argc, char** argv) {main5,59
+
+projects/roberwen/dominion/rngs.c,739
+#define MODULUS MODULUS39,1837
+#define MULTIPLIER MULTIPLIER40,1914
+#define CHECK CHECK41,1991
+#define STREAMS STREAMS42,2068
+#define A256 A25643,2145
+#define DEFAULT DEFAULT44,2222
+static long seed[STREAMS] = {DEFAULT};  /* current state of each stream   */seed46,2306
+static int  stream        = 0;          /* stream index, 0 is the default */stream47,2383
+static int  initialized   = 0;          /* test for stream initialization */initialized48,2460
+   double Random(void)Random51,2539
+   void PlantSeeds(long x)PlantSeeds71,3081
+   void PutSeed(long x)PutSeed101,4163
+   void GetSeed(long *x)GetSeed129,5157
+   void SelectStream(int index)SelectStream140,5487
+   void TestRandom(void)TestRandom153,5996
+
+projects/roberwen/dominion/badTestDrawCard.dSYM/Contents/Info.plist,449
+		<key>CFBundleDevelopmentRegion</key>CFBundleDevelopmentRegion5,181
+		<key>CFBundleIdentifier</key>CFBundleIdentifier7,247
+		<key>CFBundleInfoDictionaryVersion</key>CFBundleInfoDictionaryVersion9,335
+		<key>CFBundlePackageType</key>CFBundlePackageType11,401
+		<key>CFBundleSignature</key>CFBundleSignature13,458
+		<key>CFBundleShortVersionString</key>CFBundleShortVersionString15,513
+		<key>CFBundleVersion</key>CFBundleVersion17,576
+
+projects/roberwen/dominion/dominion.c,1706
+int compare(const void* a, const void* b) {compare8,128
+struct gameState* newGame() {newGame16,270
+int* kingdomCards(int k1, int k2, int k3, int k4, int k5, int k6, int k7,kingdomCards21,373
+int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,initializeGame37,661
+int shuffle(int player, struct gameState *state) {shuffle201,4034
+int playCard(int handPos, int choice1, int choice2, int choice3, struct gameState *state) playCard231,4802
+int buyCard(int supplyPos, struct gameState *state) {buyCard272,5652
+int numHandCards(struct gameState *state) {numHandCards311,6849
+int handCard(int handPos, struct gameState *state) {handCard315,6943
+int supplyCount(int card, struct gameState *state) {supplyCount320,7085
+int fullDeckCount(int player, int card, struct gameState *state) {fullDeckCount324,7176
+int whoseTurn(struct gameState *state) {whoseTurn346,7634
+int endTurn(struct gameState *state) {endTurn350,7705
+int isGameOver(struct gameState *state) {isGameOver390,8768
+int scoreFor (int player, struct gameState *state) {scoreFor417,9163
+int getWinners(int players[MAX_PLAYERS], struct gameState *state) {getWinners457,10891
+int drawCard(int player, struct gameState *state)drawCard525,11989
+int getCost(int cardNumber)getCost583,13719
+int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState *state, int hacardEffect646,14725
+int discardCard(int handPos, int currentPlayer, struct gameState *state, int trashFlag)discardCard1226,29202
+int gainCard(int supplyPos, struct gameState *state, int toFlag, int player)gainCard1264,30381
+int updateCoins(int player, struct gameState *state, int bonus)updateCoins1301,31284
+
+projects/roberwen/dominion/testDrawCard.c,163
+#define DEBUG DEBUG8,130
+#define NOISY_TEST NOISY_TEST9,146
+int checkDrawCard(int p, struct gameState *post) {checkDrawCard11,168
+int main () {main42,1203
+
+projects/roberwen/dominion/betterTestDrawCard.c,162
+#define DEBUG DEBUG8,130
+#define NOISY_TEST NOISY_TEST9,146
+int checkDrawCard(int p, struct gameState *post) {checkDrawCard11,168
+int main () {main19,282
+
+projects/roberwen/dominion/dominion.h,2354
+#define _DOMINION_H_DOMINION_H2,20
+#define MAX_HAND MAX_HAND6,102
+#define MAX_DECK MAX_DECK7,123
+#define MAX_PLAYERS MAX_PLAYERS9,145
+#define DEBUG DEBUG11,168
+enum CARDCARD18,359
+  {curse = 0,curse19,369
+   estate,estate20,383
+   duchy,duchy21,394
+   province,province22,404
+   copper,copper24,418
+   silver,silver25,429
+   gold,gold26,440
+   adventurer,adventurer28,450
+   council_room,council_room30,528
+   feast, /* choice1 is supply # of card gained) */feast31,545
+   gardens,gardens32,597
+   mine, /* choice1 is hand# of money to trash, choice2 is supply# ofmine33,609
+   remodel, /* choice1 is hand# of card to remodel, choice2 is supply# */remodel35,708
+   smithy,smithy36,782
+   village,village37,793
+   baron, /* choice1: boolean for discard of estate */baron39,806
+   great_hall,great_hall41,919
+   minion, /* choice1:  1 = +2 coin, 2 = redraw */minion42,934
+   steward, /* choice1: 1 = +2 card, 2 = +2 coin, 3 = trash 2 (choice2,3) */steward43,985
+   tribute,tribute44,1062
+   ambassador, /* choice1 = hand#, choice2 = number to return to supply */ambassador46,1075
+   cutpurse,cutpurse47,1150
+   embargo, /* choice1 = supply# */embargo48,1163
+   outpost,outpost49,1199
+   salvager, /* choice1 = hand# to trash */salvager50,1211
+   sea_hag,sea_hag51,1255
+   treasure_maptreasure_map52,1267
+struct gameState {gameState55,1289
+  int numPlayers; //number of playersnumPlayers56,1308
+  int supplyCount[treasure_map+1];  //this is the amount of a specific type of card given a spesupplyCount57,1346
+  int embargoTokens[treasure_map+1];embargoTokens58,1455
+  int outpostPlayed;outpostPlayed59,1492
+  int outpostTurn;outpostTurn60,1513
+  int whoseTurn;whoseTurn61,1532
+  int phase;phase62,1549
+  int numActions; /* Starts at 1 each turn */numActions63,1562
+  int coins; /* Use as you see fit! */coins64,1608
+  int numBuys; /* Starts at 1 each turn */numBuys65,1647
+  int hand[MAX_PLAYERS][MAX_HAND];hand66,1690
+  int handCount[MAX_PLAYERS];handCount67,1725
+  int deck[MAX_PLAYERS][MAX_DECK];deck68,1755
+  int deckCount[MAX_PLAYERS];deckCount69,1790
+  int discard[MAX_PLAYERS][MAX_DECK];discard70,1820
+  int discardCount[MAX_PLAYERS];discardCount71,1858
+  int playedCards[MAX_DECK];playedCards72,1891
+  int playedCardCount;playedCardCount73,1920
+
+projects/roberwen/dominion/Makefile,638
+CFLAGS= -Wall -fpic -coverage -lm -std=c99CFLAGS1,0
+rngs.o: rngs.h rngs.crngs.o3,44
+dominion.o: dominion.h dominion.c rngs.odominion.o6,96
+playdom: dominion.o playdom.cplaydom9,171
+testDrawCard: testDrawCard.c dominion.o rngs.otestDrawCard12,345
+badTestDrawCard: badTestDrawCard.c dominion.o rngs.obadTestDrawCard15,462
+testBuyCard: testDrawCard.c dominion.o rngs.otestBuyCard18,590
+testAll: dominion.o testSuite.ctestAll21,705
+interface.o: interface.h interface.cinterface.o24,800
+runtests: testDrawCard runtests27,872
+player: player.c interface.oplayer33,1018
+all: playdom player all36,1116
+clean:clean38,1138
+
+projects/roberwen/dominion/player.c,96
+int main2(int argc, char *argv[]) {main223,329
+int main(int argc, char* argv[]) {main33,614
+
+projects/roberwen/dominion/player.dSYM/Contents/Info.plist,449
+		<key>CFBundleDevelopmentRegion</key>CFBundleDevelopmentRegion5,181
+		<key>CFBundleIdentifier</key>CFBundleIdentifier7,247
+		<key>CFBundleInfoDictionaryVersion</key>CFBundleInfoDictionaryVersion9,326
+		<key>CFBundlePackageType</key>CFBundlePackageType11,392
+		<key>CFBundleSignature</key>CFBundleSignature13,449
+		<key>CFBundleShortVersionString</key>CFBundleShortVersionString15,504
+		<key>CFBundleVersion</key>CFBundleVersion17,567
+
+projects/roberwen/dominion/testBuyCard.c,163
+#define DEBUG DEBUG8,130
+#define NOISY_TEST NOISY_TEST9,146
+int checkDrawCard(int p, struct gameState *post) {checkDrawCard11,168
+int main () {main42,1203
+
+projects/roberwen/dominion/dominion_helpers.h,53
+#define _DOMINION_HELPERS_H_DOMINION_HELPERS_H2,28
+
+projects/roberwen/dominion/testShuffle.c,25
+int main () {main7,104
+
+projects/roberwen/dominion/rngs.h,29
+#define _RNGS__RNGS_10,355
+
+projects/roberwen/dominion/playdom.c,45
+int main (int argc, char** argv) {main6,80
+
+projects/roberwen/dominion/interface.h,2565
+#define _INTERFACE_H_INTERFACE_H10,94
+#define NUM_TOTAL_K_CARDS NUM_TOTAL_K_CARDS17,212
+#define NUM_K_CARDS NUM_K_CARDS18,257
+#define NUM_V_CARDS_2 NUM_V_CARDS_219,280
+#define NUM_V_CARDS_3or4 NUM_V_CARDS_3or420,304
+#define NUM_C_CARDS_2 NUM_C_CARDS_221,332
+#define NUM_C_CARDS_3 NUM_C_CARDS_322,357
+#define NUM_C_CARDS_4 NUM_C_CARDS_423,382
+#define NUM_COPPER NUM_COPPER24,407
+#define NUM_SILVER NUM_SILVER25,429
+#define NUM_GOLD NUM_GOLD26,451
+#define UNUSED UNUSED27,471
+#define START_COPPER START_COPPER28,489
+#define START_ESTATE START_ESTATE29,512
+#define HANDSIZE HANDSIZE30,535
+#define COMPARE(COMPARE32,555
+#define MAX_STRING_LENGTH MAX_STRING_LENGTH33,618
+#define TRUE TRUE34,647
+#define FALSE FALSE35,662
+#define SUCCESS SUCCESS37,679
+#define FAILURE FAILURE38,697
+#define MATCH MATCH40,717
+#define WINNER WINNER41,733
+#define NOT_WINNER NOT_WINNER42,750
+#define ACTION_PHASE ACTION_PHASE45,790
+#define BUY_PHASE BUY_PHASE46,813
+#define CLEANUP_PHASE CLEANUP_PHASE47,833
+#define COPPER_VALUE COPPER_VALUE49,858
+#define SILVER_VALUE SILVER_VALUE50,881
+#define GOLD_VALUE GOLD_VALUE51,904
+#define COPPER_COST COPPER_COST54,955
+#define SILVER_COST SILVER_COST55,977
+#define GOLD_COST GOLD_COST56,999
+#define ESTATE_COST ESTATE_COST57,1019
+#define DUCHY_COST DUCHY_COST58,1041
+#define PROVINCE_COST PROVINCE_COST59,1062
+#define CURSE_COST CURSE_COST60,1086
+#define ADVENTURER_COST ADVENTURER_COST61,1107
+#define COUNCIL_ROOM_COST COUNCIL_ROOM_COST62,1133
+#define FEAST_COST FEAST_COST63,1161
+#define GARDEN_COST GARDEN_COST64,1182
+#define MINE_COST MINE_COST65,1204
+#define MONEYLENDER_COST MONEYLENDER_COST66,1224
+#define REMODEL_COST REMODEL_COST67,1251
+#define SMITHY_COST SMITHY_COST68,1274
+#define VILLAGE_COST VILLAGE_COST69,1296
+#define WOODCUTTER_COST WOODCUTTER_COST70,1319
+#define BARON_COST BARON_COST71,1345
+#define GREAT_HALL_COST GREAT_HALL_COST72,1366
+#define MINION_COST MINION_COST73,1392
+#define SHANTY_TOWN_COST SHANTY_TOWN_COST74,1414
+#define STEWARD_COST STEWARD_COST75,1441
+#define TRIBUTE_COST TRIBUTE_COST76,1464
+#define WISHING_WELL_COST WISHING_WELL_COST77,1487
+#define AMBASSADOR_COST AMBASSADOR_COST78,1515
+#define CUTPURSE_COST CUTPURSE_COST79,1541
+#define EMBARGO_COST EMBARGO_COST80,1565
+#define OUTPOST_COST OUTPOST_COST81,1588
+#define SALVAGER_COST SALVAGER_COST82,1611
+#define SEA_HAG_COST SEA_HAG_COST83,1635
+#define TREASURE_MAP_COST TREASURE_MAP_COST84,1658
+#define ONETHOUSAND ONETHOUSAND85,1686
+
+projects/roberwen/dominion/playdom.dSYM/Contents/Info.plist,449
+		<key>CFBundleDevelopmentRegion</key>CFBundleDevelopmentRegion5,181
+		<key>CFBundleIdentifier</key>CFBundleIdentifier7,247
+		<key>CFBundleInfoDictionaryVersion</key>CFBundleInfoDictionaryVersion9,327
+		<key>CFBundlePackageType</key>CFBundlePackageType11,393
+		<key>CFBundleSignature</key>CFBundleSignature13,450
+		<key>CFBundleShortVersionString</key>CFBundleShortVersionString15,505
+		<key>CFBundleVersion</key>CFBundleVersion17,568

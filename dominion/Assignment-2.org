@@ -1,0 +1,145 @@
+#+TITLE: Assignment 2
+#+SETUPFILE: ~/main.org
+
+* Refactor
+
+Implemented five cards in seperate functions from switch statement. This was done for the following cards:
+
+1) adventurer
+2) smithy
+3) council_room
+4) feast
+5) mine
+
+The existing implementations within the switch statement were used to create a new function implementation. In the case of the adventurer card, a new function called ~myAdventurer()~ was made with the required variables included in both the funciton definiton as well as the functional call. The refactoring for the four remaining cards took on similar patterns.
+
+** Original Implementation in Switch Statement
+#+BEGIN_SRC c
+int cardEffect(...)
+{
+    // ...
+
+    //uses switch to select card and perform actions
+    switch( card )
+    {
+        case adventurer:
+            // implementation of adventurer card...
+
+        // ...
+    }
+
+    // ...
+}
+#+END_SRC
+
+** Refactored Implementation in Seperate Function
+
+#+BEGIN_SRC c
+int myAdventurer(...)
+{
+    // implementation of adventurer card...
+}
+
+int cardEffect(...)
+{
+    // ...
+
+    //uses switch to select card and perform actions
+    switch( card )
+    {
+        case adventurer:
+            // call to myAdventurer function
+            myAdventurer(...);
+
+        // ...
+    }
+
+    // ...
+}
+#+END_SRC
+
+* Bugs
+
+** Bug Breakdown by Function
+
+*** myAdventurer
+    
+Removed copper from ~if~ statement. So ~drawntreasure++~ will not execute if the player draws a copper, allowing them to gain more treasures than the vard should allow (i.e. 2 treasures) (1).
+    
+#+BEGIN_SRC c
+// BUG: copper is now counted toward drawntreasure
+// ORIGINAL: if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+if (cardDrawn == silver || cardDrawn == gold)
+    drawntreasure++;
+#+END_SRC
+
+*** myCouncil_room
+    
+The number of buys is decremented where it should be incremented. This gives the player an additional buy every time the Council Room card is played. The correct behavior would remove a buy every time this card is played (2).
+
+#+BEGIN_SRC c
+// BUG: number of buys is decremented where it should be incremented.
+// ORIGINAL: state->numBuys++;
+state->numBuys--;
+#+END_SRC
+
+*** myFeast
+    
+The feast card is sent back to the player's deck instead of going to the discard pile (3).
+
+#+BEGIN_SRC c
+// BUG: Add card to currentPlayer's deck instead of discard pile.
+// ORIGINAL: gainCard(choice1, state, 0, currentPlayer);//Gain the card
+gainCard(choice1, state, 1, currentPlayer);//Gain the card
+#+END_SRC
+
+*** mySmithy
+
+The smithy card will be played by player, but will not be placed in the played pile (4).
+
+#+BEGIN_SRC c
+// BUG: card will be played by player, but will not be placed in the played pile.
+// ORIGNAL: discardCard(handPos, currentPlayer, state, 0);
+discardCard(handPos, currentPlayer, state, 1);
+#+END_SRC
+
+** Program Execution
+
+At each step of the assignment, the program was compiled (~make all && ./playdom 2~) and run to confirm that successful 2-player execution took place, despite the function refactoring as well as the introduction of bugs. The condensed results of which follow.
+
+*** Original File (No Alterations Made)
+
+#+BEGIN_EXAMPLE
+Starting game.
+...
+Finished game.
+Player 0: 30
+Player 1: 40
+#+END_EXAMPLE
+
+*** Refactored Function Implementations (No Bugs Introduced Yet)
+
+#+BEGIN_EXAMPLE
+Starting game.
+...
+Finished game.
+Player 0: 51
+Player 1: 4
+#+END_EXAMPLE
+
+*** Bug Introductions
+
+#+BEGIN_EXAMPLE
+Starting game.
+...
+Finished game.
+Player 0: 88
+Player 1: 4
+#+END_EXAMPLE
+
+* Sources
+
+- [1]: http://wiki.dominionstrategy.com/index.php/Adventurer
+- [2]: http://wiki.dominionstrategy.com/index.php/Council_Room
+- [3]: http://wiki.dominionstrategy.com/index.php/Feast
+- [4]: http://wiki.dominionstrategy.com/index.php/Smithy
