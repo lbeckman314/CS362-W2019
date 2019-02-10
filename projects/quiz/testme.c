@@ -24,22 +24,10 @@ char *inputString()
     string = malloc(size * sizeof(char));
     //printf("size: %d\n", size);
 
-    int pool[27];
-    pool[0] = 0;
-
     int i;
-
-    for (i = 1; i < 27; i++)
-    {
-        pool[i] = i + 96;
-
-        //printf("adding %d to pool\n", i);
-        //printf("pool: %d\n", pool[i]);
-    }
 
     for (i = 0; i < size; i++)
     {
-        /*
         random = rand() % size;
         switch (random)
         {
@@ -62,9 +50,6 @@ char *inputString()
                 string[i] = '\0';
                 break;
         }
-        */
-        string[i] = (char) pool[rand() % 27];
-        //printf("pool: %d\n", pool[2]);
         //printf("string[i]: %c\n", string[i]);
     }
 
