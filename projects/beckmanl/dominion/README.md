@@ -1,2 +1,7 @@
-run make all #To compile the dominion code
-run ./playdom 30 # to run playdom code
+```sh
+# To compile the dominion code
+make clean && make all
+
+# to run playdom code
+./playdom 30
+```
