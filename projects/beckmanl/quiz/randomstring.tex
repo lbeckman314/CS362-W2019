@@ -1,0 +1,106 @@
+% Created 2019-02-10 Sun 23:00
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\input{/home/liam/main.tex}
+\author{liam beckman}
+\date{}
+\title{Random Tester Documentation}
+\hypersetup{
+ pdfauthor={liam beckman},
+ pdftitle={Random Tester Documentation},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.1 (Org mode 9.1.9)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\section{Quick Start}
+\label{sec:quickstart}
+
+To compile and run the testme program, simply enter \texttt{make \&\& make run}. This will begin the program iterations. To remove build artifacts, enter \texttt{make clean}.
+
+\section{Implementations}
+\label{sec:implementations}
+
+\subsection{char inputChar()}
+\label{sec:charinputchar}
+
+It was found that including all 127 ASCII characters does not result in a significant time restraint. In other words, the \texttt{testme} function proceeds through all 9 states in a reasonable time frame, even though the "pool" of available characters includes 127 possibilities.
+
+\begin{listing}[htbp]
+\begin{minted}[linenos,firstnumber=1,breaklines=true,breakanywhere=true]{c}
+int random;
+char character;
+
+random = rand() % 127;
+character = (char) random;
+
+return character;
+\end{minted}
+\caption{inputChar() implementation}
+\end{listing}
+
+\subsection{char *inputString()}
+\label{sec:charinputstring}
+
+In contrast to \texttt{inputChar}, the implementation of the \texttt{inputString} function was scaled down to only have available the charcters used in the target statement (e.g. 'r', 'e', 's', 'e', 't', and '$\backslash$0'). Including all 127 ASCII charcters, or even just lower case ASCII letters resulted in many more iterations and an associated longer wait time. 
+
+It should be noted that the inclusion of two 'e' characters reflects the frequency of that character in the target statement.
+
+An informal inspection of the running program yields an approximate average of 12,000 iterations until the target statement is returned.
+
+\begin{listing}[htbp]
+\begin{minted}[linenos,firstnumber=1,breaklines=true,breakanywhere=true]{c}
+int random;
+char *string;
+int size = 6;
+string = malloc(size * sizeof(char));
+
+int i;
+for (i = 0; i < size; i++)
+{
+    random = rand() % size;
+    switch (random)
+    {
+    case 0:
+        string[i] = 'r';
+        break;
+    case 1:
+        string[i] = 'e';
+        break;
+    case 2:
+        string[i] = 's';
+        break;
+    case 3:
+        string[i] = 'e';
+        break;
+    case 4:
+        string[i] = 't';
+        break;
+    case 5:
+        string[i] = '\0';
+        break;
+    }
+}
+
+return string;
+
+\end{minted}
+\caption{inputString() implementation}
+\end{listing}
+\end{document}

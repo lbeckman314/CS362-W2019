@@ -22,7 +22,6 @@ char *inputString()
     char *string;
     int size = 6;
     string = malloc(size * sizeof(char));
-    //printf("size: %d\n", size);
 
     int i;
 
@@ -50,7 +49,6 @@ char *inputString()
                 string[i] = '\0';
                 break;
         }
-        //printf("string[i]: %c\n", string[i]);
     }
 
     return string;
