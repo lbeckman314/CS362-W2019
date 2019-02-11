@@ -1,5 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{// BUG: number of buys is decremented where it should be incremented.}
-\PYG{c+c1}{// ORIGINAL: state\PYGZhy{}\PYGZgt{}numBuys++;}
-\PYG{n}{state}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{numBuys}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{;}
-\end{Verbatim}

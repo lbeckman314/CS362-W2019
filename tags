@@ -6,26 +6,42 @@
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	/66b4867b/
 A256	dominion/rngs.c	/^#define A256 /;"	d	file:
+A256	projects/beckmanl/dominion/rngs.c	/^#define A256 /;"	d	file:
 A256	projects/roberwen/dominion/rngs.c	/^#define A256 /;"	d	file:
 ACTION_PHASE	dominion/interface.h	/^#define ACTION_PHASE /;"	d
+ACTION_PHASE	projects/beckmanl/dominion/interface.h	/^#define ACTION_PHASE /;"	d
 ACTION_PHASE	projects/roberwen/dominion/interface.h	/^#define ACTION_PHASE /;"	d
 ADVENTURER_COST	dominion/interface.h	/^#define ADVENTURER_COST /;"	d
+ADVENTURER_COST	projects/beckmanl/dominion/interface.h	/^#define ADVENTURER_COST /;"	d
 ADVENTURER_COST	projects/roberwen/dominion/interface.h	/^#define ADVENTURER_COST /;"	d
 AMBASSADOR_COST	dominion/interface.h	/^#define AMBASSADOR_COST /;"	d
+AMBASSADOR_COST	projects/beckmanl/dominion/interface.h	/^#define AMBASSADOR_COST /;"	d
 AMBASSADOR_COST	projects/roberwen/dominion/interface.h	/^#define AMBASSADOR_COST /;"	d
 BARON_COST	dominion/interface.h	/^#define BARON_COST /;"	d
+BARON_COST	projects/beckmanl/dominion/interface.h	/^#define BARON_COST /;"	d
 BARON_COST	projects/roberwen/dominion/interface.h	/^#define BARON_COST /;"	d
 BUY_PHASE	dominion/interface.h	/^#define BUY_PHASE /;"	d
+BUY_PHASE	projects/beckmanl/dominion/interface.h	/^#define BUY_PHASE /;"	d
 BUY_PHASE	projects/roberwen/dominion/interface.h	/^#define BUY_PHASE /;"	d
 Bug Breakdown by Function	dominion/Assignment-2.tex	/^\\subsection{Bug Breakdown by Function}$/;"	u	section:Bugs
+Bug Breakdown by Function	projects/beckmanl/dominion/Assignment-2.tex	/^\\subsection{Bug Breakdown by Function}$/;"	u	section:Bugs
 Bug Introductions	dominion/Assignment-2.tex	/^\\subsubsection{Bug Introductions}$/;"	b	subsection:Bugs""Program Execution
+Bug Introductions	projects/beckmanl/dominion/Assignment-2.tex	/^\\subsubsection{Bug Introductions}$/;"	b	subsection:Bugs""Program Execution
 Bugs	dominion/Assignment-2.tex	/^\\section{Bugs}$/;"	s
+Bugs	dominion/Assignment-3.tex	/^\\section{Bugs}$/;"	s
+Bugs	projects/beckmanl/dominion/Assignment-2.tex	/^\\section{Bugs}$/;"	s
+Bugs	projects/beckmanl/dominion/Assignment-3.tex	/^\\section{Bugs}$/;"	s
 CARD	dominion/dominion.h	/^enum CARD$/;"	g
+CARD	projects/beckmanl/dominion/dominion.h	/^enum CARD$/;"	g
 CARD	projects/roberwen/dominion/dominion.h	/^enum CARD$/;"	g
 CFBundleDevelopmentRegion	dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleDevelopmentRegion<\/key>$/;"	k
 CFBundleDevelopmentRegion	dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleDevelopmentRegion<\/key>$/;"	k
 CFBundleDevelopmentRegion	dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleDevelopmentRegion<\/key>$/;"	k
 CFBundleDevelopmentRegion	dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleDevelopmentRegion<\/key>$/;"	k
+CFBundleDevelopmentRegion	projects/beckmanl/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleDevelopmentRegion<\/key>$/;"	k
+CFBundleDevelopmentRegion	projects/beckmanl/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleDevelopmentRegion<\/key>$/;"	k
+CFBundleDevelopmentRegion	projects/beckmanl/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleDevelopmentRegion<\/key>$/;"	k
+CFBundleDevelopmentRegion	projects/beckmanl/dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleDevelopmentRegion<\/key>$/;"	k
 CFBundleDevelopmentRegion	projects/roberwen/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleDevelopmentRegion<\/key>$/;"	k
 CFBundleDevelopmentRegion	projects/roberwen/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleDevelopmentRegion<\/key>$/;"	k
 CFBundleDevelopmentRegion	projects/roberwen/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleDevelopmentRegion<\/key>$/;"	k
@@ -34,6 +50,10 @@ CFBundleIdentifier	dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CF
 CFBundleIdentifier	dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleIdentifier<\/key>$/;"	k
 CFBundleIdentifier	dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleIdentifier<\/key>$/;"	k
 CFBundleIdentifier	dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleIdentifier<\/key>$/;"	k
+CFBundleIdentifier	projects/beckmanl/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleIdentifier<\/key>$/;"	k
+CFBundleIdentifier	projects/beckmanl/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleIdentifier<\/key>$/;"	k
+CFBundleIdentifier	projects/beckmanl/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleIdentifier<\/key>$/;"	k
+CFBundleIdentifier	projects/beckmanl/dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleIdentifier<\/key>$/;"	k
 CFBundleIdentifier	projects/roberwen/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleIdentifier<\/key>$/;"	k
 CFBundleIdentifier	projects/roberwen/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleIdentifier<\/key>$/;"	k
 CFBundleIdentifier	projects/roberwen/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleIdentifier<\/key>$/;"	k
@@ -42,6 +62,10 @@ CFBundleInfoDictionaryVersion	dominion/badTestDrawCard.dSYM/Contents/Info.plist	
 CFBundleInfoDictionaryVersion	dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleInfoDictionaryVersion<\/key>$/;"	k
 CFBundleInfoDictionaryVersion	dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleInfoDictionaryVersion<\/key>$/;"	k
 CFBundleInfoDictionaryVersion	dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleInfoDictionaryVersion<\/key>$/;"	k
+CFBundleInfoDictionaryVersion	projects/beckmanl/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleInfoDictionaryVersion<\/key>$/;"	k
+CFBundleInfoDictionaryVersion	projects/beckmanl/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleInfoDictionaryVersion<\/key>$/;"	k
+CFBundleInfoDictionaryVersion	projects/beckmanl/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleInfoDictionaryVersion<\/key>$/;"	k
+CFBundleInfoDictionaryVersion	projects/beckmanl/dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleInfoDictionaryVersion<\/key>$/;"	k
 CFBundleInfoDictionaryVersion	projects/roberwen/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleInfoDictionaryVersion<\/key>$/;"	k
 CFBundleInfoDictionaryVersion	projects/roberwen/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleInfoDictionaryVersion<\/key>$/;"	k
 CFBundleInfoDictionaryVersion	projects/roberwen/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleInfoDictionaryVersion<\/key>$/;"	k
@@ -50,6 +74,10 @@ CFBundlePackageType	dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>C
 CFBundlePackageType	dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundlePackageType<\/key>$/;"	k
 CFBundlePackageType	dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundlePackageType<\/key>$/;"	k
 CFBundlePackageType	dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundlePackageType<\/key>$/;"	k
+CFBundlePackageType	projects/beckmanl/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundlePackageType<\/key>$/;"	k
+CFBundlePackageType	projects/beckmanl/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundlePackageType<\/key>$/;"	k
+CFBundlePackageType	projects/beckmanl/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundlePackageType<\/key>$/;"	k
+CFBundlePackageType	projects/beckmanl/dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundlePackageType<\/key>$/;"	k
 CFBundlePackageType	projects/roberwen/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundlePackageType<\/key>$/;"	k
 CFBundlePackageType	projects/roberwen/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundlePackageType<\/key>$/;"	k
 CFBundlePackageType	projects/roberwen/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundlePackageType<\/key>$/;"	k
@@ -58,6 +86,10 @@ CFBundleShortVersionString	dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^	
 CFBundleShortVersionString	dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleShortVersionString<\/key>$/;"	k
 CFBundleShortVersionString	dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleShortVersionString<\/key>$/;"	k
 CFBundleShortVersionString	dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleShortVersionString<\/key>$/;"	k
+CFBundleShortVersionString	projects/beckmanl/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleShortVersionString<\/key>$/;"	k
+CFBundleShortVersionString	projects/beckmanl/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleShortVersionString<\/key>$/;"	k
+CFBundleShortVersionString	projects/beckmanl/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleShortVersionString<\/key>$/;"	k
+CFBundleShortVersionString	projects/beckmanl/dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleShortVersionString<\/key>$/;"	k
 CFBundleShortVersionString	projects/roberwen/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleShortVersionString<\/key>$/;"	k
 CFBundleShortVersionString	projects/roberwen/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleShortVersionString<\/key>$/;"	k
 CFBundleShortVersionString	projects/roberwen/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleShortVersionString<\/key>$/;"	k
@@ -66,6 +98,10 @@ CFBundleSignature	dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFB
 CFBundleSignature	dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleSignature<\/key>$/;"	k
 CFBundleSignature	dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleSignature<\/key>$/;"	k
 CFBundleSignature	dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleSignature<\/key>$/;"	k
+CFBundleSignature	projects/beckmanl/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleSignature<\/key>$/;"	k
+CFBundleSignature	projects/beckmanl/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleSignature<\/key>$/;"	k
+CFBundleSignature	projects/beckmanl/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleSignature<\/key>$/;"	k
+CFBundleSignature	projects/beckmanl/dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleSignature<\/key>$/;"	k
 CFBundleSignature	projects/roberwen/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleSignature<\/key>$/;"	k
 CFBundleSignature	projects/roberwen/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleSignature<\/key>$/;"	k
 CFBundleSignature	projects/roberwen/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleSignature<\/key>$/;"	k
@@ -74,35 +110,59 @@ CFBundleVersion	dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBun
 CFBundleVersion	dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleVersion<\/key>$/;"	k
 CFBundleVersion	dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleVersion<\/key>$/;"	k
 CFBundleVersion	dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleVersion<\/key>$/;"	k
+CFBundleVersion	projects/beckmanl/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleVersion<\/key>$/;"	k
+CFBundleVersion	projects/beckmanl/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleVersion<\/key>$/;"	k
+CFBundleVersion	projects/beckmanl/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleVersion<\/key>$/;"	k
+CFBundleVersion	projects/beckmanl/dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleVersion<\/key>$/;"	k
 CFBundleVersion	projects/roberwen/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleVersion<\/key>$/;"	k
 CFBundleVersion	projects/roberwen/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleVersion<\/key>$/;"	k
 CFBundleVersion	projects/roberwen/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleVersion<\/key>$/;"	k
 CFBundleVersion	projects/roberwen/dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleVersion<\/key>$/;"	k
 CFLAGS	dominion/Makefile	/^CFLAGS= -Wall -fpic -coverage -lm -std=c99$/;"	m
+CFLAGS	projects/beckmanl/dominion/Makefile	/^CFLAGS= -Wall -fpic -coverage -lm -std=c99$/;"	m
 CFLAGS	projects/roberwen/dominion/Makefile	/^CFLAGS= -Wall -fpic -coverage -lm -std=c99$/;"	m
 CHECK	dominion/rngs.c	/^#define CHECK /;"	d	file:
+CHECK	projects/beckmanl/dominion/rngs.c	/^#define CHECK /;"	d	file:
 CHECK	projects/roberwen/dominion/rngs.c	/^#define CHECK /;"	d	file:
 CLEANUP_PHASE	dominion/interface.h	/^#define CLEANUP_PHASE /;"	d
+CLEANUP_PHASE	projects/beckmanl/dominion/interface.h	/^#define CLEANUP_PHASE /;"	d
 CLEANUP_PHASE	projects/roberwen/dominion/interface.h	/^#define CLEANUP_PHASE /;"	d
 COMPARE	dominion/interface.h	/^#define COMPARE(/;"	d
+COMPARE	projects/beckmanl/dominion/interface.h	/^#define COMPARE(/;"	d
 COMPARE	projects/roberwen/dominion/interface.h	/^#define COMPARE(/;"	d
 COPPER_COST	dominion/interface.h	/^#define COPPER_COST /;"	d
+COPPER_COST	projects/beckmanl/dominion/interface.h	/^#define COPPER_COST /;"	d
 COPPER_COST	projects/roberwen/dominion/interface.h	/^#define COPPER_COST /;"	d
 COPPER_VALUE	dominion/interface.h	/^#define COPPER_VALUE /;"	d
+COPPER_VALUE	projects/beckmanl/dominion/interface.h	/^#define COPPER_VALUE /;"	d
 COPPER_VALUE	projects/roberwen/dominion/interface.h	/^#define COPPER_VALUE /;"	d
 COUNCIL_ROOM_COST	dominion/interface.h	/^#define COUNCIL_ROOM_COST /;"	d
+COUNCIL_ROOM_COST	projects/beckmanl/dominion/interface.h	/^#define COUNCIL_ROOM_COST /;"	d
 COUNCIL_ROOM_COST	projects/roberwen/dominion/interface.h	/^#define COUNCIL_ROOM_COST /;"	d
 COVFLAGS	dominion/Makefile	/^COVFLAGS = -fprofile-arcs -ftest-coverage$/;"	m
+COVFLAGS	projects/beckmanl/dominion/Makefile	/^COVFLAGS = -fprofile-arcs -ftest-coverage$/;"	m
 CURSE_COST	dominion/interface.h	/^#define CURSE_COST /;"	d
+CURSE_COST	projects/beckmanl/dominion/interface.h	/^#define CURSE_COST /;"	d
 CURSE_COST	projects/roberwen/dominion/interface.h	/^#define CURSE_COST /;"	d
 CUTPURSE_COST	dominion/interface.h	/^#define CUTPURSE_COST /;"	d
+CUTPURSE_COST	projects/beckmanl/dominion/interface.h	/^#define CUTPURSE_COST /;"	d
 CUTPURSE_COST	projects/roberwen/dominion/interface.h	/^#define CUTPURSE_COST /;"	d
+Card Testing	dominion/Assignment-3.tex	/^\\subsection{Card Testing}$/;"	u	section:Unit Testing Efforts
+Card Testing	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsection{Card Testing}$/;"	u	section:Unit Testing Efforts
+Card Tests	dominion/Assignment-3.tex	/^\\subsection{Card Tests}$/;"	u	section:Unit Testing
+Card Tests	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsection{Card Tests}$/;"	u	section:Unit Testing
 DEBUG	dominion/badTestDrawCard.c	/^#define DEBUG /;"	d	file:
 DEBUG	dominion/betterTestDrawCard.c	/^#define DEBUG /;"	d	file:
 DEBUG	dominion/dominion.h	/^#define DEBUG /;"	d
 DEBUG	dominion/supplyTest.c	/^#define DEBUG /;"	d	file:
 DEBUG	dominion/testBuyCard.c	/^#define DEBUG /;"	d	file:
 DEBUG	dominion/testDrawCard.c	/^#define DEBUG /;"	d	file:
+DEBUG	projects/beckmanl/dominion/badTestDrawCard.c	/^#define DEBUG /;"	d	file:
+DEBUG	projects/beckmanl/dominion/betterTestDrawCard.c	/^#define DEBUG /;"	d	file:
+DEBUG	projects/beckmanl/dominion/dominion.h	/^#define DEBUG /;"	d
+DEBUG	projects/beckmanl/dominion/supplyTest.c	/^#define DEBUG /;"	d	file:
+DEBUG	projects/beckmanl/dominion/testBuyCard.c	/^#define DEBUG /;"	d	file:
+DEBUG	projects/beckmanl/dominion/testDrawCard.c	/^#define DEBUG /;"	d	file:
 DEBUG	projects/roberwen/dominion/badTestDrawCard.c	/^#define DEBUG /;"	d	file:
 DEBUG	projects/roberwen/dominion/betterTestDrawCard.c	/^#define DEBUG /;"	d	file:
 DEBUG	projects/roberwen/dominion/dominion.h	/^#define DEBUG /;"	d
@@ -110,270 +170,422 @@ DEBUG	projects/roberwen/dominion/supplyTest.c	/^#define DEBUG /;"	d	file:
 DEBUG	projects/roberwen/dominion/testBuyCard.c	/^#define DEBUG /;"	d	file:
 DEBUG	projects/roberwen/dominion/testDrawCard.c	/^#define DEBUG /;"	d	file:
 DEFAULT	dominion/rngs.c	/^#define DEFAULT /;"	d	file:
+DEFAULT	projects/beckmanl/dominion/rngs.c	/^#define DEFAULT /;"	d	file:
 DEFAULT	projects/roberwen/dominion/rngs.c	/^#define DEFAULT /;"	d	file:
 DUCHY_COST	dominion/interface.h	/^#define DUCHY_COST /;"	d
+DUCHY_COST	projects/beckmanl/dominion/interface.h	/^#define DUCHY_COST /;"	d
 DUCHY_COST	projects/roberwen/dominion/interface.h	/^#define DUCHY_COST /;"	d
 EMBARGO_COST	dominion/interface.h	/^#define EMBARGO_COST /;"	d
+EMBARGO_COST	projects/beckmanl/dominion/interface.h	/^#define EMBARGO_COST /;"	d
 EMBARGO_COST	projects/roberwen/dominion/interface.h	/^#define EMBARGO_COST /;"	d
 ESTATE_COST	dominion/interface.h	/^#define ESTATE_COST /;"	d
+ESTATE_COST	projects/beckmanl/dominion/interface.h	/^#define ESTATE_COST /;"	d
 ESTATE_COST	projects/roberwen/dominion/interface.h	/^#define ESTATE_COST /;"	d
 FAILURE	dominion/interface.h	/^#define FAILURE /;"	d
+FAILURE	projects/beckmanl/dominion/interface.h	/^#define FAILURE /;"	d
 FAILURE	projects/roberwen/dominion/interface.h	/^#define FAILURE /;"	d
 FALSE	dominion/interface.h	/^#define FALSE /;"	d
+FALSE	projects/beckmanl/dominion/interface.h	/^#define FALSE /;"	d
 FALSE	projects/roberwen/dominion/interface.h	/^#define FALSE /;"	d
 FEAST_COST	dominion/interface.h	/^#define FEAST_COST /;"	d
+FEAST_COST	projects/beckmanl/dominion/interface.h	/^#define FEAST_COST /;"	d
 FEAST_COST	projects/roberwen/dominion/interface.h	/^#define FEAST_COST /;"	d
+Function Testing	dominion/Assignment-3.tex	/^\\subsection{Function Testing}$/;"	u	section:Unit Testing Efforts
+Function Testing	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsection{Function Testing}$/;"	u	section:Unit Testing Efforts
 GARDEN_COST	dominion/interface.h	/^#define GARDEN_COST /;"	d
+GARDEN_COST	projects/beckmanl/dominion/interface.h	/^#define GARDEN_COST /;"	d
 GARDEN_COST	projects/roberwen/dominion/interface.h	/^#define GARDEN_COST /;"	d
 GOLD_COST	dominion/interface.h	/^#define GOLD_COST /;"	d
+GOLD_COST	projects/beckmanl/dominion/interface.h	/^#define GOLD_COST /;"	d
 GOLD_COST	projects/roberwen/dominion/interface.h	/^#define GOLD_COST /;"	d
 GOLD_VALUE	dominion/interface.h	/^#define GOLD_VALUE /;"	d
+GOLD_VALUE	projects/beckmanl/dominion/interface.h	/^#define GOLD_VALUE /;"	d
 GOLD_VALUE	projects/roberwen/dominion/interface.h	/^#define GOLD_VALUE /;"	d
 GREAT_HALL_COST	dominion/interface.h	/^#define GREAT_HALL_COST /;"	d
+GREAT_HALL_COST	projects/beckmanl/dominion/interface.h	/^#define GREAT_HALL_COST /;"	d
 GREAT_HALL_COST	projects/roberwen/dominion/interface.h	/^#define GREAT_HALL_COST /;"	d
 GetSeed	dominion/rngs.c	/^   void GetSeed(long *x)$/;"	f	typeref:typename:void
+GetSeed	projects/beckmanl/dominion/rngs.c	/^   void GetSeed(long *x)$/;"	f	typeref:typename:void
 GetSeed	projects/roberwen/dominion/rngs.c	/^   void GetSeed(long *x)$/;"	f	typeref:typename:void
 HANDSIZE	dominion/interface.h	/^#define HANDSIZE /;"	d
+HANDSIZE	projects/beckmanl/dominion/interface.h	/^#define HANDSIZE /;"	d
 HANDSIZE	projects/roberwen/dominion/interface.h	/^#define HANDSIZE /;"	d
-Implementations	projects/quiz/randomstring.tex	/^\\section{Implementations}$/;"	s
 MATCH	dominion/interface.h	/^#define MATCH /;"	d
+MATCH	projects/beckmanl/dominion/interface.h	/^#define MATCH /;"	d
 MATCH	projects/roberwen/dominion/interface.h	/^#define MATCH /;"	d
 MAX_DECK	dominion/dominion.h	/^#define MAX_DECK /;"	d
+MAX_DECK	projects/beckmanl/dominion/dominion.h	/^#define MAX_DECK /;"	d
 MAX_DECK	projects/roberwen/dominion/dominion.h	/^#define MAX_DECK /;"	d
 MAX_HAND	dominion/dominion.h	/^#define MAX_HAND /;"	d
+MAX_HAND	projects/beckmanl/dominion/dominion.h	/^#define MAX_HAND /;"	d
 MAX_HAND	projects/roberwen/dominion/dominion.h	/^#define MAX_HAND /;"	d
 MAX_PLAYERS	dominion/dominion.h	/^#define MAX_PLAYERS /;"	d
+MAX_PLAYERS	projects/beckmanl/dominion/dominion.h	/^#define MAX_PLAYERS /;"	d
 MAX_PLAYERS	projects/roberwen/dominion/dominion.h	/^#define MAX_PLAYERS /;"	d
 MAX_STRING_LENGTH	dominion/interface.h	/^#define MAX_STRING_LENGTH /;"	d
+MAX_STRING_LENGTH	projects/beckmanl/dominion/interface.h	/^#define MAX_STRING_LENGTH /;"	d
 MAX_STRING_LENGTH	projects/roberwen/dominion/interface.h	/^#define MAX_STRING_LENGTH /;"	d
 MINE_COST	dominion/interface.h	/^#define MINE_COST /;"	d
+MINE_COST	projects/beckmanl/dominion/interface.h	/^#define MINE_COST /;"	d
 MINE_COST	projects/roberwen/dominion/interface.h	/^#define MINE_COST /;"	d
 MINION_COST	dominion/interface.h	/^#define MINION_COST /;"	d
+MINION_COST	projects/beckmanl/dominion/interface.h	/^#define MINION_COST /;"	d
 MINION_COST	projects/roberwen/dominion/interface.h	/^#define MINION_COST /;"	d
 MODULUS	dominion/rngs.c	/^#define MODULUS /;"	d	file:
+MODULUS	projects/beckmanl/dominion/rngs.c	/^#define MODULUS /;"	d	file:
 MODULUS	projects/roberwen/dominion/rngs.c	/^#define MODULUS /;"	d	file:
 MONEYLENDER_COST	dominion/interface.h	/^#define MONEYLENDER_COST /;"	d
+MONEYLENDER_COST	projects/beckmanl/dominion/interface.h	/^#define MONEYLENDER_COST /;"	d
 MONEYLENDER_COST	projects/roberwen/dominion/interface.h	/^#define MONEYLENDER_COST /;"	d
 MULTIPLIER	dominion/rngs.c	/^#define MULTIPLIER /;"	d	file:
+MULTIPLIER	projects/beckmanl/dominion/rngs.c	/^#define MULTIPLIER /;"	d	file:
 MULTIPLIER	projects/roberwen/dominion/rngs.c	/^#define MULTIPLIER /;"	d	file:
 MYASSERT_H	dominion/myAssert.h	/^#define MYASSERT_H$/;"	d
+MYASSERT_H	projects/beckmanl/dominion/myAssert.h	/^#define MYASSERT_H$/;"	d
 NOISY_TEST	dominion/badTestDrawCard.c	/^#define NOISY_TEST /;"	d	file:
 NOISY_TEST	dominion/betterTestDrawCard.c	/^#define NOISY_TEST /;"	d	file:
 NOISY_TEST	dominion/supplyTest.c	/^#define NOISY_TEST /;"	d	file:
 NOISY_TEST	dominion/testBuyCard.c	/^#define NOISY_TEST /;"	d	file:
 NOISY_TEST	dominion/testDrawCard.c	/^#define NOISY_TEST /;"	d	file:
+NOISY_TEST	projects/beckmanl/dominion/badTestDrawCard.c	/^#define NOISY_TEST /;"	d	file:
+NOISY_TEST	projects/beckmanl/dominion/betterTestDrawCard.c	/^#define NOISY_TEST /;"	d	file:
+NOISY_TEST	projects/beckmanl/dominion/supplyTest.c	/^#define NOISY_TEST /;"	d	file:
+NOISY_TEST	projects/beckmanl/dominion/testBuyCard.c	/^#define NOISY_TEST /;"	d	file:
+NOISY_TEST	projects/beckmanl/dominion/testDrawCard.c	/^#define NOISY_TEST /;"	d	file:
 NOISY_TEST	projects/roberwen/dominion/badTestDrawCard.c	/^#define NOISY_TEST /;"	d	file:
 NOISY_TEST	projects/roberwen/dominion/betterTestDrawCard.c	/^#define NOISY_TEST /;"	d	file:
 NOISY_TEST	projects/roberwen/dominion/supplyTest.c	/^#define NOISY_TEST /;"	d	file:
 NOISY_TEST	projects/roberwen/dominion/testBuyCard.c	/^#define NOISY_TEST /;"	d	file:
 NOISY_TEST	projects/roberwen/dominion/testDrawCard.c	/^#define NOISY_TEST /;"	d	file:
 NOT_WINNER	dominion/interface.h	/^#define NOT_WINNER /;"	d
+NOT_WINNER	projects/beckmanl/dominion/interface.h	/^#define NOT_WINNER /;"	d
 NOT_WINNER	projects/roberwen/dominion/interface.h	/^#define NOT_WINNER /;"	d
 NUM_COPPER	dominion/interface.h	/^#define NUM_COPPER /;"	d
+NUM_COPPER	projects/beckmanl/dominion/interface.h	/^#define NUM_COPPER /;"	d
 NUM_COPPER	projects/roberwen/dominion/interface.h	/^#define NUM_COPPER /;"	d
 NUM_C_CARDS_2	dominion/interface.h	/^#define NUM_C_CARDS_2 /;"	d
+NUM_C_CARDS_2	projects/beckmanl/dominion/interface.h	/^#define NUM_C_CARDS_2 /;"	d
 NUM_C_CARDS_2	projects/roberwen/dominion/interface.h	/^#define NUM_C_CARDS_2 /;"	d
 NUM_C_CARDS_3	dominion/interface.h	/^#define NUM_C_CARDS_3 /;"	d
+NUM_C_CARDS_3	projects/beckmanl/dominion/interface.h	/^#define NUM_C_CARDS_3 /;"	d
 NUM_C_CARDS_3	projects/roberwen/dominion/interface.h	/^#define NUM_C_CARDS_3 /;"	d
 NUM_C_CARDS_4	dominion/interface.h	/^#define NUM_C_CARDS_4 /;"	d
+NUM_C_CARDS_4	projects/beckmanl/dominion/interface.h	/^#define NUM_C_CARDS_4 /;"	d
 NUM_C_CARDS_4	projects/roberwen/dominion/interface.h	/^#define NUM_C_CARDS_4 /;"	d
 NUM_GOLD	dominion/interface.h	/^#define NUM_GOLD /;"	d
+NUM_GOLD	projects/beckmanl/dominion/interface.h	/^#define NUM_GOLD /;"	d
 NUM_GOLD	projects/roberwen/dominion/interface.h	/^#define NUM_GOLD /;"	d
 NUM_K_CARDS	dominion/interface.h	/^#define NUM_K_CARDS /;"	d
+NUM_K_CARDS	projects/beckmanl/dominion/interface.h	/^#define NUM_K_CARDS /;"	d
 NUM_K_CARDS	projects/roberwen/dominion/interface.h	/^#define NUM_K_CARDS /;"	d
 NUM_SILVER	dominion/interface.h	/^#define NUM_SILVER /;"	d
+NUM_SILVER	projects/beckmanl/dominion/interface.h	/^#define NUM_SILVER /;"	d
 NUM_SILVER	projects/roberwen/dominion/interface.h	/^#define NUM_SILVER /;"	d
 NUM_TOTAL_K_CARDS	dominion/interface.h	/^#define NUM_TOTAL_K_CARDS /;"	d
+NUM_TOTAL_K_CARDS	projects/beckmanl/dominion/interface.h	/^#define NUM_TOTAL_K_CARDS /;"	d
 NUM_TOTAL_K_CARDS	projects/roberwen/dominion/interface.h	/^#define NUM_TOTAL_K_CARDS /;"	d
 NUM_V_CARDS_2	dominion/interface.h	/^#define NUM_V_CARDS_2 /;"	d
+NUM_V_CARDS_2	projects/beckmanl/dominion/interface.h	/^#define NUM_V_CARDS_2 /;"	d
 NUM_V_CARDS_2	projects/roberwen/dominion/interface.h	/^#define NUM_V_CARDS_2 /;"	d
 NUM_V_CARDS_3or4	dominion/interface.h	/^#define NUM_V_CARDS_3or4 /;"	d
+NUM_V_CARDS_3or4	projects/beckmanl/dominion/interface.h	/^#define NUM_V_CARDS_3or4 /;"	d
 NUM_V_CARDS_3or4	projects/roberwen/dominion/interface.h	/^#define NUM_V_CARDS_3or4 /;"	d
 ONETHOUSAND	dominion/interface.h	/^#define ONETHOUSAND /;"	d
+ONETHOUSAND	projects/beckmanl/dominion/interface.h	/^#define ONETHOUSAND /;"	d
 ONETHOUSAND	projects/roberwen/dominion/interface.h	/^#define ONETHOUSAND /;"	d
 OUTPOST_COST	dominion/interface.h	/^#define OUTPOST_COST /;"	d
+OUTPOST_COST	projects/beckmanl/dominion/interface.h	/^#define OUTPOST_COST /;"	d
 OUTPOST_COST	projects/roberwen/dominion/interface.h	/^#define OUTPOST_COST /;"	d
 Original File  No Alterations Made 	dominion/Assignment-2.tex	/^\\subsubsection{Original File (No Alterations Made)}$/;"	b	subsection:Bugs""Program Execution
+Original File  No Alterations Made 	projects/beckmanl/dominion/Assignment-2.tex	/^\\subsubsection{Original File (No Alterations Made)}$/;"	b	subsection:Bugs""Program Execution
 Original Implementation in Switch Statement	dominion/Assignment-2.tex	/^\\subsection{Original Implementation in Switch Statement}$/;"	u	section:Refactor
+Original Implementation in Switch Statement	projects/beckmanl/dominion/Assignment-2.tex	/^\\subsection{Original Implementation in Switch Statement}$/;"	u	section:Refactor
 PROVINCE_COST	dominion/interface.h	/^#define PROVINCE_COST /;"	d
+PROVINCE_COST	projects/beckmanl/dominion/interface.h	/^#define PROVINCE_COST /;"	d
 PROVINCE_COST	projects/roberwen/dominion/interface.h	/^#define PROVINCE_COST /;"	d
 PlantSeeds	dominion/rngs.c	/^   void PlantSeeds(long x)$/;"	f	typeref:typename:void
+PlantSeeds	projects/beckmanl/dominion/rngs.c	/^   void PlantSeeds(long x)$/;"	f	typeref:typename:void
 PlantSeeds	projects/roberwen/dominion/rngs.c	/^   void PlantSeeds(long x)$/;"	f	typeref:typename:void
 Program Execution	dominion/Assignment-2.tex	/^\\subsection{Program Execution}$/;"	u	section:Bugs
+Program Execution	projects/beckmanl/dominion/Assignment-2.tex	/^\\subsection{Program Execution}$/;"	u	section:Bugs
 PutSeed	dominion/rngs.c	/^   void PutSeed(long x)$/;"	f	typeref:typename:void
+PutSeed	projects/beckmanl/dominion/rngs.c	/^   void PutSeed(long x)$/;"	f	typeref:typename:void
 PutSeed	projects/roberwen/dominion/rngs.c	/^   void PutSeed(long x)$/;"	f	typeref:typename:void
 REMODEL_COST	dominion/interface.h	/^#define REMODEL_COST /;"	d
+REMODEL_COST	projects/beckmanl/dominion/interface.h	/^#define REMODEL_COST /;"	d
 REMODEL_COST	projects/roberwen/dominion/interface.h	/^#define REMODEL_COST /;"	d
 Random	dominion/rngs.c	/^   double Random(void)$/;"	f	typeref:typename:double
+Random	projects/beckmanl/dominion/rngs.c	/^   double Random(void)$/;"	f	typeref:typename:double
 Random	projects/roberwen/dominion/rngs.c	/^   double Random(void)$/;"	f	typeref:typename:double
 Refactor	dominion/Assignment-2.tex	/^\\section{Refactor}$/;"	s
+Refactor	projects/beckmanl/dominion/Assignment-2.tex	/^\\section{Refactor}$/;"	s
 Refactored Function Implementations  No Bugs Introduced Yet 	dominion/Assignment-2.tex	/^\\subsubsection{Refactored Function Implementations (No Bugs Introduced Yet)}$/;"	b	subsection:Bugs""Program Execution
+Refactored Function Implementations  No Bugs Introduced Yet 	projects/beckmanl/dominion/Assignment-2.tex	/^\\subsubsection{Refactored Function Implementations (No Bugs Introduced Yet)}$/;"	b	subsection:Bugs""Program Execution
 Refactored Implementation in Seperate Function	dominion/Assignment-2.tex	/^\\subsection{Refactored Implementation in Seperate Function}$/;"	u	section:Refactor
+Refactored Implementation in Seperate Function	projects/beckmanl/dominion/Assignment-2.tex	/^\\subsection{Refactored Implementation in Seperate Function}$/;"	u	section:Refactor
 SALVAGER_COST	dominion/interface.h	/^#define SALVAGER_COST /;"	d
+SALVAGER_COST	projects/beckmanl/dominion/interface.h	/^#define SALVAGER_COST /;"	d
 SALVAGER_COST	projects/roberwen/dominion/interface.h	/^#define SALVAGER_COST /;"	d
 SEA_HAG_COST	dominion/interface.h	/^#define SEA_HAG_COST /;"	d
+SEA_HAG_COST	projects/beckmanl/dominion/interface.h	/^#define SEA_HAG_COST /;"	d
 SEA_HAG_COST	projects/roberwen/dominion/interface.h	/^#define SEA_HAG_COST /;"	d
 SHANTY_TOWN_COST	dominion/interface.h	/^#define SHANTY_TOWN_COST /;"	d
+SHANTY_TOWN_COST	projects/beckmanl/dominion/interface.h	/^#define SHANTY_TOWN_COST /;"	d
 SHANTY_TOWN_COST	projects/roberwen/dominion/interface.h	/^#define SHANTY_TOWN_COST /;"	d
 SILVER_COST	dominion/interface.h	/^#define SILVER_COST /;"	d
+SILVER_COST	projects/beckmanl/dominion/interface.h	/^#define SILVER_COST /;"	d
 SILVER_COST	projects/roberwen/dominion/interface.h	/^#define SILVER_COST /;"	d
 SILVER_VALUE	dominion/interface.h	/^#define SILVER_VALUE /;"	d
+SILVER_VALUE	projects/beckmanl/dominion/interface.h	/^#define SILVER_VALUE /;"	d
 SILVER_VALUE	projects/roberwen/dominion/interface.h	/^#define SILVER_VALUE /;"	d
 SMITHY_COST	dominion/interface.h	/^#define SMITHY_COST /;"	d
+SMITHY_COST	projects/beckmanl/dominion/interface.h	/^#define SMITHY_COST /;"	d
 SMITHY_COST	projects/roberwen/dominion/interface.h	/^#define SMITHY_COST /;"	d
 START_COPPER	dominion/interface.h	/^#define START_COPPER /;"	d
+START_COPPER	projects/beckmanl/dominion/interface.h	/^#define START_COPPER /;"	d
 START_COPPER	projects/roberwen/dominion/interface.h	/^#define START_COPPER /;"	d
 START_ESTATE	dominion/interface.h	/^#define START_ESTATE /;"	d
+START_ESTATE	projects/beckmanl/dominion/interface.h	/^#define START_ESTATE /;"	d
 START_ESTATE	projects/roberwen/dominion/interface.h	/^#define START_ESTATE /;"	d
 STEWARD_COST	dominion/interface.h	/^#define STEWARD_COST /;"	d
+STEWARD_COST	projects/beckmanl/dominion/interface.h	/^#define STEWARD_COST /;"	d
 STEWARD_COST	projects/roberwen/dominion/interface.h	/^#define STEWARD_COST /;"	d
 STREAMS	dominion/rngs.c	/^#define STREAMS /;"	d	file:
+STREAMS	projects/beckmanl/dominion/rngs.c	/^#define STREAMS /;"	d	file:
 STREAMS	projects/roberwen/dominion/rngs.c	/^#define STREAMS /;"	d	file:
 SUCCESS	dominion/interface.h	/^#define SUCCESS /;"	d
+SUCCESS	projects/beckmanl/dominion/interface.h	/^#define SUCCESS /;"	d
 SUCCESS	projects/roberwen/dominion/interface.h	/^#define SUCCESS /;"	d
 SelectStream	dominion/rngs.c	/^   void SelectStream(int index)$/;"	f	typeref:typename:void
+SelectStream	projects/beckmanl/dominion/rngs.c	/^   void SelectStream(int index)$/;"	f	typeref:typename:void
 SelectStream	projects/roberwen/dominion/rngs.c	/^   void SelectStream(int index)$/;"	f	typeref:typename:void
 Sources	dominion/Assignment-2.tex	/^\\section{Sources}$/;"	s
+Sources	projects/beckmanl/dominion/Assignment-2.tex	/^\\section{Sources}$/;"	s
 TREASURE_MAP_COST	dominion/interface.h	/^#define TREASURE_MAP_COST /;"	d
+TREASURE_MAP_COST	projects/beckmanl/dominion/interface.h	/^#define TREASURE_MAP_COST /;"	d
 TREASURE_MAP_COST	projects/roberwen/dominion/interface.h	/^#define TREASURE_MAP_COST /;"	d
 TRIBUTE_COST	dominion/interface.h	/^#define TRIBUTE_COST /;"	d
+TRIBUTE_COST	projects/beckmanl/dominion/interface.h	/^#define TRIBUTE_COST /;"	d
 TRIBUTE_COST	projects/roberwen/dominion/interface.h	/^#define TRIBUTE_COST /;"	d
 TRUE	dominion/interface.h	/^#define TRUE /;"	d
+TRUE	projects/beckmanl/dominion/interface.h	/^#define TRUE /;"	d
 TRUE	projects/roberwen/dominion/interface.h	/^#define TRUE /;"	d
 TestRandom	dominion/rngs.c	/^   void TestRandom(void)$/;"	f	typeref:typename:void
+TestRandom	projects/beckmanl/dominion/rngs.c	/^   void TestRandom(void)$/;"	f	typeref:typename:void
 TestRandom	projects/roberwen/dominion/rngs.c	/^   void TestRandom(void)$/;"	f	typeref:typename:void
 UNUSED	dominion/interface.h	/^#define UNUSED /;"	d
+UNUSED	projects/beckmanl/dominion/interface.h	/^#define UNUSED /;"	d
 UNUSED	projects/roberwen/dominion/interface.h	/^#define UNUSED /;"	d
+Unit Testing	dominion/Assignment-3.tex	/^\\section{Unit Testing}$/;"	s
+Unit Testing	projects/beckmanl/dominion/Assignment-3.tex	/^\\section{Unit Testing}$/;"	s
+Unit Testing Efforts	dominion/Assignment-3.tex	/^\\section{Unit Testing Efforts}$/;"	s
+Unit Testing Efforts	projects/beckmanl/dominion/Assignment-3.tex	/^\\section{Unit Testing Efforts}$/;"	s
+Unit Tests	dominion/Assignment-3.tex	/^\\subsection{Unit Tests}$/;"	u	section:Unit Testing
+Unit Tests	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsection{Unit Tests}$/;"	u	section:Unit Testing
 VILLAGE_COST	dominion/interface.h	/^#define VILLAGE_COST /;"	d
+VILLAGE_COST	projects/beckmanl/dominion/interface.h	/^#define VILLAGE_COST /;"	d
 VILLAGE_COST	projects/roberwen/dominion/interface.h	/^#define VILLAGE_COST /;"	d
 WINNER	dominion/interface.h	/^#define WINNER /;"	d
+WINNER	projects/beckmanl/dominion/interface.h	/^#define WINNER /;"	d
 WINNER	projects/roberwen/dominion/interface.h	/^#define WINNER /;"	d
 WISHING_WELL_COST	dominion/interface.h	/^#define WISHING_WELL_COST /;"	d
+WISHING_WELL_COST	projects/beckmanl/dominion/interface.h	/^#define WISHING_WELL_COST /;"	d
 WISHING_WELL_COST	projects/roberwen/dominion/interface.h	/^#define WISHING_WELL_COST /;"	d
 WOODCUTTER_COST	dominion/interface.h	/^#define WOODCUTTER_COST /;"	d
+WOODCUTTER_COST	projects/beckmanl/dominion/interface.h	/^#define WOODCUTTER_COST /;"	d
 WOODCUTTER_COST	projects/roberwen/dominion/interface.h	/^#define WOODCUTTER_COST /;"	d
 _DOMINION_H	dominion/dominion.h	/^#define _DOMINION_H$/;"	d
+_DOMINION_H	projects/beckmanl/dominion/dominion.h	/^#define _DOMINION_H$/;"	d
 _DOMINION_H	projects/roberwen/dominion/dominion.h	/^#define _DOMINION_H$/;"	d
 _DOMINION_HELPERS_H	dominion/dominion_helpers.h	/^#define _DOMINION_HELPERS_H$/;"	d
+_DOMINION_HELPERS_H	projects/beckmanl/dominion/dominion_helpers.h	/^#define _DOMINION_HELPERS_H$/;"	d
 _DOMINION_HELPERS_H	projects/roberwen/dominion/dominion_helpers.h	/^#define _DOMINION_HELPERS_H$/;"	d
 _INTERFACE_H	dominion/interface.h	/^#define _INTERFACE_H$/;"	d
+_INTERFACE_H	projects/beckmanl/dominion/interface.h	/^#define _INTERFACE_H$/;"	d
 _INTERFACE_H	projects/roberwen/dominion/interface.h	/^#define _INTERFACE_H$/;"	d
 _RNGS_	dominion/rngs.h	/^#define _RNGS_$/;"	d
+_RNGS_	projects/beckmanl/dominion/rngs.h	/^#define _RNGS_$/;"	d
 _RNGS_	projects/roberwen/dominion/rngs.h	/^#define _RNGS_$/;"	d
 addCardToHand	dominion/interface.c	/^int addCardToHand(int player, int card, struct gameState *game) {$/;"	f	typeref:typename:int
+addCardToHand	projects/beckmanl/dominion/interface.c	/^int addCardToHand(int player, int card, struct gameState *game) {$/;"	f	typeref:typename:int
 addCardToHand	projects/roberwen/dominion/interface.c	/^int addCardToHand(int player, int card, struct gameState *game) {$/;"	f	typeref:typename:int
 adventurer	dominion/dominion.h	/^   adventurer,$/;"	e	enum:CARD
+adventurer	projects/beckmanl/dominion/dominion.h	/^   adventurer,$/;"	e	enum:CARD
 adventurer	projects/roberwen/dominion/dominion.h	/^   adventurer,$/;"	e	enum:CARD
 all	dominion/Makefile	/^all: playdom player $/;"	t
+all	projects/beckmanl/dominion/Makefile	/^all: playdom player $/;"	t
 all	projects/roberwen/dominion/Makefile	/^all: playdom player $/;"	t
 ambassador	dominion/dominion.h	/^   ambassador, \/* choice1 = hand#, choice2 = number to return to supply *\/$/;"	e	enum:CARD
+ambassador	projects/beckmanl/dominion/dominion.h	/^   ambassador, \/* choice1 = hand#, choice2 = number to return to supply *\/$/;"	e	enum:CARD
 ambassador	projects/roberwen/dominion/dominion.h	/^   ambassador, \/* choice1 = hand#, choice2 = number to return to supply *\/$/;"	e	enum:CARD
 badTestDrawCard	dominion/Makefile	/^badTestDrawCard: badTestDrawCard.c dominion.o rngs.o$/;"	t
+badTestDrawCard	projects/beckmanl/dominion/Makefile	/^badTestDrawCard: badTestDrawCard.c dominion.o rngs.o$/;"	t
 badTestDrawCard	projects/roberwen/dominion/Makefile	/^badTestDrawCard: badTestDrawCard.c dominion.o rngs.o$/;"	t
 baron	dominion/dominion.h	/^   baron, \/* choice1: boolean for discard of estate *\/$/;"	e	enum:CARD
+baron	projects/beckmanl/dominion/dominion.h	/^   baron, \/* choice1: boolean for discard of estate *\/$/;"	e	enum:CARD
 baron	projects/roberwen/dominion/dominion.h	/^   baron, \/* choice1: boolean for discard of estate *\/$/;"	e	enum:CARD
 blue	dominion/color.h	/^#define blue /;"	d
+blue	projects/beckmanl/dominion/color.h	/^#define blue /;"	d
 boldoff	dominion/color.h	/^#define boldoff /;"	d
+boldoff	projects/beckmanl/dominion/color.h	/^#define boldoff /;"	d
 boldon	dominion/color.h	/^#define boldon /;"	d
+boldon	projects/beckmanl/dominion/color.h	/^#define boldon /;"	d
 buyCard	dominion/dominion.c	/^int buyCard(int supplyPos, struct gameState *state) {$/;"	f	typeref:typename:int
+buyCard	projects/beckmanl/dominion/dominion.c	/^int buyCard(int supplyPos, struct gameState *state) {$/;"	f	typeref:typename:int
 buyCard	projects/roberwen/dominion/dominion.c	/^int buyCard(int supplyPos, struct gameState *state) {$/;"	f	typeref:typename:int
 cardEffect	dominion/dominion.c	/^int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState *state, int han/;"	f	typeref:typename:int
+cardEffect	projects/beckmanl/dominion/dominion.c	/^int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState *state, int han/;"	f	typeref:typename:int
 cardEffect	projects/roberwen/dominion/dominion.c	/^int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState *state, int han/;"	f	typeref:typename:int
 cardNumToName	dominion/interface.c	/^void cardNumToName(int card, char *name){$/;"	f	typeref:typename:void
+cardNumToName	projects/beckmanl/dominion/interface.c	/^void cardNumToName(int card, char *name){$/;"	f	typeref:typename:void
 cardNumToName	projects/roberwen/dominion/interface.c	/^void cardNumToName(int card, char *name){$/;"	f	typeref:typename:void
-char  inputString  	projects/quiz/randomstring.tex	/^\\subsection{char *inputString()}$/;"	u	section:Implementations
-char inputChar  	projects/quiz/randomstring.tex	/^\\subsection{char inputChar()}$/;"	u	section:Implementations
+cardtest1  smithy 	dominion/Assignment-3.tex	/^\\subsubsection{cardtest1 (smithy)}$/;"	b	subsection:Unit Testing""Card Tests
+cardtest1  smithy 	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsubsection{cardtest1 (smithy)}$/;"	b	subsection:Unit Testing""Card Tests
+cardtest2  adventurer 	dominion/Assignment-3.tex	/^\\subsubsection{cardtest2 (adventurer)}$/;"	b	subsection:Unit Testing""Card Tests
+cardtest2  adventurer 	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsubsection{cardtest2 (adventurer)}$/;"	b	subsection:Unit Testing""Card Tests
+cardtest3  village 	dominion/Assignment-3.tex	/^\\subsubsection{cardtest3 (village)}$/;"	b	subsection:Unit Testing""Card Tests
+cardtest3  village 	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsubsection{cardtest3 (village)}$/;"	b	subsection:Unit Testing""Card Tests
+cardtest4  mine 	dominion/Assignment-3.tex	/^\\subsubsection{cardtest4 (mine)}$/;"	b	subsection:Unit Testing""Card Tests
+cardtest4  mine 	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsubsection{cardtest4 (mine)}$/;"	b	subsection:Unit Testing""Card Tests
 checkDrawCard	dominion/badTestDrawCard.c	/^int checkDrawCard(int p, struct gameState *post) {$/;"	f	typeref:typename:int
 checkDrawCard	dominion/betterTestDrawCard.c	/^int checkDrawCard(int p, struct gameState *post) {$/;"	f	typeref:typename:int
 checkDrawCard	dominion/testBuyCard.c	/^int checkDrawCard(int p, struct gameState *post) {$/;"	f	typeref:typename:int
 checkDrawCard	dominion/testDrawCard.c	/^int checkDrawCard(int p, struct gameState *post) {$/;"	f	typeref:typename:int
+checkDrawCard	projects/beckmanl/dominion/badTestDrawCard.c	/^int checkDrawCard(int p, struct gameState *post) {$/;"	f	typeref:typename:int
+checkDrawCard	projects/beckmanl/dominion/betterTestDrawCard.c	/^int checkDrawCard(int p, struct gameState *post) {$/;"	f	typeref:typename:int
+checkDrawCard	projects/beckmanl/dominion/testBuyCard.c	/^int checkDrawCard(int p, struct gameState *post) {$/;"	f	typeref:typename:int
+checkDrawCard	projects/beckmanl/dominion/testDrawCard.c	/^int checkDrawCard(int p, struct gameState *post) {$/;"	f	typeref:typename:int
 checkDrawCard	projects/roberwen/dominion/badTestDrawCard.c	/^int checkDrawCard(int p, struct gameState *post) {$/;"	f	typeref:typename:int
 checkDrawCard	projects/roberwen/dominion/betterTestDrawCard.c	/^int checkDrawCard(int p, struct gameState *post) {$/;"	f	typeref:typename:int
 checkDrawCard	projects/roberwen/dominion/testBuyCard.c	/^int checkDrawCard(int p, struct gameState *post) {$/;"	f	typeref:typename:int
 checkDrawCard	projects/roberwen/dominion/testDrawCard.c	/^int checkDrawCard(int p, struct gameState *post) {$/;"	f	typeref:typename:int
 clean	dominion/Makefile	/^clean:$/;"	t
+clean	projects/beckmanl/dominion/Makefile	/^clean:$/;"	t
 clean	projects/roberwen/dominion/Makefile	/^clean:$/;"	t
 cleanunittest	dominion/Makefile	/^cleanunittest:$/;"	t
+cleanunittest	projects/beckmanl/dominion/Makefile	/^cleanunittest:$/;"	t
 coins	dominion/dominion.h	/^  int coins; \/* Use as you see fit! *\/$/;"	m	struct:gameState	typeref:typename:int
+coins	projects/beckmanl/dominion/dominion.h	/^  int coins; \/* Use as you see fit! *\/$/;"	m	struct:gameState	typeref:typename:int
 coins	projects/roberwen/dominion/dominion.h	/^  int coins; \/* Use as you see fit! *\/$/;"	m	struct:gameState	typeref:typename:int
 compare	dominion/dominion.c	/^int compare(const void* a, const void* b) {$/;"	f	typeref:typename:int
+compare	projects/beckmanl/dominion/dominion.c	/^int compare(const void* a, const void* b) {$/;"	f	typeref:typename:int
 compare	projects/roberwen/dominion/dominion.c	/^int compare(const void* a, const void* b) {$/;"	f	typeref:typename:int
 copper	dominion/dominion.h	/^   copper,$/;"	e	enum:CARD
+copper	projects/beckmanl/dominion/dominion.h	/^   copper,$/;"	e	enum:CARD
 copper	projects/roberwen/dominion/dominion.h	/^   copper,$/;"	e	enum:CARD
 council_room	dominion/dominion.h	/^   council_room,$/;"	e	enum:CARD
+council_room	projects/beckmanl/dominion/dominion.h	/^   council_room,$/;"	e	enum:CARD
 council_room	projects/roberwen/dominion/dominion.h	/^   council_room,$/;"	e	enum:CARD
 countHandCoins	dominion/interface.c	/^int countHandCoins(int player, struct gameState *game) {$/;"	f	typeref:typename:int
+countHandCoins	projects/beckmanl/dominion/interface.c	/^int countHandCoins(int player, struct gameState *game) {$/;"	f	typeref:typename:int
 countHandCoins	projects/roberwen/dominion/interface.c	/^int countHandCoins(int player, struct gameState *game) {$/;"	f	typeref:typename:int
 curse	dominion/dominion.h	/^  {curse = 0,$/;"	e	enum:CARD
+curse	projects/beckmanl/dominion/dominion.h	/^  {curse = 0,$/;"	e	enum:CARD
 curse	projects/roberwen/dominion/dominion.h	/^  {curse = 0,$/;"	e	enum:CARD
 cutpurse	dominion/dominion.h	/^   cutpurse,$/;"	e	enum:CARD
+cutpurse	projects/beckmanl/dominion/dominion.h	/^   cutpurse,$/;"	e	enum:CARD
 cutpurse	projects/roberwen/dominion/dominion.h	/^   cutpurse,$/;"	e	enum:CARD
 cyan	dominion/color.h	/^#define cyan /;"	d
+cyan	projects/beckmanl/dominion/color.h	/^#define cyan /;"	d
 deck	dominion/dominion.h	/^  int deck[MAX_PLAYERS][MAX_DECK];$/;"	m	struct:gameState	typeref:typename:int[][]
+deck	projects/beckmanl/dominion/dominion.h	/^  int deck[MAX_PLAYERS][MAX_DECK];$/;"	m	struct:gameState	typeref:typename:int[][]
 deck	projects/roberwen/dominion/dominion.h	/^  int deck[MAX_PLAYERS][MAX_DECK];$/;"	m	struct:gameState	typeref:typename:int[][]
 deckCount	dominion/dominion.h	/^  int deckCount[MAX_PLAYERS];$/;"	m	struct:gameState	typeref:typename:int[]
+deckCount	projects/beckmanl/dominion/dominion.h	/^  int deckCount[MAX_PLAYERS];$/;"	m	struct:gameState	typeref:typename:int[]
 deckCount	projects/roberwen/dominion/dominion.h	/^  int deckCount[MAX_PLAYERS];$/;"	m	struct:gameState	typeref:typename:int[]
 discard	dominion/dominion.h	/^  int discard[MAX_PLAYERS][MAX_DECK];$/;"	m	struct:gameState	typeref:typename:int[][]
+discard	projects/beckmanl/dominion/dominion.h	/^  int discard[MAX_PLAYERS][MAX_DECK];$/;"	m	struct:gameState	typeref:typename:int[][]
 discard	projects/roberwen/dominion/dominion.h	/^  int discard[MAX_PLAYERS][MAX_DECK];$/;"	m	struct:gameState	typeref:typename:int[][]
 discardCard	dominion/dominion.c	/^int discardCard(int handPos, int currentPlayer, struct gameState *state, int trashFlag)$/;"	f	typeref:typename:int
+discardCard	projects/beckmanl/dominion/dominion.c	/^int discardCard(int handPos, int currentPlayer, struct gameState *state, int trashFlag)$/;"	f	typeref:typename:int
 discardCard	projects/roberwen/dominion/dominion.c	/^int discardCard(int handPos, int currentPlayer, struct gameState *state, int trashFlag)$/;"	f	typeref:typename:int
 discardCount	dominion/dominion.h	/^  int discardCount[MAX_PLAYERS];$/;"	m	struct:gameState	typeref:typename:int[]
+discardCount	projects/beckmanl/dominion/dominion.h	/^  int discardCount[MAX_PLAYERS];$/;"	m	struct:gameState	typeref:typename:int[]
 discardCount	projects/roberwen/dominion/dominion.h	/^  int discardCount[MAX_PLAYERS];$/;"	m	struct:gameState	typeref:typename:int[]
 dominion.o	dominion/Makefile	/^dominion.o: dominion.h dominion.c rngs.o$/;"	t
+dominion.o	projects/beckmanl/dominion/Makefile	/^dominion.o: dominion.h dominion.c rngs.o$/;"	t
 dominion.o	projects/roberwen/dominion/Makefile	/^dominion.o: dominion.h dominion.c rngs.o$/;"	t
 drawCard	dominion/dominion.c	/^int drawCard(int player, struct gameState *state)$/;"	f	typeref:typename:int
+drawCard	projects/beckmanl/dominion/dominion.c	/^int drawCard(int player, struct gameState *state)$/;"	f	typeref:typename:int
 drawCard	projects/roberwen/dominion/dominion.c	/^int drawCard(int player, struct gameState *state)$/;"	f	typeref:typename:int
 duchy	dominion/dominion.h	/^   duchy,$/;"	e	enum:CARD
+duchy	projects/beckmanl/dominion/dominion.h	/^   duchy,$/;"	e	enum:CARD
 duchy	projects/roberwen/dominion/dominion.h	/^   duchy,$/;"	e	enum:CARD
 embargo	dominion/dominion.h	/^   embargo, \/* choice1 = supply# *\/$/;"	e	enum:CARD
+embargo	projects/beckmanl/dominion/dominion.h	/^   embargo, \/* choice1 = supply# *\/$/;"	e	enum:CARD
 embargo	projects/roberwen/dominion/dominion.h	/^   embargo, \/* choice1 = supply# *\/$/;"	e	enum:CARD
 embargoTokens	dominion/dominion.h	/^  int embargoTokens[treasure_map+1];$/;"	m	struct:gameState	typeref:typename:int[]
+embargoTokens	projects/beckmanl/dominion/dominion.h	/^  int embargoTokens[treasure_map+1];$/;"	m	struct:gameState	typeref:typename:int[]
 embargoTokens	projects/roberwen/dominion/dominion.h	/^  int embargoTokens[treasure_map+1];$/;"	m	struct:gameState	typeref:typename:int[]
 endTurn	dominion/dominion.c	/^int endTurn(struct gameState *state) {$/;"	f	typeref:typename:int
+endTurn	projects/beckmanl/dominion/dominion.c	/^int endTurn(struct gameState *state) {$/;"	f	typeref:typename:int
 endTurn	projects/roberwen/dominion/dominion.c	/^int endTurn(struct gameState *state) {$/;"	f	typeref:typename:int
 estate	dominion/dominion.h	/^   estate,$/;"	e	enum:CARD
+estate	projects/beckmanl/dominion/dominion.h	/^   estate,$/;"	e	enum:CARD
 estate	projects/roberwen/dominion/dominion.h	/^   estate,$/;"	e	enum:CARD
 executeBotTurn	dominion/interface.c	/^void executeBotTurn(int player, int *turnNum, struct gameState *game) {$/;"	f	typeref:typename:void
+executeBotTurn	projects/beckmanl/dominion/interface.c	/^void executeBotTurn(int player, int *turnNum, struct gameState *game) {$/;"	f	typeref:typename:void
 executeBotTurn	projects/roberwen/dominion/interface.c	/^void executeBotTurn(int player, int *turnNum, struct gameState *game) {$/;"	f	typeref:typename:void
 failed	dominion/myAssert.c	/^void failed(char *expression, int line, char *file, int color)$/;"	f	typeref:typename:void
+failed	projects/beckmanl/dominion/myAssert.c	/^void failed(char *expression, int line, char *file, int color)$/;"	f	typeref:typename:void
 feast	dominion/dominion.h	/^   feast, \/* choice1 is supply # of card gained) *\/$/;"	e	enum:CARD
+feast	projects/beckmanl/dominion/dominion.h	/^   feast, \/* choice1 is supply # of card gained) *\/$/;"	e	enum:CARD
 feast	projects/roberwen/dominion/dominion.h	/^   feast, \/* choice1 is supply # of card gained) *\/$/;"	e	enum:CARD
 fullDeckCount	dominion/dominion.c	/^int fullDeckCount(int player, int card, struct gameState *state) {$/;"	f	typeref:typename:int
+fullDeckCount	projects/beckmanl/dominion/dominion.c	/^int fullDeckCount(int player, int card, struct gameState *state) {$/;"	f	typeref:typename:int
 fullDeckCount	projects/roberwen/dominion/dominion.c	/^int fullDeckCount(int player, int card, struct gameState *state) {$/;"	f	typeref:typename:int
 gainCard	dominion/dominion.c	/^int gainCard(int supplyPos, struct gameState *state, int toFlag, int player)$/;"	f	typeref:typename:int
+gainCard	projects/beckmanl/dominion/dominion.c	/^int gainCard(int supplyPos, struct gameState *state, int toFlag, int player)$/;"	f	typeref:typename:int
 gainCard	projects/roberwen/dominion/dominion.c	/^int gainCard(int supplyPos, struct gameState *state, int toFlag, int player)$/;"	f	typeref:typename:int
 gameState	dominion/dominion.h	/^struct gameState {$/;"	s
+gameState	projects/beckmanl/dominion/dominion.h	/^struct gameState {$/;"	s
 gameState	projects/roberwen/dominion/dominion.h	/^struct gameState {$/;"	s
 gardens	dominion/dominion.h	/^   gardens,$/;"	e	enum:CARD
+gardens	projects/beckmanl/dominion/dominion.h	/^   gardens,$/;"	e	enum:CARD
 gardens	projects/roberwen/dominion/dominion.h	/^   gardens,$/;"	e	enum:CARD
 getCardCost	dominion/interface.c	/^int getCardCost(int card) {$/;"	f	typeref:typename:int
+getCardCost	projects/beckmanl/dominion/interface.c	/^int getCardCost(int card) {$/;"	f	typeref:typename:int
 getCardCost	projects/roberwen/dominion/interface.c	/^int getCardCost(int card) {$/;"	f	typeref:typename:int
 getCost	dominion/dominion.c	/^int getCost(int cardNumber)$/;"	f	typeref:typename:int
+getCost	projects/beckmanl/dominion/dominion.c	/^int getCost(int cardNumber)$/;"	f	typeref:typename:int
 getCost	projects/roberwen/dominion/dominion.c	/^int getCost(int cardNumber)$/;"	f	typeref:typename:int
 getWinners	dominion/dominion.c	/^int getWinners(int players[MAX_PLAYERS], struct gameState *state) {$/;"	f	typeref:typename:int
+getWinners	projects/beckmanl/dominion/dominion.c	/^int getWinners(int players[MAX_PLAYERS], struct gameState *state) {$/;"	f	typeref:typename:int
 getWinners	projects/roberwen/dominion/dominion.c	/^int getWinners(int players[MAX_PLAYERS], struct gameState *state) {$/;"	f	typeref:typename:int
 gold	dominion/dominion.h	/^   gold,$/;"	e	enum:CARD
+gold	projects/beckmanl/dominion/dominion.h	/^   gold,$/;"	e	enum:CARD
 gold	projects/roberwen/dominion/dominion.h	/^   gold,$/;"	e	enum:CARD
 great_hall	dominion/dominion.h	/^   great_hall,$/;"	e	enum:CARD
+great_hall	projects/beckmanl/dominion/dominion.h	/^   great_hall,$/;"	e	enum:CARD
 great_hall	projects/roberwen/dominion/dominion.h	/^   great_hall,$/;"	e	enum:CARD
 green	dominion/color.h	/^#define green /;"	d
+green	projects/beckmanl/dominion/color.h	/^#define green /;"	d
 hand	dominion/dominion.h	/^  int hand[MAX_PLAYERS][MAX_HAND];$/;"	m	struct:gameState	typeref:typename:int[][]
+hand	projects/beckmanl/dominion/dominion.h	/^  int hand[MAX_PLAYERS][MAX_HAND];$/;"	m	struct:gameState	typeref:typename:int[][]
 hand	projects/roberwen/dominion/dominion.h	/^  int hand[MAX_PLAYERS][MAX_HAND];$/;"	m	struct:gameState	typeref:typename:int[][]
 handCard	dominion/dominion.c	/^int handCard(int handPos, struct gameState *state) {$/;"	f	typeref:typename:int
+handCard	projects/beckmanl/dominion/dominion.c	/^int handCard(int handPos, struct gameState *state) {$/;"	f	typeref:typename:int
 handCard	projects/roberwen/dominion/dominion.c	/^int handCard(int handPos, struct gameState *state) {$/;"	f	typeref:typename:int
 handCount	dominion/dominion.h	/^  int handCount[MAX_PLAYERS];$/;"	m	struct:gameState	typeref:typename:int[]
+handCount	projects/beckmanl/dominion/dominion.h	/^  int handCount[MAX_PLAYERS];$/;"	m	struct:gameState	typeref:typename:int[]
 handCount	projects/roberwen/dominion/dominion.h	/^  int handCount[MAX_PLAYERS];$/;"	m	struct:gameState	typeref:typename:int[]
 initializeGame	dominion/dominion.c	/^int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,$/;"	f	typeref:typename:int
+initializeGame	projects/beckmanl/dominion/dominion.c	/^int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,$/;"	f	typeref:typename:int
 initializeGame	projects/roberwen/dominion/dominion.c	/^int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,$/;"	f	typeref:typename:int
 initialized	dominion/rngs.c	/^static int  initialized   = 0;          \/* test for stream initialization *\/$/;"	v	typeref:typename:int	file:
+initialized	projects/beckmanl/dominion/rngs.c	/^static int  initialized   = 0;          \/* test for stream initialization *\/$/;"	v	typeref:typename:int	file:
 initialized	projects/roberwen/dominion/rngs.c	/^static int  initialized   = 0;          \/* test for stream initialization *\/$/;"	v	typeref:typename:int	file:
 interface.o	dominion/Makefile	/^interface.o: interface.h interface.c$/;"	t
+interface.o	projects/beckmanl/dominion/Makefile	/^interface.o: interface.h interface.c$/;"	t
 interface.o	projects/roberwen/dominion/Makefile	/^interface.o: interface.h interface.c$/;"	t
 isGameOver	dominion/dominion.c	/^int isGameOver(struct gameState *state) {$/;"	f	typeref:typename:int
+isGameOver	projects/beckmanl/dominion/dominion.c	/^int isGameOver(struct gameState *state) {$/;"	f	typeref:typename:int
 isGameOver	projects/roberwen/dominion/dominion.c	/^int isGameOver(struct gameState *state) {$/;"	f	typeref:typename:int
 kingdomCards	dominion/dominion.c	/^int* kingdomCards(int k1, int k2, int k3, int k4, int k5, int k6, int k7,$/;"	f	typeref:typename:int *
+kingdomCards	projects/beckmanl/dominion/dominion.c	/^int* kingdomCards(int k1, int k2, int k3, int k4, int k5, int k6, int k7,$/;"	f	typeref:typename:int *
 kingdomCards	projects/roberwen/dominion/dominion.c	/^int* kingdomCards(int k1, int k2, int k3, int k4, int k5, int k6, int k7,$/;"	f	typeref:typename:int *
 magenta	dominion/color.h	/^#define magenta /;"	d
+magenta	projects/beckmanl/dominion/color.h	/^#define magenta /;"	d
 main	dominion/badTestDrawCard.c	/^int main () {$/;"	f	typeref:typename:int
 main	dominion/betterTestDrawCard.c	/^int main () {$/;"	f	typeref:typename:int
 main	dominion/cardtest1.c	/^int main(int argc, char* argv[])$/;"	f	typeref:typename:int
@@ -392,6 +604,24 @@ main	dominion/unittest1.c	/^int main(int argc, char* argv[])$/;"	f	typeref:typen
 main	dominion/unittest2.c	/^int main(int argc, char* argv[])$/;"	f	typeref:typename:int
 main	dominion/unittest3.c	/^int main(int argc, char* argv[])$/;"	f	typeref:typename:int
 main	dominion/unittest4.c	/^int main(int argc, char* argv[])$/;"	f	typeref:typename:int
+main	projects/beckmanl/dominion/badTestDrawCard.c	/^int main () {$/;"	f	typeref:typename:int
+main	projects/beckmanl/dominion/betterTestDrawCard.c	/^int main () {$/;"	f	typeref:typename:int
+main	projects/beckmanl/dominion/cardtest1.c	/^int main(int argc, char* argv[])$/;"	f	typeref:typename:int
+main	projects/beckmanl/dominion/cardtest2.c	/^int main(int argc, char* argv[])$/;"	f	typeref:typename:int
+main	projects/beckmanl/dominion/cardtest3.c	/^int main(int argc, char* argv[])$/;"	f	typeref:typename:int
+main	projects/beckmanl/dominion/cardtest4.c	/^int main(int argc, char* argv[])$/;"	f	typeref:typename:int
+main	projects/beckmanl/dominion/playdom.c	/^int main (int argc, char** argv) {$/;"	f	typeref:typename:int
+main	projects/beckmanl/dominion/player.c	/^int main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+main	projects/beckmanl/dominion/rt.c	/^int main(int argc, char** argv) {$/;"	f	typeref:typename:int
+main	projects/beckmanl/dominion/supplyTest.c	/^int main () {$/;"	f	typeref:typename:int
+main	projects/beckmanl/dominion/testBuyCard.c	/^int main () {$/;"	f	typeref:typename:int
+main	projects/beckmanl/dominion/testDrawCard.c	/^int main () {$/;"	f	typeref:typename:int
+main	projects/beckmanl/dominion/testInit.c	/^int main (int argc, char** argv) {$/;"	f	typeref:typename:int
+main	projects/beckmanl/dominion/testShuffle.c	/^int main () {$/;"	f	typeref:typename:int
+main	projects/beckmanl/dominion/unittest1.c	/^int main(int argc, char* argv[])$/;"	f	typeref:typename:int
+main	projects/beckmanl/dominion/unittest2.c	/^int main(int argc, char* argv[])$/;"	f	typeref:typename:int
+main	projects/beckmanl/dominion/unittest3.c	/^int main(int argc, char* argv[])$/;"	f	typeref:typename:int
+main	projects/beckmanl/dominion/unittest4.c	/^int main(int argc, char* argv[])$/;"	f	typeref:typename:int
 main	projects/roberwen/dominion/badTestDrawCard.c	/^int main () {$/;"	f	typeref:typename:int
 main	projects/roberwen/dominion/betterTestDrawCard.c	/^int main () {$/;"	f	typeref:typename:int
 main	projects/roberwen/dominion/playdom.c	/^int main (int argc, char** argv) {$/;"	f	typeref:typename:int
@@ -403,141 +633,261 @@ main	projects/roberwen/dominion/testDrawCard.c	/^int main () {$/;"	f	typeref:typ
 main	projects/roberwen/dominion/testInit.c	/^int main (int argc, char** argv) {$/;"	f	typeref:typename:int
 main	projects/roberwen/dominion/testShuffle.c	/^int main () {$/;"	f	typeref:typename:int
 main2	dominion/player.c	/^int main2(int argc, char *argv[]) {$/;"	f	typeref:typename:int
+main2	projects/beckmanl/dominion/player.c	/^int main2(int argc, char *argv[]) {$/;"	f	typeref:typename:int
 main2	projects/roberwen/dominion/player.c	/^int main2(int argc, char *argv[]) {$/;"	f	typeref:typename:int
 mine	dominion/dominion.h	/^   mine, \/* choice1 is hand# of money to trash, choice2 is supply# of$/;"	e	enum:CARD
+mine	projects/beckmanl/dominion/dominion.h	/^   mine, \/* choice1 is hand# of money to trash, choice2 is supply# of$/;"	e	enum:CARD
 mine	projects/roberwen/dominion/dominion.h	/^   mine, \/* choice1 is hand# of money to trash, choice2 is supply# of$/;"	e	enum:CARD
 minion	dominion/dominion.h	/^   minion, \/* choice1:  1 = +2 coin, 2 = redraw *\/$/;"	e	enum:CARD
+minion	projects/beckmanl/dominion/dominion.h	/^   minion, \/* choice1:  1 = +2 coin, 2 = redraw *\/$/;"	e	enum:CARD
 minion	projects/roberwen/dominion/dominion.h	/^   minion, \/* choice1:  1 = +2 coin, 2 = redraw *\/$/;"	e	enum:CARD
 myAdventurer	dominion/Assignment-2.tex	/^\\subsubsection{myAdventurer}$/;"	b	subsection:Bugs""Bug Breakdown by Function
 myAdventurer	dominion/dominion.c	/^int myAdventurer(int drawntreasure, int currentPlayer, int temphand[], struct gameState *state)$/;"	f	typeref:typename:int
+myAdventurer	projects/beckmanl/dominion/Assignment-2.tex	/^\\subsubsection{myAdventurer}$/;"	b	subsection:Bugs""Bug Breakdown by Function
+myAdventurer	projects/beckmanl/dominion/dominion.c	/^int myAdventurer(int drawntreasure, int currentPlayer, int temphand[], struct gameState *state)$/;"	f	typeref:typename:int
 myAssert	dominion/myAssert.h	/^#define myAssert(/;"	d
+myAssert	projects/beckmanl/dominion/myAssert.h	/^#define myAssert(/;"	d
 myCouncil  _room	dominion/Assignment-2.tex	/^\\subsubsection{myCouncil\\_room}$/;"	b	subsection:Bugs""Bug Breakdown by Function
+myCouncil  _room	projects/beckmanl/dominion/Assignment-2.tex	/^\\subsubsection{myCouncil\\_room}$/;"	b	subsection:Bugs""Bug Breakdown by Function
 myCouncil_room	dominion/dominion.c	/^int myCouncil_room(int currentPlayer, int handPos, struct gameState *state)$/;"	f	typeref:typename:int
+myCouncil_room	projects/beckmanl/dominion/dominion.c	/^int myCouncil_room(int currentPlayer, int handPos, struct gameState *state)$/;"	f	typeref:typename:int
 myFeast	dominion/Assignment-2.tex	/^\\subsubsection{myFeast}$/;"	b	subsection:Bugs""Bug Breakdown by Function
 myFeast	dominion/dominion.c	/^int myFeast(int currentPlayer, int temphand[], struct gameState *state, int choice1)$/;"	f	typeref:typename:int
+myFeast	projects/beckmanl/dominion/Assignment-2.tex	/^\\subsubsection{myFeast}$/;"	b	subsection:Bugs""Bug Breakdown by Function
+myFeast	projects/beckmanl/dominion/dominion.c	/^int myFeast(int currentPlayer, int temphand[], struct gameState *state, int choice1)$/;"	f	typeref:typename:int
 myMine	dominion/dominion.c	/^int myMine(int currentPlayer, struct gameState *state, int choice1, int choice2, int handPos)$/;"	f	typeref:typename:int
+myMine	projects/beckmanl/dominion/dominion.c	/^int myMine(int currentPlayer, struct gameState *state, int choice1, int choice2, int handPos)$/;"	f	typeref:typename:int
 mySmithy	dominion/Assignment-2.tex	/^\\subsubsection{mySmithy}$/;"	b	subsection:Bugs""Bug Breakdown by Function
 mySmithy	dominion/dominion.c	/^int mySmithy(int currentPlayer, struct gameState *state, int handPos)$/;"	f	typeref:typename:int
+mySmithy	projects/beckmanl/dominion/Assignment-2.tex	/^\\subsubsection{mySmithy}$/;"	b	subsection:Bugs""Bug Breakdown by Function
+mySmithy	projects/beckmanl/dominion/dominion.c	/^int mySmithy(int currentPlayer, struct gameState *state, int handPos)$/;"	f	typeref:typename:int
 newGame	dominion/dominion.c	/^struct gameState* newGame() {$/;"	f	typeref:struct:gameState *
+newGame	projects/beckmanl/dominion/dominion.c	/^struct gameState* newGame() {$/;"	f	typeref:struct:gameState *
 newGame	projects/roberwen/dominion/dominion.c	/^struct gameState* newGame() {$/;"	f	typeref:struct:gameState *
 normal	dominion/color.h	/^#define normal /;"	d
+normal	projects/beckmanl/dominion/color.h	/^#define normal /;"	d
 numActions	dominion/dominion.h	/^  int numActions; \/* Starts at 1 each turn *\/$/;"	m	struct:gameState	typeref:typename:int
+numActions	projects/beckmanl/dominion/dominion.h	/^  int numActions; \/* Starts at 1 each turn *\/$/;"	m	struct:gameState	typeref:typename:int
 numActions	projects/roberwen/dominion/dominion.h	/^  int numActions; \/* Starts at 1 each turn *\/$/;"	m	struct:gameState	typeref:typename:int
 numBuys	dominion/dominion.h	/^  int numBuys; \/* Starts at 1 each turn *\/$/;"	m	struct:gameState	typeref:typename:int
+numBuys	projects/beckmanl/dominion/dominion.h	/^  int numBuys; \/* Starts at 1 each turn *\/$/;"	m	struct:gameState	typeref:typename:int
 numBuys	projects/roberwen/dominion/dominion.h	/^  int numBuys; \/* Starts at 1 each turn *\/$/;"	m	struct:gameState	typeref:typename:int
 numHandCards	dominion/dominion.c	/^int numHandCards(struct gameState *state) {$/;"	f	typeref:typename:int
+numHandCards	projects/beckmanl/dominion/dominion.c	/^int numHandCards(struct gameState *state) {$/;"	f	typeref:typename:int
 numHandCards	projects/roberwen/dominion/dominion.c	/^int numHandCards(struct gameState *state) {$/;"	f	typeref:typename:int
 numPlayers	dominion/dominion.h	/^  int numPlayers; \/\/number of players$/;"	m	struct:gameState	typeref:typename:int
+numPlayers	projects/beckmanl/dominion/dominion.h	/^  int numPlayers; \/\/number of players$/;"	m	struct:gameState	typeref:typename:int
 numPlayers	projects/roberwen/dominion/dominion.h	/^  int numPlayers; \/\/number of players$/;"	m	struct:gameState	typeref:typename:int
 outpost	dominion/dominion.h	/^   outpost,$/;"	e	enum:CARD
+outpost	projects/beckmanl/dominion/dominion.h	/^   outpost,$/;"	e	enum:CARD
 outpost	projects/roberwen/dominion/dominion.h	/^   outpost,$/;"	e	enum:CARD
 outpostPlayed	dominion/dominion.h	/^  int outpostPlayed;$/;"	m	struct:gameState	typeref:typename:int
+outpostPlayed	projects/beckmanl/dominion/dominion.h	/^  int outpostPlayed;$/;"	m	struct:gameState	typeref:typename:int
 outpostPlayed	projects/roberwen/dominion/dominion.h	/^  int outpostPlayed;$/;"	m	struct:gameState	typeref:typename:int
 outpostTurn	dominion/dominion.h	/^  int outpostTurn;$/;"	m	struct:gameState	typeref:typename:int
+outpostTurn	projects/beckmanl/dominion/dominion.h	/^  int outpostTurn;$/;"	m	struct:gameState	typeref:typename:int
 outpostTurn	projects/roberwen/dominion/dominion.h	/^  int outpostTurn;$/;"	m	struct:gameState	typeref:typename:int
 passed	dominion/myAssert.c	/^void passed(char *expression, int line, char *file, int color)$/;"	f	typeref:typename:void
+passed	projects/beckmanl/dominion/myAssert.c	/^void passed(char *expression, int line, char *file, int color)$/;"	f	typeref:typename:void
 phase	dominion/dominion.h	/^  int phase;$/;"	m	struct:gameState	typeref:typename:int
+phase	projects/beckmanl/dominion/dominion.h	/^  int phase;$/;"	m	struct:gameState	typeref:typename:int
 phase	projects/roberwen/dominion/dominion.h	/^  int phase;$/;"	m	struct:gameState	typeref:typename:int
 phaseNumToName	dominion/interface.c	/^void phaseNumToName(int phase, char *name) {$/;"	f	typeref:typename:void
+phaseNumToName	projects/beckmanl/dominion/interface.c	/^void phaseNumToName(int phase, char *name) {$/;"	f	typeref:typename:void
 phaseNumToName	projects/roberwen/dominion/interface.c	/^void phaseNumToName(int phase, char *name) {$/;"	f	typeref:typename:void
 playCard	dominion/dominion.c	/^int playCard(int handPos, int choice1, int choice2, int choice3, struct gameState *state) $/;"	f	typeref:typename:int
+playCard	projects/beckmanl/dominion/dominion.c	/^int playCard(int handPos, int choice1, int choice2, int choice3, struct gameState *state) $/;"	f	typeref:typename:int
 playCard	projects/roberwen/dominion/dominion.c	/^int playCard(int handPos, int choice1, int choice2, int choice3, struct gameState *state) $/;"	f	typeref:typename:int
 playdom	dominion/Makefile	/^playdom: dominion.o playdom.c$/;"	t
+playdom	projects/beckmanl/dominion/Makefile	/^playdom: dominion.o playdom.c$/;"	t
 playdom	projects/roberwen/dominion/Makefile	/^playdom: dominion.o playdom.c$/;"	t
 playedCardCount	dominion/dominion.h	/^  int playedCardCount;$/;"	m	struct:gameState	typeref:typename:int
+playedCardCount	projects/beckmanl/dominion/dominion.h	/^  int playedCardCount;$/;"	m	struct:gameState	typeref:typename:int
 playedCardCount	projects/roberwen/dominion/dominion.h	/^  int playedCardCount;$/;"	m	struct:gameState	typeref:typename:int
 playedCards	dominion/dominion.h	/^  int playedCards[MAX_DECK];$/;"	m	struct:gameState	typeref:typename:int[]
+playedCards	projects/beckmanl/dominion/dominion.h	/^  int playedCards[MAX_DECK];$/;"	m	struct:gameState	typeref:typename:int[]
 playedCards	projects/roberwen/dominion/dominion.h	/^  int playedCards[MAX_DECK];$/;"	m	struct:gameState	typeref:typename:int[]
 player	dominion/Makefile	/^player: player.c interface.o$/;"	t
+player	projects/beckmanl/dominion/Makefile	/^player: player.c interface.o$/;"	t
 player	projects/roberwen/dominion/Makefile	/^player: player.c interface.o$/;"	t
 printDeck	dominion/interface.c	/^void printDeck(int player, struct gameState *game) {$/;"	f	typeref:typename:void
+printDeck	projects/beckmanl/dominion/interface.c	/^void printDeck(int player, struct gameState *game) {$/;"	f	typeref:typename:void
 printDeck	projects/roberwen/dominion/interface.c	/^void printDeck(int player, struct gameState *game) {$/;"	f	typeref:typename:void
 printDiscard	dominion/interface.c	/^void printDiscard(int player, struct gameState *game) {$/;"	f	typeref:typename:void
+printDiscard	projects/beckmanl/dominion/interface.c	/^void printDiscard(int player, struct gameState *game) {$/;"	f	typeref:typename:void
 printDiscard	projects/roberwen/dominion/interface.c	/^void printDiscard(int player, struct gameState *game) {$/;"	f	typeref:typename:void
 printHand	dominion/interface.c	/^void printHand(int player, struct gameState *game) {$/;"	f	typeref:typename:void
+printHand	projects/beckmanl/dominion/interface.c	/^void printHand(int player, struct gameState *game) {$/;"	f	typeref:typename:void
 printHand	projects/roberwen/dominion/interface.c	/^void printHand(int player, struct gameState *game) {$/;"	f	typeref:typename:void
 printHelp	dominion/interface.c	/^void printHelp(void) {$/;"	f	typeref:typename:void
+printHelp	projects/beckmanl/dominion/interface.c	/^void printHelp(void) {$/;"	f	typeref:typename:void
 printHelp	projects/roberwen/dominion/interface.c	/^void printHelp(void) {$/;"	f	typeref:typename:void
 printPlayed	dominion/interface.c	/^void printPlayed(int player, struct gameState *game) {$/;"	f	typeref:typename:void
+printPlayed	projects/beckmanl/dominion/interface.c	/^void printPlayed(int player, struct gameState *game) {$/;"	f	typeref:typename:void
 printPlayed	projects/roberwen/dominion/interface.c	/^void printPlayed(int player, struct gameState *game) {$/;"	f	typeref:typename:void
 printScores	dominion/interface.c	/^void printScores(struct gameState *game) {$/;"	f	typeref:typename:void
+printScores	projects/beckmanl/dominion/interface.c	/^void printScores(struct gameState *game) {$/;"	f	typeref:typename:void
 printScores	projects/roberwen/dominion/interface.c	/^void printScores(struct gameState *game) {$/;"	f	typeref:typename:void
 printState	dominion/interface.c	/^void printState(struct gameState *game) {$/;"	f	typeref:typename:void
+printState	projects/beckmanl/dominion/interface.c	/^void printState(struct gameState *game) {$/;"	f	typeref:typename:void
 printState	projects/roberwen/dominion/interface.c	/^void printState(struct gameState *game) {$/;"	f	typeref:typename:void
 printSupply	dominion/interface.c	/^void printSupply(struct gameState *game) {$/;"	f	typeref:typename:void
+printSupply	projects/beckmanl/dominion/interface.c	/^void printSupply(struct gameState *game) {$/;"	f	typeref:typename:void
 printSupply	projects/roberwen/dominion/interface.c	/^void printSupply(struct gameState *game) {$/;"	f	typeref:typename:void
 province	dominion/dominion.h	/^   province,$/;"	e	enum:CARD
+province	projects/beckmanl/dominion/dominion.h	/^   province,$/;"	e	enum:CARD
 province	projects/roberwen/dominion/dominion.h	/^   province,$/;"	e	enum:CARD
 provinceCountTest	dominion/unittest2.c	/^void provinceCountTest(struct gameState testGame)$/;"	f	typeref:typename:void
+provinceCountTest	projects/beckmanl/dominion/unittest2.c	/^void provinceCountTest(struct gameState testGame)$/;"	f	typeref:typename:void
 red	dominion/color.h	/^#define red /;"	d
+red	projects/beckmanl/dominion/color.h	/^#define red /;"	d
 remodel	dominion/dominion.h	/^   remodel, \/* choice1 is hand# of card to remodel, choice2 is supply# *\/$/;"	e	enum:CARD
+remodel	projects/beckmanl/dominion/dominion.h	/^   remodel, \/* choice1 is hand# of card to remodel, choice2 is supply# *\/$/;"	e	enum:CARD
 remodel	projects/roberwen/dominion/dominion.h	/^   remodel, \/* choice1 is hand# of card to remodel, choice2 is supply# *\/$/;"	e	enum:CARD
 rngs.o	dominion/Makefile	/^rngs.o: rngs.h rngs.c$/;"	t
+rngs.o	projects/beckmanl/dominion/Makefile	/^rngs.o: rngs.h rngs.c$/;"	t
 rngs.o	projects/roberwen/dominion/Makefile	/^rngs.o: rngs.h rngs.c$/;"	t
 runtests	dominion/Makefile	/^runtests: testDrawCard $/;"	t
+runtests	projects/beckmanl/dominion/Makefile	/^runtests: testDrawCard $/;"	t
 runtests	projects/roberwen/dominion/Makefile	/^runtests: testDrawCard $/;"	t
 salvager	dominion/dominion.h	/^   salvager, \/* choice1 = hand# to trash *\/$/;"	e	enum:CARD
+salvager	projects/beckmanl/dominion/dominion.h	/^   salvager, \/* choice1 = hand# to trash *\/$/;"	e	enum:CARD
 salvager	projects/roberwen/dominion/dominion.h	/^   salvager, \/* choice1 = hand# to trash *\/$/;"	e	enum:CARD
 scoreFor	dominion/dominion.c	/^int scoreFor (int player, struct gameState *state) {$/;"	f	typeref:typename:int
+scoreFor	projects/beckmanl/dominion/dominion.c	/^int scoreFor (int player, struct gameState *state) {$/;"	f	typeref:typename:int
 scoreFor	projects/roberwen/dominion/dominion.c	/^int scoreFor (int player, struct gameState *state) {$/;"	f	typeref:typename:int
 sea_hag	dominion/dominion.h	/^   sea_hag,$/;"	e	enum:CARD
+sea_hag	projects/beckmanl/dominion/dominion.h	/^   sea_hag,$/;"	e	enum:CARD
 sea_hag	projects/roberwen/dominion/dominion.h	/^   sea_hag,$/;"	e	enum:CARD
-sec:charinputchar	projects/quiz/randomstring.tex	/^\\label{sec:charinputchar}$/;"	l
-sec:charinputstring	projects/quiz/randomstring.tex	/^\\label{sec:charinputstring}$/;"	l
-sec:implementations	projects/quiz/randomstring.tex	/^\\label{sec:implementations}$/;"	l
+sec:bugs	dominion/Assignment-3.tex	/^\\label{sec:bugs}$/;"	l
+sec:bugs	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:bugs}$/;"	l
+sec:cardtestadventurer	dominion/Assignment-3.tex	/^\\label{sec:cardtestadventurer}$/;"	l
+sec:cardtestadventurer	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:cardtestadventurer}$/;"	l
+sec:cardtesting	dominion/Assignment-3.tex	/^\\label{sec:cardtesting}$/;"	l
+sec:cardtesting	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:cardtesting}$/;"	l
+sec:cardtestmine	dominion/Assignment-3.tex	/^\\label{sec:cardtestmine}$/;"	l
+sec:cardtestmine	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:cardtestmine}$/;"	l
+sec:cardtests	dominion/Assignment-3.tex	/^\\label{sec:cardtests}$/;"	l
+sec:cardtests	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:cardtests}$/;"	l
+sec:cardtestsmithy	dominion/Assignment-3.tex	/^\\label{sec:cardtestsmithy}$/;"	l
+sec:cardtestsmithy	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:cardtestsmithy}$/;"	l
+sec:cardtestvillage	dominion/Assignment-3.tex	/^\\label{sec:cardtestvillage}$/;"	l
+sec:cardtestvillage	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:cardtestvillage}$/;"	l
+sec:functiontesting	dominion/Assignment-3.tex	/^\\label{sec:functiontesting}$/;"	l
+sec:functiontesting	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:functiontesting}$/;"	l
 sec:org12dbbad	dominion/Assignment-2.tex	/^\\label{sec:org12dbbad}$/;"	l
+sec:org12dbbad	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org12dbbad}$/;"	l
 sec:org1809fad	dominion/Assignment-2.tex	/^\\label{sec:org1809fad}$/;"	l
+sec:org1809fad	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org1809fad}$/;"	l
 sec:org24710bb	dominion/Assignment-2.tex	/^\\label{sec:org24710bb}$/;"	l
+sec:org24710bb	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org24710bb}$/;"	l
 sec:org3e40217	dominion/Assignment-2.tex	/^\\label{sec:org3e40217}$/;"	l
+sec:org3e40217	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org3e40217}$/;"	l
 sec:org526629d	dominion/Assignment-2.tex	/^\\label{sec:org526629d}$/;"	l
+sec:org526629d	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org526629d}$/;"	l
 sec:org546e8b2	dominion/Assignment-2.tex	/^\\label{sec:org546e8b2}$/;"	l
+sec:org546e8b2	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org546e8b2}$/;"	l
 sec:org70bf80e	dominion/Assignment-2.tex	/^\\label{sec:org70bf80e}$/;"	l
+sec:org70bf80e	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org70bf80e}$/;"	l
 sec:org7268d4d	dominion/Assignment-2.tex	/^\\label{sec:org7268d4d}$/;"	l
+sec:org7268d4d	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org7268d4d}$/;"	l
 sec:org79f919e	dominion/Assignment-2.tex	/^\\label{sec:org79f919e}$/;"	l
+sec:org79f919e	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org79f919e}$/;"	l
 sec:org8070788	dominion/Assignment-2.tex	/^\\label{sec:org8070788}$/;"	l
+sec:org8070788	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org8070788}$/;"	l
 sec:org8ce9f95	dominion/Assignment-2.tex	/^\\label{sec:org8ce9f95}$/;"	l
+sec:org8ce9f95	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org8ce9f95}$/;"	l
 sec:org945b52d	dominion/Assignment-2.tex	/^\\label{sec:org945b52d}$/;"	l
+sec:org945b52d	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org945b52d}$/;"	l
 sec:orgd7ab4d8	dominion/Assignment-2.tex	/^\\label{sec:orgd7ab4d8}$/;"	l
+sec:orgd7ab4d8	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:orgd7ab4d8}$/;"	l
 sec:orgda8257e	dominion/Assignment-2.tex	/^\\label{sec:orgda8257e}$/;"	l
+sec:orgda8257e	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:orgda8257e}$/;"	l
+sec:unittestcomparefunction	dominion/Assignment-3.tex	/^\\label{sec:unittestcomparefunction}$/;"	l
+sec:unittestcomparefunction	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:unittestcomparefunction}$/;"	l
+sec:unittestgetcostfunction	dominion/Assignment-3.tex	/^\\label{sec:unittestgetcostfunction}$/;"	l
+sec:unittestgetcostfunction	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:unittestgetcostfunction}$/;"	l
+sec:unittesting	dominion/Assignment-3.tex	/^\\label{sec:unittesting}$/;"	l
+sec:unittesting	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:unittesting}$/;"	l
+sec:unittestingefforts	dominion/Assignment-3.tex	/^\\label{sec:unittestingefforts}$/;"	l
+sec:unittestingefforts	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:unittestingefforts}$/;"	l
+sec:unittestisgameoverfunction	dominion/Assignment-3.tex	/^\\label{sec:unittestisgameoverfunction}$/;"	l
+sec:unittestisgameoverfunction	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:unittestisgameoverfunction}$/;"	l
+sec:unittests	dominion/Assignment-3.tex	/^\\label{sec:unittests}$/;"	l
+sec:unittests	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:unittests}$/;"	l
+sec:unittestupdatecoinsfunction	dominion/Assignment-3.tex	/^\\label{sec:unittestupdatecoinsfunction}$/;"	l
+sec:unittestupdatecoinsfunction	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:unittestupdatecoinsfunction}$/;"	l
 seed	dominion/rngs.c	/^static long seed[STREAMS] = {DEFAULT};  \/* current state of each stream   *\/$/;"	v	typeref:typename:long[]	file:
+seed	projects/beckmanl/dominion/rngs.c	/^static long seed[STREAMS] = {DEFAULT};  \/* current state of each stream   *\/$/;"	v	typeref:typename:long[]	file:
 seed	projects/roberwen/dominion/rngs.c	/^static long seed[STREAMS] = {DEFAULT};  \/* current state of each stream   *\/$/;"	v	typeref:typename:long[]	file:
 selectKingdomCards	dominion/interface.c	/^void selectKingdomCards(int randomSeed, int kingCards[NUM_K_CARDS]) {$/;"	f	typeref:typename:void
+selectKingdomCards	projects/beckmanl/dominion/interface.c	/^void selectKingdomCards(int randomSeed, int kingCards[NUM_K_CARDS]) {$/;"	f	typeref:typename:void
 selectKingdomCards	projects/roberwen/dominion/interface.c	/^void selectKingdomCards(int randomSeed, int kingCards[NUM_K_CARDS]) {$/;"	f	typeref:typename:void
 shuffle	dominion/dominion.c	/^int shuffle(int player, struct gameState *state) {$/;"	f	typeref:typename:int
+shuffle	projects/beckmanl/dominion/dominion.c	/^int shuffle(int player, struct gameState *state) {$/;"	f	typeref:typename:int
 shuffle	projects/roberwen/dominion/dominion.c	/^int shuffle(int player, struct gameState *state) {$/;"	f	typeref:typename:int
 silver	dominion/dominion.h	/^   silver,$/;"	e	enum:CARD
+silver	projects/beckmanl/dominion/dominion.h	/^   silver,$/;"	e	enum:CARD
 silver	projects/roberwen/dominion/dominion.h	/^   silver,$/;"	e	enum:CARD
 smithy	dominion/dominion.h	/^   smithy,$/;"	e	enum:CARD
+smithy	projects/beckmanl/dominion/dominion.h	/^   smithy,$/;"	e	enum:CARD
 smithy	projects/roberwen/dominion/dominion.h	/^   smithy,$/;"	e	enum:CARD
 steward	dominion/dominion.h	/^   steward, \/* choice1: 1 = +2 card, 2 = +2 coin, 3 = trash 2 (choice2,3) *\/$/;"	e	enum:CARD
+steward	projects/beckmanl/dominion/dominion.h	/^   steward, \/* choice1: 1 = +2 card, 2 = +2 coin, 3 = trash 2 (choice2,3) *\/$/;"	e	enum:CARD
 steward	projects/roberwen/dominion/dominion.h	/^   steward, \/* choice1: 1 = +2 card, 2 = +2 coin, 3 = trash 2 (choice2,3) *\/$/;"	e	enum:CARD
 stream	dominion/rngs.c	/^static int  stream        = 0;          \/* stream index, 0 is the default *\/$/;"	v	typeref:typename:int	file:
+stream	projects/beckmanl/dominion/rngs.c	/^static int  stream        = 0;          \/* stream index, 0 is the default *\/$/;"	v	typeref:typename:int	file:
 stream	projects/roberwen/dominion/rngs.c	/^static int  stream        = 0;          \/* stream index, 0 is the default *\/$/;"	v	typeref:typename:int	file:
 supplyCount	dominion/dominion.c	/^int supplyCount(int card, struct gameState *state) {$/;"	f	typeref:typename:int
 supplyCount	dominion/dominion.h	/^  int supplyCount[treasure_map+1];  \/\/this is the amount of a specific type of card given a sp/;"	m	struct:gameState	typeref:typename:int[]
+supplyCount	projects/beckmanl/dominion/dominion.c	/^int supplyCount(int card, struct gameState *state) {$/;"	f	typeref:typename:int
+supplyCount	projects/beckmanl/dominion/dominion.h	/^  int supplyCount[treasure_map+1];  \/\/this is the amount of a specific type of card given a sp/;"	m	struct:gameState	typeref:typename:int[]
 supplyCount	projects/roberwen/dominion/dominion.c	/^int supplyCount(int card, struct gameState *state) {$/;"	f	typeref:typename:int
 supplyCount	projects/roberwen/dominion/dominion.h	/^  int supplyCount[treasure_map+1];  \/\/this is the amount of a specific type of card given a sp/;"	m	struct:gameState	typeref:typename:int[]
 supplyCountTest	dominion/unittest2.c	/^void supplyCountTest(struct gameState testGame)$/;"	f	typeref:typename:void
+supplyCountTest	projects/beckmanl/dominion/unittest2.c	/^void supplyCountTest(struct gameState testGame)$/;"	f	typeref:typename:void
 test1	dominion/unittest4.c	/^void test1(int player, struct gameState *testGame)$/;"	f	typeref:typename:void
+test1	projects/beckmanl/dominion/unittest4.c	/^void test1(int player, struct gameState *testGame)$/;"	f	typeref:typename:void
 test2	dominion/unittest4.c	/^void test2(int player, struct gameState *testGame)$/;"	f	typeref:typename:void
+test2	projects/beckmanl/dominion/unittest4.c	/^void test2(int player, struct gameState *testGame)$/;"	f	typeref:typename:void
 testAll	dominion/Makefile	/^testAll: dominion.o testSuite.c$/;"	t
+testAll	projects/beckmanl/dominion/Makefile	/^testAll: dominion.o testSuite.c$/;"	t
 testAll	projects/roberwen/dominion/Makefile	/^testAll: dominion.o testSuite.c$/;"	t
 testBuyCard	dominion/Makefile	/^testBuyCard: testDrawCard.c dominion.o rngs.o$/;"	t
+testBuyCard	projects/beckmanl/dominion/Makefile	/^testBuyCard: testDrawCard.c dominion.o rngs.o$/;"	t
 testBuyCard	projects/roberwen/dominion/Makefile	/^testBuyCard: testDrawCard.c dominion.o rngs.o$/;"	t
 testDrawCard	dominion/Makefile	/^testDrawCard: testDrawCard.c dominion.o rngs.o$/;"	t
+testDrawCard	projects/beckmanl/dominion/Makefile	/^testDrawCard: testDrawCard.c dominion.o rngs.o$/;"	t
 testDrawCard	projects/roberwen/dominion/Makefile	/^testDrawCard: testDrawCard.c dominion.o rngs.o$/;"	t
 treasure_map	dominion/dominion.h	/^   treasure_map$/;"	e	enum:CARD
+treasure_map	projects/beckmanl/dominion/dominion.h	/^   treasure_map$/;"	e	enum:CARD
 treasure_map	projects/roberwen/dominion/dominion.h	/^   treasure_map$/;"	e	enum:CARD
 tribute	dominion/dominion.h	/^   tribute,$/;"	e	enum:CARD
+tribute	projects/beckmanl/dominion/dominion.h	/^   tribute,$/;"	e	enum:CARD
 tribute	projects/roberwen/dominion/dominion.h	/^   tribute,$/;"	e	enum:CARD
+unittest1  getCost function 	dominion/Assignment-3.tex	/^\\subsubsection{unittest1 (getCost function)}$/;"	b	subsection:Unit Testing""Unit Tests
+unittest1  getCost function 	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsubsection{unittest1 (getCost function)}$/;"	b	subsection:Unit Testing""Unit Tests
+unittest2  isGameOver function 	dominion/Assignment-3.tex	/^\\subsubsection{unittest2 (isGameOver function)}$/;"	b	subsection:Unit Testing""Unit Tests
+unittest2  isGameOver function 	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsubsection{unittest2 (isGameOver function)}$/;"	b	subsection:Unit Testing""Unit Tests
+unittest3  compare function 	dominion/Assignment-3.tex	/^\\subsubsection{unittest3 (compare function)}$/;"	b	subsection:Unit Testing""Unit Tests
+unittest3  compare function 	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsubsection{unittest3 (compare function)}$/;"	b	subsection:Unit Testing""Unit Tests
+unittest4  updateCoins function 	dominion/Assignment-3.tex	/^\\subsubsection{unittest4 (updateCoins function)}$/;"	b	subsection:Unit Testing""Unit Tests
+unittest4  updateCoins function 	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsubsection{unittest4 (updateCoins function)}$/;"	b	subsection:Unit Testing""Unit Tests
 unittestresults	dominion/Makefile	/^unittestresults: myAssert.h myAssert.c$/;"	t
+unittestresults	projects/beckmanl/dominion/Makefile	/^unittestresults: myAssert.h myAssert.c$/;"	t
 updateCoins	dominion/dominion.c	/^int updateCoins(int player, struct gameState *state, int bonus)$/;"	f	typeref:typename:int
+updateCoins	projects/beckmanl/dominion/dominion.c	/^int updateCoins(int player, struct gameState *state, int bonus)$/;"	f	typeref:typename:int
 updateCoins	projects/roberwen/dominion/dominion.c	/^int updateCoins(int player, struct gameState *state, int bonus)$/;"	f	typeref:typename:int
 village	dominion/dominion.h	/^   village,$/;"	e	enum:CARD
+village	projects/beckmanl/dominion/dominion.h	/^   village,$/;"	e	enum:CARD
 village	projects/roberwen/dominion/dominion.h	/^   village,$/;"	e	enum:CARD
 white	dominion/color.h	/^#define white /;"	d
+white	projects/beckmanl/dominion/color.h	/^#define white /;"	d
 whoseTurn	dominion/dominion.c	/^int whoseTurn(struct gameState *state) {$/;"	f	typeref:typename:int
 whoseTurn	dominion/dominion.h	/^  int whoseTurn;$/;"	m	struct:gameState	typeref:typename:int
+whoseTurn	projects/beckmanl/dominion/dominion.c	/^int whoseTurn(struct gameState *state) {$/;"	f	typeref:typename:int
+whoseTurn	projects/beckmanl/dominion/dominion.h	/^  int whoseTurn;$/;"	m	struct:gameState	typeref:typename:int
 whoseTurn	projects/roberwen/dominion/dominion.c	/^int whoseTurn(struct gameState *state) {$/;"	f	typeref:typename:int
 whoseTurn	projects/roberwen/dominion/dominion.h	/^  int whoseTurn;$/;"	m	struct:gameState	typeref:typename:int
 yellow	dominion/color.h	/^#define yellow /;"	d
+yellow	projects/beckmanl/dominion/color.h	/^#define yellow /;"	d

@@ -1,6 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{// BUG: copper is now counted toward drawntreasure}
-\PYG{c+c1}{// ORIGINAL: if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)}
-\PYG{k}{if} \PYG{p}{(}\PYG{n}{cardDrawn} \PYG{o}{==} \PYG{n}{silver} \PYG{o}{||} \PYG{n}{cardDrawn} \PYG{o}{==} \PYG{n}{gold}\PYG{p}{)}
-    \PYG{n}{drawntreasure}\PYG{o}{++}\PYG{p}{;}
-\end{Verbatim}

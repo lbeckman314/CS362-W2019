@@ -1,5 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{// BUG: Add card to currentPlayer\PYGZsq{}s deck instead of discard pile.}
-\PYG{c+c1}{// ORIGINAL: gainCard(choice1, state, 0, currentPlayer);//Gain the card}
-\PYG{n}{gainCard}\PYG{p}{(}\PYG{n}{choice1}\PYG{p}{,} \PYG{n}{state}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{currentPlayer}\PYG{p}{);}\PYG{c+c1}{//Gain the card}
-\end{Verbatim}
