@@ -6,3 +6,8 @@ _minted*
 *.out
 *.gcda
 *.gcno
+color
+unittest{1..4}
+cardtest{1..4}
+playdom
+player

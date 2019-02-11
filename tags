@@ -38,10 +38,6 @@ CFBundleDevelopmentRegion	dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		
 CFBundleDevelopmentRegion	dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleDevelopmentRegion<\/key>$/;"	k
 CFBundleDevelopmentRegion	dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleDevelopmentRegion<\/key>$/;"	k
 CFBundleDevelopmentRegion	dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleDevelopmentRegion<\/key>$/;"	k
-CFBundleDevelopmentRegion	projects/beckmanl/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleDevelopmentRegion<\/key>$/;"	k
-CFBundleDevelopmentRegion	projects/beckmanl/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleDevelopmentRegion<\/key>$/;"	k
-CFBundleDevelopmentRegion	projects/beckmanl/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleDevelopmentRegion<\/key>$/;"	k
-CFBundleDevelopmentRegion	projects/beckmanl/dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleDevelopmentRegion<\/key>$/;"	k
 CFBundleDevelopmentRegion	projects/roberwen/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleDevelopmentRegion<\/key>$/;"	k
 CFBundleDevelopmentRegion	projects/roberwen/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleDevelopmentRegion<\/key>$/;"	k
 CFBundleDevelopmentRegion	projects/roberwen/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleDevelopmentRegion<\/key>$/;"	k
@@ -50,10 +46,6 @@ CFBundleIdentifier	dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CF
 CFBundleIdentifier	dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleIdentifier<\/key>$/;"	k
 CFBundleIdentifier	dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleIdentifier<\/key>$/;"	k
 CFBundleIdentifier	dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleIdentifier<\/key>$/;"	k
-CFBundleIdentifier	projects/beckmanl/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleIdentifier<\/key>$/;"	k
-CFBundleIdentifier	projects/beckmanl/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleIdentifier<\/key>$/;"	k
-CFBundleIdentifier	projects/beckmanl/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleIdentifier<\/key>$/;"	k
-CFBundleIdentifier	projects/beckmanl/dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleIdentifier<\/key>$/;"	k
 CFBundleIdentifier	projects/roberwen/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleIdentifier<\/key>$/;"	k
 CFBundleIdentifier	projects/roberwen/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleIdentifier<\/key>$/;"	k
 CFBundleIdentifier	projects/roberwen/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleIdentifier<\/key>$/;"	k
@@ -62,10 +54,6 @@ CFBundleInfoDictionaryVersion	dominion/badTestDrawCard.dSYM/Contents/Info.plist	
 CFBundleInfoDictionaryVersion	dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleInfoDictionaryVersion<\/key>$/;"	k
 CFBundleInfoDictionaryVersion	dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleInfoDictionaryVersion<\/key>$/;"	k
 CFBundleInfoDictionaryVersion	dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleInfoDictionaryVersion<\/key>$/;"	k
-CFBundleInfoDictionaryVersion	projects/beckmanl/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleInfoDictionaryVersion<\/key>$/;"	k
-CFBundleInfoDictionaryVersion	projects/beckmanl/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleInfoDictionaryVersion<\/key>$/;"	k
-CFBundleInfoDictionaryVersion	projects/beckmanl/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleInfoDictionaryVersion<\/key>$/;"	k
-CFBundleInfoDictionaryVersion	projects/beckmanl/dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleInfoDictionaryVersion<\/key>$/;"	k
 CFBundleInfoDictionaryVersion	projects/roberwen/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleInfoDictionaryVersion<\/key>$/;"	k
 CFBundleInfoDictionaryVersion	projects/roberwen/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleInfoDictionaryVersion<\/key>$/;"	k
 CFBundleInfoDictionaryVersion	projects/roberwen/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleInfoDictionaryVersion<\/key>$/;"	k
@@ -74,10 +62,6 @@ CFBundlePackageType	dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>C
 CFBundlePackageType	dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundlePackageType<\/key>$/;"	k
 CFBundlePackageType	dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundlePackageType<\/key>$/;"	k
 CFBundlePackageType	dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundlePackageType<\/key>$/;"	k
-CFBundlePackageType	projects/beckmanl/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundlePackageType<\/key>$/;"	k
-CFBundlePackageType	projects/beckmanl/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundlePackageType<\/key>$/;"	k
-CFBundlePackageType	projects/beckmanl/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundlePackageType<\/key>$/;"	k
-CFBundlePackageType	projects/beckmanl/dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundlePackageType<\/key>$/;"	k
 CFBundlePackageType	projects/roberwen/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundlePackageType<\/key>$/;"	k
 CFBundlePackageType	projects/roberwen/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundlePackageType<\/key>$/;"	k
 CFBundlePackageType	projects/roberwen/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundlePackageType<\/key>$/;"	k
@@ -86,10 +70,6 @@ CFBundleShortVersionString	dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^	
 CFBundleShortVersionString	dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleShortVersionString<\/key>$/;"	k
 CFBundleShortVersionString	dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleShortVersionString<\/key>$/;"	k
 CFBundleShortVersionString	dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleShortVersionString<\/key>$/;"	k
-CFBundleShortVersionString	projects/beckmanl/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleShortVersionString<\/key>$/;"	k
-CFBundleShortVersionString	projects/beckmanl/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleShortVersionString<\/key>$/;"	k
-CFBundleShortVersionString	projects/beckmanl/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleShortVersionString<\/key>$/;"	k
-CFBundleShortVersionString	projects/beckmanl/dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleShortVersionString<\/key>$/;"	k
 CFBundleShortVersionString	projects/roberwen/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleShortVersionString<\/key>$/;"	k
 CFBundleShortVersionString	projects/roberwen/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleShortVersionString<\/key>$/;"	k
 CFBundleShortVersionString	projects/roberwen/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleShortVersionString<\/key>$/;"	k
@@ -98,10 +78,6 @@ CFBundleSignature	dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFB
 CFBundleSignature	dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleSignature<\/key>$/;"	k
 CFBundleSignature	dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleSignature<\/key>$/;"	k
 CFBundleSignature	dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleSignature<\/key>$/;"	k
-CFBundleSignature	projects/beckmanl/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleSignature<\/key>$/;"	k
-CFBundleSignature	projects/beckmanl/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleSignature<\/key>$/;"	k
-CFBundleSignature	projects/beckmanl/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleSignature<\/key>$/;"	k
-CFBundleSignature	projects/beckmanl/dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleSignature<\/key>$/;"	k
 CFBundleSignature	projects/roberwen/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleSignature<\/key>$/;"	k
 CFBundleSignature	projects/roberwen/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleSignature<\/key>$/;"	k
 CFBundleSignature	projects/roberwen/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleSignature<\/key>$/;"	k
@@ -110,10 +86,6 @@ CFBundleVersion	dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBun
 CFBundleVersion	dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleVersion<\/key>$/;"	k
 CFBundleVersion	dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleVersion<\/key>$/;"	k
 CFBundleVersion	dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleVersion<\/key>$/;"	k
-CFBundleVersion	projects/beckmanl/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleVersion<\/key>$/;"	k
-CFBundleVersion	projects/beckmanl/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleVersion<\/key>$/;"	k
-CFBundleVersion	projects/beckmanl/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleVersion<\/key>$/;"	k
-CFBundleVersion	projects/beckmanl/dominion/testDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleVersion<\/key>$/;"	k
 CFBundleVersion	projects/roberwen/dominion/badTestDrawCard.dSYM/Contents/Info.plist	/^		<key>CFBundleVersion<\/key>$/;"	k
 CFBundleVersion	projects/roberwen/dominion/playdom.dSYM/Contents/Info.plist	/^		<key>CFBundleVersion<\/key>$/;"	k
 CFBundleVersion	projects/roberwen/dominion/player.dSYM/Contents/Info.plist	/^		<key>CFBundleVersion<\/key>$/;"	k
