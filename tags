@@ -24,13 +24,13 @@ BUY_PHASE	dominion/interface.h	/^#define BUY_PHASE /;"	d
 BUY_PHASE	projects/beckmanl/dominion/interface.h	/^#define BUY_PHASE /;"	d
 BUY_PHASE	projects/roberwen/dominion/interface.h	/^#define BUY_PHASE /;"	d
 Bug Breakdown by Function	dominion/Assignment-2.tex	/^\\subsection{Bug Breakdown by Function}$/;"	u	section:Bugs
-Bug Breakdown by Function	projects/beckmanl/dominion/Assignment-2.tex	/^\\subsection{Bug Breakdown by Function}$/;"	u	section:Bugs
+Bug Breakdown by Function	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\subsection{Bug Breakdown by Function}$/;"	u	section:Bugs
 Bug Introductions	dominion/Assignment-2.tex	/^\\subsubsection{Bug Introductions}$/;"	b	subsection:Bugs""Program Execution
-Bug Introductions	projects/beckmanl/dominion/Assignment-2.tex	/^\\subsubsection{Bug Introductions}$/;"	b	subsection:Bugs""Program Execution
+Bug Introductions	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\subsubsection{Bug Introductions}$/;"	b	subsection:Bugs""Program Execution
 Bugs	dominion/Assignment-2.tex	/^\\section{Bugs}$/;"	s
 Bugs	dominion/Assignment-3.tex	/^\\section{Bugs}$/;"	s
-Bugs	projects/beckmanl/dominion/Assignment-2.tex	/^\\section{Bugs}$/;"	s
-Bugs	projects/beckmanl/dominion/Assignment-3.tex	/^\\section{Bugs}$/;"	s
+Bugs	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\section{Bugs}$/;"	s
+Bugs	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\section{Bugs}$/;"	s
 CARD	dominion/dominion.h	/^enum CARD$/;"	g
 CARD	projects/beckmanl/dominion/dominion.h	/^enum CARD$/;"	g
 CARD	projects/roberwen/dominion/dominion.h	/^enum CARD$/;"	g
@@ -148,9 +148,9 @@ CUTPURSE_COST	dominion/interface.h	/^#define CUTPURSE_COST /;"	d
 CUTPURSE_COST	projects/beckmanl/dominion/interface.h	/^#define CUTPURSE_COST /;"	d
 CUTPURSE_COST	projects/roberwen/dominion/interface.h	/^#define CUTPURSE_COST /;"	d
 Card Testing	dominion/Assignment-3.tex	/^\\subsection{Card Testing}$/;"	u	section:Unit Testing Efforts
-Card Testing	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsection{Card Testing}$/;"	u	section:Unit Testing Efforts
+Card Testing	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\subsection{Card Testing}$/;"	u	section:Unit Testing Efforts
 Card Tests	dominion/Assignment-3.tex	/^\\subsection{Card Tests}$/;"	u	section:Unit Testing
-Card Tests	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsection{Card Tests}$/;"	u	section:Unit Testing
+Card Tests	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\subsection{Card Tests}$/;"	u	section:Unit Testing
 DEBUG	dominion/badTestDrawCard.c	/^#define DEBUG /;"	d	file:
 DEBUG	dominion/betterTestDrawCard.c	/^#define DEBUG /;"	d	file:
 DEBUG	dominion/dominion.h	/^#define DEBUG /;"	d
@@ -191,7 +191,7 @@ FEAST_COST	dominion/interface.h	/^#define FEAST_COST /;"	d
 FEAST_COST	projects/beckmanl/dominion/interface.h	/^#define FEAST_COST /;"	d
 FEAST_COST	projects/roberwen/dominion/interface.h	/^#define FEAST_COST /;"	d
 Function Testing	dominion/Assignment-3.tex	/^\\subsection{Function Testing}$/;"	u	section:Unit Testing Efforts
-Function Testing	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsection{Function Testing}$/;"	u	section:Unit Testing Efforts
+Function Testing	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\subsection{Function Testing}$/;"	u	section:Unit Testing Efforts
 GARDEN_COST	dominion/interface.h	/^#define GARDEN_COST /;"	d
 GARDEN_COST	projects/beckmanl/dominion/interface.h	/^#define GARDEN_COST /;"	d
 GARDEN_COST	projects/roberwen/dominion/interface.h	/^#define GARDEN_COST /;"	d
@@ -297,9 +297,9 @@ OUTPOST_COST	dominion/interface.h	/^#define OUTPOST_COST /;"	d
 OUTPOST_COST	projects/beckmanl/dominion/interface.h	/^#define OUTPOST_COST /;"	d
 OUTPOST_COST	projects/roberwen/dominion/interface.h	/^#define OUTPOST_COST /;"	d
 Original File  No Alterations Made 	dominion/Assignment-2.tex	/^\\subsubsection{Original File (No Alterations Made)}$/;"	b	subsection:Bugs""Program Execution
-Original File  No Alterations Made 	projects/beckmanl/dominion/Assignment-2.tex	/^\\subsubsection{Original File (No Alterations Made)}$/;"	b	subsection:Bugs""Program Execution
+Original File  No Alterations Made 	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\subsubsection{Original File (No Alterations Made)}$/;"	b	subsection:Bugs""Program Execution
 Original Implementation in Switch Statement	dominion/Assignment-2.tex	/^\\subsection{Original Implementation in Switch Statement}$/;"	u	section:Refactor
-Original Implementation in Switch Statement	projects/beckmanl/dominion/Assignment-2.tex	/^\\subsection{Original Implementation in Switch Statement}$/;"	u	section:Refactor
+Original Implementation in Switch Statement	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\subsection{Original Implementation in Switch Statement}$/;"	u	section:Refactor
 PROVINCE_COST	dominion/interface.h	/^#define PROVINCE_COST /;"	d
 PROVINCE_COST	projects/beckmanl/dominion/interface.h	/^#define PROVINCE_COST /;"	d
 PROVINCE_COST	projects/roberwen/dominion/interface.h	/^#define PROVINCE_COST /;"	d
@@ -307,7 +307,7 @@ PlantSeeds	dominion/rngs.c	/^   void PlantSeeds(long x)$/;"	f	typeref:typename:v
 PlantSeeds	projects/beckmanl/dominion/rngs.c	/^   void PlantSeeds(long x)$/;"	f	typeref:typename:void
 PlantSeeds	projects/roberwen/dominion/rngs.c	/^   void PlantSeeds(long x)$/;"	f	typeref:typename:void
 Program Execution	dominion/Assignment-2.tex	/^\\subsection{Program Execution}$/;"	u	section:Bugs
-Program Execution	projects/beckmanl/dominion/Assignment-2.tex	/^\\subsection{Program Execution}$/;"	u	section:Bugs
+Program Execution	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\subsection{Program Execution}$/;"	u	section:Bugs
 PutSeed	dominion/rngs.c	/^   void PutSeed(long x)$/;"	f	typeref:typename:void
 PutSeed	projects/beckmanl/dominion/rngs.c	/^   void PutSeed(long x)$/;"	f	typeref:typename:void
 PutSeed	projects/roberwen/dominion/rngs.c	/^   void PutSeed(long x)$/;"	f	typeref:typename:void
@@ -318,11 +318,11 @@ Random	dominion/rngs.c	/^   double Random(void)$/;"	f	typeref:typename:double
 Random	projects/beckmanl/dominion/rngs.c	/^   double Random(void)$/;"	f	typeref:typename:double
 Random	projects/roberwen/dominion/rngs.c	/^   double Random(void)$/;"	f	typeref:typename:double
 Refactor	dominion/Assignment-2.tex	/^\\section{Refactor}$/;"	s
-Refactor	projects/beckmanl/dominion/Assignment-2.tex	/^\\section{Refactor}$/;"	s
+Refactor	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\section{Refactor}$/;"	s
 Refactored Function Implementations  No Bugs Introduced Yet 	dominion/Assignment-2.tex	/^\\subsubsection{Refactored Function Implementations (No Bugs Introduced Yet)}$/;"	b	subsection:Bugs""Program Execution
-Refactored Function Implementations  No Bugs Introduced Yet 	projects/beckmanl/dominion/Assignment-2.tex	/^\\subsubsection{Refactored Function Implementations (No Bugs Introduced Yet)}$/;"	b	subsection:Bugs""Program Execution
+Refactored Function Implementations  No Bugs Introduced Yet 	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\subsubsection{Refactored Function Implementations (No Bugs Introduced Yet)}$/;"	b	subsection:Bugs""Program Execution
 Refactored Implementation in Seperate Function	dominion/Assignment-2.tex	/^\\subsection{Refactored Implementation in Seperate Function}$/;"	u	section:Refactor
-Refactored Implementation in Seperate Function	projects/beckmanl/dominion/Assignment-2.tex	/^\\subsection{Refactored Implementation in Seperate Function}$/;"	u	section:Refactor
+Refactored Implementation in Seperate Function	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\subsection{Refactored Implementation in Seperate Function}$/;"	u	section:Refactor
 SALVAGER_COST	dominion/interface.h	/^#define SALVAGER_COST /;"	d
 SALVAGER_COST	projects/beckmanl/dominion/interface.h	/^#define SALVAGER_COST /;"	d
 SALVAGER_COST	projects/roberwen/dominion/interface.h	/^#define SALVAGER_COST /;"	d
@@ -360,7 +360,7 @@ SelectStream	dominion/rngs.c	/^   void SelectStream(int index)$/;"	f	typeref:typ
 SelectStream	projects/beckmanl/dominion/rngs.c	/^   void SelectStream(int index)$/;"	f	typeref:typename:void
 SelectStream	projects/roberwen/dominion/rngs.c	/^   void SelectStream(int index)$/;"	f	typeref:typename:void
 Sources	dominion/Assignment-2.tex	/^\\section{Sources}$/;"	s
-Sources	projects/beckmanl/dominion/Assignment-2.tex	/^\\section{Sources}$/;"	s
+Sources	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\section{Sources}$/;"	s
 TREASURE_MAP_COST	dominion/interface.h	/^#define TREASURE_MAP_COST /;"	d
 TREASURE_MAP_COST	projects/beckmanl/dominion/interface.h	/^#define TREASURE_MAP_COST /;"	d
 TREASURE_MAP_COST	projects/roberwen/dominion/interface.h	/^#define TREASURE_MAP_COST /;"	d
@@ -377,11 +377,11 @@ UNUSED	dominion/interface.h	/^#define UNUSED /;"	d
 UNUSED	projects/beckmanl/dominion/interface.h	/^#define UNUSED /;"	d
 UNUSED	projects/roberwen/dominion/interface.h	/^#define UNUSED /;"	d
 Unit Testing	dominion/Assignment-3.tex	/^\\section{Unit Testing}$/;"	s
-Unit Testing	projects/beckmanl/dominion/Assignment-3.tex	/^\\section{Unit Testing}$/;"	s
+Unit Testing	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\section{Unit Testing}$/;"	s
 Unit Testing Efforts	dominion/Assignment-3.tex	/^\\section{Unit Testing Efforts}$/;"	s
-Unit Testing Efforts	projects/beckmanl/dominion/Assignment-3.tex	/^\\section{Unit Testing Efforts}$/;"	s
+Unit Testing Efforts	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\section{Unit Testing Efforts}$/;"	s
 Unit Tests	dominion/Assignment-3.tex	/^\\subsection{Unit Tests}$/;"	u	section:Unit Testing
-Unit Tests	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsection{Unit Tests}$/;"	u	section:Unit Testing
+Unit Tests	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\subsection{Unit Tests}$/;"	u	section:Unit Testing
 VILLAGE_COST	dominion/interface.h	/^#define VILLAGE_COST /;"	d
 VILLAGE_COST	projects/beckmanl/dominion/interface.h	/^#define VILLAGE_COST /;"	d
 VILLAGE_COST	projects/roberwen/dominion/interface.h	/^#define VILLAGE_COST /;"	d
@@ -440,13 +440,13 @@ cardNumToName	dominion/interface.c	/^void cardNumToName(int card, char *name){$/
 cardNumToName	projects/beckmanl/dominion/interface.c	/^void cardNumToName(int card, char *name){$/;"	f	typeref:typename:void
 cardNumToName	projects/roberwen/dominion/interface.c	/^void cardNumToName(int card, char *name){$/;"	f	typeref:typename:void
 cardtest1  smithy 	dominion/Assignment-3.tex	/^\\subsubsection{cardtest1 (smithy)}$/;"	b	subsection:Unit Testing""Card Tests
-cardtest1  smithy 	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsubsection{cardtest1 (smithy)}$/;"	b	subsection:Unit Testing""Card Tests
+cardtest1  smithy 	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\subsubsection{cardtest1 (smithy)}$/;"	b	subsection:Unit Testing""Card Tests
 cardtest2  adventurer 	dominion/Assignment-3.tex	/^\\subsubsection{cardtest2 (adventurer)}$/;"	b	subsection:Unit Testing""Card Tests
-cardtest2  adventurer 	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsubsection{cardtest2 (adventurer)}$/;"	b	subsection:Unit Testing""Card Tests
+cardtest2  adventurer 	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\subsubsection{cardtest2 (adventurer)}$/;"	b	subsection:Unit Testing""Card Tests
 cardtest3  village 	dominion/Assignment-3.tex	/^\\subsubsection{cardtest3 (village)}$/;"	b	subsection:Unit Testing""Card Tests
-cardtest3  village 	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsubsection{cardtest3 (village)}$/;"	b	subsection:Unit Testing""Card Tests
+cardtest3  village 	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\subsubsection{cardtest3 (village)}$/;"	b	subsection:Unit Testing""Card Tests
 cardtest4  mine 	dominion/Assignment-3.tex	/^\\subsubsection{cardtest4 (mine)}$/;"	b	subsection:Unit Testing""Card Tests
-cardtest4  mine 	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsubsection{cardtest4 (mine)}$/;"	b	subsection:Unit Testing""Card Tests
+cardtest4  mine 	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\subsubsection{cardtest4 (mine)}$/;"	b	subsection:Unit Testing""Card Tests
 checkDrawCard	dominion/badTestDrawCard.c	/^int checkDrawCard(int p, struct gameState *post) {$/;"	f	typeref:typename:int
 checkDrawCard	dominion/betterTestDrawCard.c	/^int checkDrawCard(int p, struct gameState *post) {$/;"	f	typeref:typename:int
 checkDrawCard	dominion/testBuyCard.c	/^int checkDrawCard(int p, struct gameState *post) {$/;"	f	typeref:typename:int
@@ -643,23 +643,23 @@ minion	projects/beckmanl/dominion/dominion.h	/^   minion, \/* choice1:  1 = +2 c
 minion	projects/roberwen/dominion/dominion.h	/^   minion, \/* choice1:  1 = +2 coin, 2 = redraw *\/$/;"	e	enum:CARD
 myAdventurer	dominion/Assignment-2.tex	/^\\subsubsection{myAdventurer}$/;"	b	subsection:Bugs""Bug Breakdown by Function
 myAdventurer	dominion/dominion.c	/^int myAdventurer(int drawntreasure, int currentPlayer, int temphand[], struct gameState *state)$/;"	f	typeref:typename:int
-myAdventurer	projects/beckmanl/dominion/Assignment-2.tex	/^\\subsubsection{myAdventurer}$/;"	b	subsection:Bugs""Bug Breakdown by Function
+myAdventurer	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\subsubsection{myAdventurer}$/;"	b	subsection:Bugs""Bug Breakdown by Function
 myAdventurer	projects/beckmanl/dominion/dominion.c	/^int myAdventurer(int drawntreasure, int currentPlayer, int temphand[], struct gameState *state)$/;"	f	typeref:typename:int
 myAssert	dominion/myAssert.h	/^#define myAssert(/;"	d
 myAssert	projects/beckmanl/dominion/myAssert.h	/^#define myAssert(/;"	d
 myCouncil  _room	dominion/Assignment-2.tex	/^\\subsubsection{myCouncil\\_room}$/;"	b	subsection:Bugs""Bug Breakdown by Function
-myCouncil  _room	projects/beckmanl/dominion/Assignment-2.tex	/^\\subsubsection{myCouncil\\_room}$/;"	b	subsection:Bugs""Bug Breakdown by Function
+myCouncil  _room	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\subsubsection{myCouncil\\_room}$/;"	b	subsection:Bugs""Bug Breakdown by Function
 myCouncil_room	dominion/dominion.c	/^int myCouncil_room(int currentPlayer, int handPos, struct gameState *state)$/;"	f	typeref:typename:int
 myCouncil_room	projects/beckmanl/dominion/dominion.c	/^int myCouncil_room(int currentPlayer, int handPos, struct gameState *state)$/;"	f	typeref:typename:int
 myFeast	dominion/Assignment-2.tex	/^\\subsubsection{myFeast}$/;"	b	subsection:Bugs""Bug Breakdown by Function
 myFeast	dominion/dominion.c	/^int myFeast(int currentPlayer, int temphand[], struct gameState *state, int choice1)$/;"	f	typeref:typename:int
-myFeast	projects/beckmanl/dominion/Assignment-2.tex	/^\\subsubsection{myFeast}$/;"	b	subsection:Bugs""Bug Breakdown by Function
+myFeast	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\subsubsection{myFeast}$/;"	b	subsection:Bugs""Bug Breakdown by Function
 myFeast	projects/beckmanl/dominion/dominion.c	/^int myFeast(int currentPlayer, int temphand[], struct gameState *state, int choice1)$/;"	f	typeref:typename:int
 myMine	dominion/dominion.c	/^int myMine(int currentPlayer, struct gameState *state, int choice1, int choice2, int handPos)$/;"	f	typeref:typename:int
 myMine	projects/beckmanl/dominion/dominion.c	/^int myMine(int currentPlayer, struct gameState *state, int choice1, int choice2, int handPos)$/;"	f	typeref:typename:int
 mySmithy	dominion/Assignment-2.tex	/^\\subsubsection{mySmithy}$/;"	b	subsection:Bugs""Bug Breakdown by Function
 mySmithy	dominion/dominion.c	/^int mySmithy(int currentPlayer, struct gameState *state, int handPos)$/;"	f	typeref:typename:int
-mySmithy	projects/beckmanl/dominion/Assignment-2.tex	/^\\subsubsection{mySmithy}$/;"	b	subsection:Bugs""Bug Breakdown by Function
+mySmithy	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\subsubsection{mySmithy}$/;"	b	subsection:Bugs""Bug Breakdown by Function
 mySmithy	projects/beckmanl/dominion/dominion.c	/^int mySmithy(int currentPlayer, struct gameState *state, int handPos)$/;"	f	typeref:typename:int
 newGame	dominion/dominion.c	/^struct gameState* newGame() {$/;"	f	typeref:struct:gameState *
 newGame	projects/beckmanl/dominion/dominion.c	/^struct gameState* newGame() {$/;"	f	typeref:struct:gameState *
@@ -760,63 +760,63 @@ sea_hag	dominion/dominion.h	/^   sea_hag,$/;"	e	enum:CARD
 sea_hag	projects/beckmanl/dominion/dominion.h	/^   sea_hag,$/;"	e	enum:CARD
 sea_hag	projects/roberwen/dominion/dominion.h	/^   sea_hag,$/;"	e	enum:CARD
 sec:bugs	dominion/Assignment-3.tex	/^\\label{sec:bugs}$/;"	l
-sec:bugs	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:bugs}$/;"	l
+sec:bugs	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\label{sec:bugs}$/;"	l
 sec:cardtestadventurer	dominion/Assignment-3.tex	/^\\label{sec:cardtestadventurer}$/;"	l
-sec:cardtestadventurer	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:cardtestadventurer}$/;"	l
+sec:cardtestadventurer	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\label{sec:cardtestadventurer}$/;"	l
 sec:cardtesting	dominion/Assignment-3.tex	/^\\label{sec:cardtesting}$/;"	l
-sec:cardtesting	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:cardtesting}$/;"	l
+sec:cardtesting	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\label{sec:cardtesting}$/;"	l
 sec:cardtestmine	dominion/Assignment-3.tex	/^\\label{sec:cardtestmine}$/;"	l
-sec:cardtestmine	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:cardtestmine}$/;"	l
+sec:cardtestmine	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\label{sec:cardtestmine}$/;"	l
 sec:cardtests	dominion/Assignment-3.tex	/^\\label{sec:cardtests}$/;"	l
-sec:cardtests	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:cardtests}$/;"	l
+sec:cardtests	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\label{sec:cardtests}$/;"	l
 sec:cardtestsmithy	dominion/Assignment-3.tex	/^\\label{sec:cardtestsmithy}$/;"	l
-sec:cardtestsmithy	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:cardtestsmithy}$/;"	l
+sec:cardtestsmithy	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\label{sec:cardtestsmithy}$/;"	l
 sec:cardtestvillage	dominion/Assignment-3.tex	/^\\label{sec:cardtestvillage}$/;"	l
-sec:cardtestvillage	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:cardtestvillage}$/;"	l
+sec:cardtestvillage	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\label{sec:cardtestvillage}$/;"	l
 sec:functiontesting	dominion/Assignment-3.tex	/^\\label{sec:functiontesting}$/;"	l
-sec:functiontesting	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:functiontesting}$/;"	l
+sec:functiontesting	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\label{sec:functiontesting}$/;"	l
 sec:org12dbbad	dominion/Assignment-2.tex	/^\\label{sec:org12dbbad}$/;"	l
-sec:org12dbbad	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org12dbbad}$/;"	l
+sec:org12dbbad	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\label{sec:org12dbbad}$/;"	l
 sec:org1809fad	dominion/Assignment-2.tex	/^\\label{sec:org1809fad}$/;"	l
-sec:org1809fad	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org1809fad}$/;"	l
+sec:org1809fad	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\label{sec:org1809fad}$/;"	l
 sec:org24710bb	dominion/Assignment-2.tex	/^\\label{sec:org24710bb}$/;"	l
-sec:org24710bb	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org24710bb}$/;"	l
+sec:org24710bb	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\label{sec:org24710bb}$/;"	l
 sec:org3e40217	dominion/Assignment-2.tex	/^\\label{sec:org3e40217}$/;"	l
-sec:org3e40217	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org3e40217}$/;"	l
+sec:org3e40217	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\label{sec:org3e40217}$/;"	l
 sec:org526629d	dominion/Assignment-2.tex	/^\\label{sec:org526629d}$/;"	l
-sec:org526629d	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org526629d}$/;"	l
+sec:org526629d	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\label{sec:org526629d}$/;"	l
 sec:org546e8b2	dominion/Assignment-2.tex	/^\\label{sec:org546e8b2}$/;"	l
-sec:org546e8b2	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org546e8b2}$/;"	l
+sec:org546e8b2	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\label{sec:org546e8b2}$/;"	l
 sec:org70bf80e	dominion/Assignment-2.tex	/^\\label{sec:org70bf80e}$/;"	l
-sec:org70bf80e	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org70bf80e}$/;"	l
+sec:org70bf80e	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\label{sec:org70bf80e}$/;"	l
 sec:org7268d4d	dominion/Assignment-2.tex	/^\\label{sec:org7268d4d}$/;"	l
-sec:org7268d4d	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org7268d4d}$/;"	l
+sec:org7268d4d	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\label{sec:org7268d4d}$/;"	l
 sec:org79f919e	dominion/Assignment-2.tex	/^\\label{sec:org79f919e}$/;"	l
-sec:org79f919e	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org79f919e}$/;"	l
+sec:org79f919e	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\label{sec:org79f919e}$/;"	l
 sec:org8070788	dominion/Assignment-2.tex	/^\\label{sec:org8070788}$/;"	l
-sec:org8070788	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org8070788}$/;"	l
+sec:org8070788	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\label{sec:org8070788}$/;"	l
 sec:org8ce9f95	dominion/Assignment-2.tex	/^\\label{sec:org8ce9f95}$/;"	l
-sec:org8ce9f95	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org8ce9f95}$/;"	l
+sec:org8ce9f95	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\label{sec:org8ce9f95}$/;"	l
 sec:org945b52d	dominion/Assignment-2.tex	/^\\label{sec:org945b52d}$/;"	l
-sec:org945b52d	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:org945b52d}$/;"	l
+sec:org945b52d	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\label{sec:org945b52d}$/;"	l
 sec:orgd7ab4d8	dominion/Assignment-2.tex	/^\\label{sec:orgd7ab4d8}$/;"	l
-sec:orgd7ab4d8	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:orgd7ab4d8}$/;"	l
+sec:orgd7ab4d8	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\label{sec:orgd7ab4d8}$/;"	l
 sec:orgda8257e	dominion/Assignment-2.tex	/^\\label{sec:orgda8257e}$/;"	l
-sec:orgda8257e	projects/beckmanl/dominion/Assignment-2.tex	/^\\label{sec:orgda8257e}$/;"	l
+sec:orgda8257e	projects/beckmanl/dominion/Assignment-2/Assignment-2.tex	/^\\label{sec:orgda8257e}$/;"	l
 sec:unittestcomparefunction	dominion/Assignment-3.tex	/^\\label{sec:unittestcomparefunction}$/;"	l
-sec:unittestcomparefunction	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:unittestcomparefunction}$/;"	l
+sec:unittestcomparefunction	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\label{sec:unittestcomparefunction}$/;"	l
 sec:unittestgetcostfunction	dominion/Assignment-3.tex	/^\\label{sec:unittestgetcostfunction}$/;"	l
-sec:unittestgetcostfunction	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:unittestgetcostfunction}$/;"	l
+sec:unittestgetcostfunction	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\label{sec:unittestgetcostfunction}$/;"	l
 sec:unittesting	dominion/Assignment-3.tex	/^\\label{sec:unittesting}$/;"	l
-sec:unittesting	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:unittesting}$/;"	l
+sec:unittesting	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\label{sec:unittesting}$/;"	l
 sec:unittestingefforts	dominion/Assignment-3.tex	/^\\label{sec:unittestingefforts}$/;"	l
-sec:unittestingefforts	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:unittestingefforts}$/;"	l
+sec:unittestingefforts	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\label{sec:unittestingefforts}$/;"	l
 sec:unittestisgameoverfunction	dominion/Assignment-3.tex	/^\\label{sec:unittestisgameoverfunction}$/;"	l
-sec:unittestisgameoverfunction	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:unittestisgameoverfunction}$/;"	l
+sec:unittestisgameoverfunction	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\label{sec:unittestisgameoverfunction}$/;"	l
 sec:unittests	dominion/Assignment-3.tex	/^\\label{sec:unittests}$/;"	l
-sec:unittests	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:unittests}$/;"	l
+sec:unittests	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\label{sec:unittests}$/;"	l
 sec:unittestupdatecoinsfunction	dominion/Assignment-3.tex	/^\\label{sec:unittestupdatecoinsfunction}$/;"	l
-sec:unittestupdatecoinsfunction	projects/beckmanl/dominion/Assignment-3.tex	/^\\label{sec:unittestupdatecoinsfunction}$/;"	l
+sec:unittestupdatecoinsfunction	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\label{sec:unittestupdatecoinsfunction}$/;"	l
 seed	dominion/rngs.c	/^static long seed[STREAMS] = {DEFAULT};  \/* current state of each stream   *\/$/;"	v	typeref:typename:long[]	file:
 seed	projects/beckmanl/dominion/rngs.c	/^static long seed[STREAMS] = {DEFAULT};  \/* current state of each stream   *\/$/;"	v	typeref:typename:long[]	file:
 seed	projects/roberwen/dominion/rngs.c	/^static long seed[STREAMS] = {DEFAULT};  \/* current state of each stream   *\/$/;"	v	typeref:typename:long[]	file:
@@ -866,13 +866,13 @@ tribute	dominion/dominion.h	/^   tribute,$/;"	e	enum:CARD
 tribute	projects/beckmanl/dominion/dominion.h	/^   tribute,$/;"	e	enum:CARD
 tribute	projects/roberwen/dominion/dominion.h	/^   tribute,$/;"	e	enum:CARD
 unittest1  getCost function 	dominion/Assignment-3.tex	/^\\subsubsection{unittest1 (getCost function)}$/;"	b	subsection:Unit Testing""Unit Tests
-unittest1  getCost function 	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsubsection{unittest1 (getCost function)}$/;"	b	subsection:Unit Testing""Unit Tests
+unittest1  getCost function 	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\subsubsection{unittest1 (getCost function)}$/;"	b	subsection:Unit Testing""Unit Tests
 unittest2  isGameOver function 	dominion/Assignment-3.tex	/^\\subsubsection{unittest2 (isGameOver function)}$/;"	b	subsection:Unit Testing""Unit Tests
-unittest2  isGameOver function 	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsubsection{unittest2 (isGameOver function)}$/;"	b	subsection:Unit Testing""Unit Tests
+unittest2  isGameOver function 	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\subsubsection{unittest2 (isGameOver function)}$/;"	b	subsection:Unit Testing""Unit Tests
 unittest3  compare function 	dominion/Assignment-3.tex	/^\\subsubsection{unittest3 (compare function)}$/;"	b	subsection:Unit Testing""Unit Tests
-unittest3  compare function 	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsubsection{unittest3 (compare function)}$/;"	b	subsection:Unit Testing""Unit Tests
+unittest3  compare function 	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\subsubsection{unittest3 (compare function)}$/;"	b	subsection:Unit Testing""Unit Tests
 unittest4  updateCoins function 	dominion/Assignment-3.tex	/^\\subsubsection{unittest4 (updateCoins function)}$/;"	b	subsection:Unit Testing""Unit Tests
-unittest4  updateCoins function 	projects/beckmanl/dominion/Assignment-3.tex	/^\\subsubsection{unittest4 (updateCoins function)}$/;"	b	subsection:Unit Testing""Unit Tests
+unittest4  updateCoins function 	projects/beckmanl/dominion/Assignment-3/Assignment-3.tex	/^\\subsubsection{unittest4 (updateCoins function)}$/;"	b	subsection:Unit Testing""Unit Tests
 unittestresults	dominion/Makefile	/^unittestresults: myAssert.h myAssert.c$/;"	t
 unittestresults	projects/beckmanl/dominion/Makefile	/^unittestresults: myAssert.h myAssert.c$/;"	t
 updateCoins	dominion/dominion.c	/^int updateCoins(int player, struct gameState *state, int bonus)$/;"	f	typeref:typename:int

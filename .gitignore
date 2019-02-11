@@ -1,2 +1,8 @@
 tags
 _minted*
+*.dSYM
+#*#
+*~
+*.out
+*.gcda
+*.gcno
