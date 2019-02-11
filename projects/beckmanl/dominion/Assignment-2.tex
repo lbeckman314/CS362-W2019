@@ -1,0 +1,192 @@
+% Created 2019-01-27 Sun 17:54
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\input{/home/liam/main.tex}
+\author{liam beckman}
+\date{\today}
+\title{Assignment 2}
+\hypersetup{
+ pdfauthor={liam beckman},
+ pdftitle={Assignment 2},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.1 (Org mode 9.1.9)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\section{Refactor}
+\label{sec:org945b52d}
+
+Implemented five cards in seperate functions from switch statement. This was done for the following cards:
+
+\begin{enumerate}
+\item adventurer
+\item smithy
+\item council\_room
+\item feast
+\item mine
+\end{enumerate}
+
+The existing implementations within the switch statement were used to create a new function implementation. In the case of the adventurer card, a new function called \texttt{myAdventurer()} was made with the required variables included in both the funciton definiton as well as the functional call. The refactoring for the four remaining cards took on similar patterns.
+
+\subsection{Original Implementation in Switch Statement}
+\label{sec:org1809fad}
+\begin{minted}[breaklines=true,breakanywhere=true]{c}
+int cardEffect(...)
+{
+    // ...
+
+    //uses switch to select card and perform actions
+    switch( card )
+    {
+        case adventurer:
+            // implementation of adventurer card...
+
+        // ...
+    }
+
+    // ...
+}
+\end{minted}
+
+\subsection{Refactored Implementation in Seperate Function}
+\label{sec:orgd7ab4d8}
+
+\begin{minted}[breaklines=true,breakanywhere=true]{c}
+int myAdventurer(...)
+{
+    // implementation of adventurer card...
+}
+
+int cardEffect(...)
+{
+    // ...
+
+    //uses switch to select card and perform actions
+    switch( card )
+    {
+        case adventurer:
+            // call to myAdventurer function
+            myAdventurer(...);
+
+        // ...
+    }
+
+    // ...
+}
+\end{minted}
+
+\section{Bugs}
+\label{sec:org24710bb}
+
+\subsection{Bug Breakdown by Function}
+\label{sec:org546e8b2}
+
+\subsubsection{myAdventurer}
+\label{sec:org7268d4d}
+
+Removed copper from \texttt{if} statement. So \texttt{drawntreasure++} will not execute if the player draws a copper, allowing them to gain more treasures than the vard should allow (i.e. 2 treasures) (1).
+
+\begin{minted}[breaklines=true,breakanywhere=true]{c}
+// BUG: copper is now counted toward drawntreasure
+// ORIGINAL: if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+if (cardDrawn == silver || cardDrawn == gold)
+    drawntreasure++;
+\end{minted}
+
+\subsubsection{myCouncil\_room}
+\label{sec:org79f919e}
+
+The number of buys is decremented where it should be incremented. This gives the player an additional buy every time the Council Room card is played. The correct behavior would remove a buy every time this card is played (2).
+
+\begin{minted}[breaklines=true,breakanywhere=true]{c}
+// BUG: number of buys is decremented where it should be incremented.
+// ORIGINAL: state->numBuys++;
+state->numBuys--;
+\end{minted}
+
+\subsubsection{myFeast}
+\label{sec:org70bf80e}
+
+The feast card is sent back to the player's deck instead of going to the discard pile (3).
+
+\begin{minted}[breaklines=true,breakanywhere=true]{c}
+// BUG: Add card to currentPlayer's deck instead of discard pile.
+// ORIGINAL: gainCard(choice1, state, 0, currentPlayer);//Gain the card
+gainCard(choice1, state, 1, currentPlayer);//Gain the card
+\end{minted}
+
+\subsubsection{mySmithy}
+\label{sec:org8070788}
+
+The smithy card will be played by player, but will not be placed in the played pile (4).
+
+\begin{minted}[breaklines=true,breakanywhere=true]{c}
+// BUG: card will be played by player, but will not be placed in the played pile.
+// ORIGNAL: discardCard(handPos, currentPlayer, state, 0);
+discardCard(handPos, currentPlayer, state, 1);
+\end{minted}
+
+\subsection{Program Execution}
+\label{sec:orgda8257e}
+
+At each step of the assignment, the program was compiled (\texttt{make all \&\& ./playdom 2}) and run to confirm that successful 2-player execution took place, despite the function refactoring as well as the introduction of bugs. The condensed results of which follow.
+
+\subsubsection{Original File (No Alterations Made)}
+\label{sec:org526629d}
+
+\begin{verbatim}
+Starting game.
+...
+Finished game.
+Player 0: 30
+Player 1: 40
+\end{verbatim}
+
+\subsubsection{Refactored Function Implementations (No Bugs Introduced Yet)}
+\label{sec:org12dbbad}
+
+\begin{verbatim}
+Starting game.
+...
+Finished game.
+Player 0: 51
+Player 1: 4
+\end{verbatim}
+
+\subsubsection{Bug Introductions}
+\label{sec:org8ce9f95}
+
+\begin{verbatim}
+Starting game.
+...
+Finished game.
+Player 0: 88
+Player 1: 4
+\end{verbatim}
+
+\section{Sources}
+\label{sec:org3e40217}
+
+\begin{itemize}
+\item\relax [1]: \url{http://wiki.dominionstrategy.com/index.php/Adventurer}
+\item\relax [2]: \url{http://wiki.dominionstrategy.com/index.php/Council\_Room}
+\item\relax [3]: \url{http://wiki.dominionstrategy.com/index.php/Feast}
+\item\relax [4]: \url{http://wiki.dominionstrategy.com/index.php/Smithy}
+\end{itemize}
+\end{document}

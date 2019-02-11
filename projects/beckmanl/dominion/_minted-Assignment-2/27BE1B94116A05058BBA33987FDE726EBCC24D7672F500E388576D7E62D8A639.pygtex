@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int} \PYG{n+nf}{myAdventurer}\PYG{p}{(...)}
+\PYG{p}{\PYGZob{}}
+    \PYG{c+c1}{// implementation of adventurer card...}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kt}{int} \PYG{n+nf}{cardEffect}\PYG{p}{(...)}
+\PYG{p}{\PYGZob{}}
+    \PYG{c+c1}{// ...}
+
+    \PYG{c+c1}{//uses switch to select card and perform actions}
+    \PYG{k}{switch}\PYG{p}{(} \PYG{n}{card} \PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{k}{case} \PYG{n+nl}{adventurer}\PYG{p}{:}
+            \PYG{c+c1}{// call to myAdventurer function}
+            \PYG{n}{myAdventurer}\PYG{p}{(...);}
+
+        \PYG{c+c1}{// ...}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{c+c1}{// ...}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

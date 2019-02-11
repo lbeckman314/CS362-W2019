@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{myAssert}\PYG{p}{(}\PYG{n}{isGameOver}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{testGame}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{);}
+
+\PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{3}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+\PYG{o}{\PYGZca{}\PYGZca{}}\PYG{n}{ItestGame}\PYG{p}{.}\PYG{n}{supplyCount}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{n}{myAssert}\PYG{p}{(}\PYG{n}{isGameOver}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{testGame}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{1}\PYG{p}{);}
+\end{Verbatim}

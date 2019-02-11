@@ -1,0 +1,250 @@
+% Created 2019-02-10 Sun 22:31
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\input{/home/liam/main.tex}
+\author{liam beckman}
+\date{}
+\title{Assignment 3}
+\hypersetup{
+ pdfauthor={liam beckman},
+ pdftitle={Assignment 3},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.1 (Org mode 9.1.9)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\section{Bugs}
+\label{sec:bugs}
+
+A prominent bug is one I introduced in Assignment 2 within the \texttt{myAdventurer} function.
+
+\begin{listing}[htbp]
+\begin{minted}[breaklines=true,breakanywhere=true]{c}
+int myAdventurer(int drawntreasure, int currentPlayer, int temphand[], struct gameState *state)
+{
+    // ...
+
+    // BUG: gold is not counted toward drawntreasure
+    //if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+    if (cardDrawn == copper || cardDrawn == silver)
+        drawntreasure++;
+    
+    // ...
+}
+\end{minted}
+\caption{myAdventurer Bug that doesn't count gold toward treasure.}
+\end{listing}
+
+\section{Unit Testing}
+\label{sec:unittesting}
+
+\subsection{Unit Tests}
+\label{sec:unittests}
+
+The four unit tests covered the following four functions:
+\begin{enumerate}
+\item getCost
+\item isGameOver
+\item compare
+\item updateCoins
+\end{enumerate}
+
+\begin{table}[htbp]
+\caption{Coverage for Function Tests}
+\centering
+\begin{tabular}{lll}
+function & statement coverage & branch coverage\\
+\hline
+getCost & 1.95\% & 6.75\%\\
+isGameOver & 1.62\% & 1.93\%\\
+compare & 0.97\% & 0.96\%\\
+updateCoins & 2.27\% & 1.93\%\\
+\end{tabular}
+\end{table}
+
+\subsubsection{unittest1 (getCost function)}
+\label{sec:unittestgetcostfunction}
+
+\begin{verbatim}
+Lines executed:1.95% of 616
+Branches executed:6.75% of 415
+Taken at least once:1.20% of 415
+Calls executed:0.00% of 108
+\end{verbatim}
+
+\subsubsection{unittest2 (isGameOver function)}
+\label{sec:unittestisgameoverfunction}
+
+\begin{verbatim}
+Lines executed:1.62% of 616
+Branches executed:1.93% of 415
+Taken at least once:1.93% of 415
+Calls executed:0.00% of 108
+\end{verbatim}
+
+\subsubsection{unittest3 (compare function)}
+\label{sec:unittestcomparefunction}
+
+\begin{verbatim}
+Lines executed:0.97% of 616
+Branches executed:0.96% of 415
+Taken at least once:0.96% of 415
+Calls executed:0.00% of 108
+\end{verbatim}
+
+\subsubsection{unittest4 (updateCoins function)}
+\label{sec:unittestupdatecoinsfunction}
+
+\begin{verbatim}
+Lines executed:2.27% of 616
+Branches executed:1.93% of 415
+Taken at least once:1.69% of 415
+Calls executed:0.00% of 108
+\end{verbatim}
+
+\subsection{Card Tests}
+\label{sec:cardtests}
+
+The four card tests covered the following four card types:
+\begin{enumerate}
+\item smithy
+\item adventurer
+\item village
+\item mine
+\end{enumerate}
+
+\begin{table}[htbp]
+\caption{Coverage for Card Tests}
+\centering
+\begin{tabular}{lll}
+card & statement coverage & branch coverage\\
+\hline
+Smithy & 6.49\% & 3.86\%\\
+Adventurer & 17.05\% & 17.83\%\\
+Village & 19.32\% & 22.89\%\\
+Mine & 21.27\% & 28.92\%\\
+\end{tabular}
+\end{table}
+
+\subsubsection{cardtest1 (smithy)}
+\label{sec:cardtestsmithy}
+
+\begin{verbatim}
+Lines executed:6.49% of 616
+Branches executed:3.86% of 415
+Taken at least once:2.41% of 415
+Calls executed:2.78% of 108
+\end{verbatim}
+
+\subsubsection{cardtest2 (adventurer)}
+\label{sec:cardtestadventurer}
+
+\begin{verbatim}
+Lines executed:17.05% of 616
+Branches executed:17.83% of 415
+Taken at least once:13.98% of 415
+Calls executed:10.19% of 108
+\end{verbatim}
+
+\subsubsection{cardtest3 (village)}
+\label{sec:cardtestvillage}
+
+\begin{verbatim}
+Lines executed:19.32% of 616
+Branches executed:22.89% of 415
+Taken at least once:13.98% of 415
+Calls executed:11.11% of 108
+\end{verbatim}
+
+\subsubsection{cardtest4 (mine)}
+\label{sec:cardtestmine}
+
+\begin{verbatim}
+Lines executed:21.27% of 616
+Branches executed:28.92% of 415
+Taken at least once:16.63% of 415
+Calls executed:12.04% of 108
+\end{verbatim}
+
+\section{Unit Testing Efforts}
+\label{sec:unittestingefforts}
+
+\subsection{Function Testing}
+\label{sec:functiontesting}
+
+Funciton testing involved confirming that a given function had the desired effect. For example, testing the \texttt{isGameOver} function involved first confirming that a given game is still continuing, then changing a given value to trigger an end to the game (e.g. changing three supply counts to 0), and finally testing for a successful end of game value:
+
+\begin{listing}[htbp]
+\begin{minted}[breaklines=true,breakanywhere=true]{c}
+myAssert(isGameOver(&testGame) == 0);
+
+for (i = 0; i < 3; i++)
+{
+    testGame.supplyCount[i] = 0;
+}
+
+myAssert(isGameOver(&testGame) == 1);
+\end{minted}
+\caption{Function testing example.}
+\end{listing}
+
+\subsection{Card Testing}
+\label{sec:cardtesting}
+
+Testing cards involved two steps:
+\begin{enumerate}
+\item Confirming that the implementation exited correctly by asserting that the relevant function returned 0 (as opposed to -1 for an unsuccessful exit).
+\item Confirming that the actions of the card had the desired effect. For the following smithy example, this means that if a player started with five cards in both their hands and decks, then the smithy card would result in a deck count of two and a hand count of seven.
+\end{enumerate}
+
+\begin{listing}[htbp]
+\begin{minted}[breaklines=true,breakanywhere=true]{c}
+// initialize hand and deck counts
+testGame->deckCount[player] = 5;
+testGame->handCount[player] = 5;
+
+// check successful exit of function
+myAssert(mySmithy(player, testGame, handPos) == 0); 
+
+// check successful 
+myAssert(testGame->deckCount[player] == 2);
+myAssert(testGame->handCount[player] == 7);
+\end{minted}
+\caption{Card testing example.}
+\end{listing}
+
+As per the instructor recommendation all of the unit tests and the card tests utilized a custom assert implementation, so as to be able to collect coverage information even when a crash fails (this behavior is not included in the standard C \texttt{assert} function).
+
+\begin{listing}[htbp]
+\begin{minted}[breaklines=true,breakanywhere=true]{c}
+#define myAssert(expression)                          \
+    if (expression)                                   \
+        (passed)(#expression, __LINE__, __FILE__, 0); \
+    else                                              \
+        (failed)(#expression, __LINE__, __FILE__, 0); \
+
+// outputs "TEST FAILED" message
+void failed(char *expression, int line, char *file, int color);
+
+// outputs "TEST PASSED" message
+void passed(char *expression, int line, char *file, int color);
+\end{minted}
+\caption{Custom assert macro for use in the test suite.}
+\end{listing}
+\end{document}
