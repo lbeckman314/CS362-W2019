@@ -1,0 +1,57 @@
+#+TITLE: Random Tester Documentation
+#+SETUPFILE: ~/main.org
+
+* Implementations
+
+** char inputChar()
+
+#+CAPTION:
+#+BEGIN_SRC c
+int random;
+char character;
+
+random = rand() % 127;
+character = (char) random;
+
+return character;
+#+END_SRC
+
+** char *inputString()
+
+#+CAPTION:
+#+BEGIN_SRC c
+int random;
+char *string;
+int size = 6;
+string = malloc(size * sizeof(char));
+
+int i;
+for (i = 0; i < size; i++)
+{
+    random = rand() % size;
+    switch (random)
+    {
+    case 0:
+        string[i] = 'r';
+        break;
+    case 1:
+        string[i] = 'e';
+        break;
+    case 2:
+        string[i] = 's';
+        break;
+    case 3:
+        string[i] = 'e';
+        break;
+    case 4:
+        string[i] = 't';
+        break;
+    case 5:
+        string[i] = '\0';
+        break;
+    }
+}
+
+return string;
+
+#+END_SRC

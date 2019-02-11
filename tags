@@ -92,6 +92,7 @@ COPPER_VALUE	dominion/interface.h	/^#define COPPER_VALUE /;"	d
 COPPER_VALUE	projects/roberwen/dominion/interface.h	/^#define COPPER_VALUE /;"	d
 COUNCIL_ROOM_COST	dominion/interface.h	/^#define COUNCIL_ROOM_COST /;"	d
 COUNCIL_ROOM_COST	projects/roberwen/dominion/interface.h	/^#define COUNCIL_ROOM_COST /;"	d
+COVFLAGS	dominion/Makefile	/^COVFLAGS = -fprofile-arcs -ftest-coverage$/;"	m
 CURSE_COST	dominion/interface.h	/^#define CURSE_COST /;"	d
 CURSE_COST	projects/roberwen/dominion/interface.h	/^#define CURSE_COST /;"	d
 CUTPURSE_COST	dominion/interface.h	/^#define CUTPURSE_COST /;"	d
@@ -134,6 +135,7 @@ GetSeed	dominion/rngs.c	/^   void GetSeed(long *x)$/;"	f	typeref:typename:void
 GetSeed	projects/roberwen/dominion/rngs.c	/^   void GetSeed(long *x)$/;"	f	typeref:typename:void
 HANDSIZE	dominion/interface.h	/^#define HANDSIZE /;"	d
 HANDSIZE	projects/roberwen/dominion/interface.h	/^#define HANDSIZE /;"	d
+Implementations	projects/quiz/randomstring.tex	/^\\section{Implementations}$/;"	s
 MATCH	dominion/interface.h	/^#define MATCH /;"	d
 MATCH	projects/roberwen/dominion/interface.h	/^#define MATCH /;"	d
 MAX_DECK	dominion/dominion.h	/^#define MAX_DECK /;"	d
@@ -279,6 +281,8 @@ cardEffect	dominion/dominion.c	/^int cardEffect(int card, int choice1, int choic
 cardEffect	projects/roberwen/dominion/dominion.c	/^int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState *state, int han/;"	f	typeref:typename:int
 cardNumToName	dominion/interface.c	/^void cardNumToName(int card, char *name){$/;"	f	typeref:typename:void
 cardNumToName	projects/roberwen/dominion/interface.c	/^void cardNumToName(int card, char *name){$/;"	f	typeref:typename:void
+char  inputString  	projects/quiz/randomstring.tex	/^\\subsection{char *inputString()}$/;"	u	section:Implementations
+char inputChar  	projects/quiz/randomstring.tex	/^\\subsection{char inputChar()}$/;"	u	section:Implementations
 checkDrawCard	dominion/badTestDrawCard.c	/^int checkDrawCard(int p, struct gameState *post) {$/;"	f	typeref:typename:int
 checkDrawCard	dominion/betterTestDrawCard.c	/^int checkDrawCard(int p, struct gameState *post) {$/;"	f	typeref:typename:int
 checkDrawCard	dominion/testBuyCard.c	/^int checkDrawCard(int p, struct gameState *post) {$/;"	f	typeref:typename:int
@@ -289,6 +293,7 @@ checkDrawCard	projects/roberwen/dominion/testBuyCard.c	/^int checkDrawCard(int p
 checkDrawCard	projects/roberwen/dominion/testDrawCard.c	/^int checkDrawCard(int p, struct gameState *post) {$/;"	f	typeref:typename:int
 clean	dominion/Makefile	/^clean:$/;"	t
 clean	projects/roberwen/dominion/Makefile	/^clean:$/;"	t
+cleanunittest	dominion/Makefile	/^cleanunittest:$/;"	t
 coins	dominion/dominion.h	/^  int coins; \/* Use as you see fit! *\/$/;"	m	struct:gameState	typeref:typename:int
 coins	projects/roberwen/dominion/dominion.h	/^  int coins; \/* Use as you see fit! *\/$/;"	m	struct:gameState	typeref:typename:int
 compare	dominion/dominion.c	/^int compare(const void* a, const void* b) {$/;"	f	typeref:typename:int
@@ -330,7 +335,7 @@ estate	dominion/dominion.h	/^   estate,$/;"	e	enum:CARD
 estate	projects/roberwen/dominion/dominion.h	/^   estate,$/;"	e	enum:CARD
 executeBotTurn	dominion/interface.c	/^void executeBotTurn(int player, int *turnNum, struct gameState *game) {$/;"	f	typeref:typename:void
 executeBotTurn	projects/roberwen/dominion/interface.c	/^void executeBotTurn(int player, int *turnNum, struct gameState *game) {$/;"	f	typeref:typename:void
-failed	dominion/myAssert.c	/^void failed(char *expression, int line, char *file)$/;"	f	typeref:typename:void
+failed	dominion/myAssert.c	/^void failed(char *expression, int line, char *file, int color)$/;"	f	typeref:typename:void
 feast	dominion/dominion.h	/^   feast, \/* choice1 is supply # of card gained) *\/$/;"	e	enum:CARD
 feast	projects/roberwen/dominion/dominion.h	/^   feast, \/* choice1 is supply # of card gained) *\/$/;"	e	enum:CARD
 fullDeckCount	dominion/dominion.c	/^int fullDeckCount(int player, int card, struct gameState *state) {$/;"	f	typeref:typename:int
@@ -371,6 +376,10 @@ kingdomCards	projects/roberwen/dominion/dominion.c	/^int* kingdomCards(int k1, i
 magenta	dominion/color.h	/^#define magenta /;"	d
 main	dominion/badTestDrawCard.c	/^int main () {$/;"	f	typeref:typename:int
 main	dominion/betterTestDrawCard.c	/^int main () {$/;"	f	typeref:typename:int
+main	dominion/cardtest1.c	/^int main(int argc, char* argv[])$/;"	f	typeref:typename:int
+main	dominion/cardtest2.c	/^int main(int argc, char* argv[])$/;"	f	typeref:typename:int
+main	dominion/cardtest3.c	/^int main(int argc, char* argv[])$/;"	f	typeref:typename:int
+main	dominion/cardtest4.c	/^int main(int argc, char* argv[])$/;"	f	typeref:typename:int
 main	dominion/playdom.c	/^int main (int argc, char** argv) {$/;"	f	typeref:typename:int
 main	dominion/player.c	/^int main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
 main	dominion/rt.c	/^int main(int argc, char** argv) {$/;"	f	typeref:typename:int
@@ -426,7 +435,7 @@ outpostPlayed	dominion/dominion.h	/^  int outpostPlayed;$/;"	m	struct:gameState	
 outpostPlayed	projects/roberwen/dominion/dominion.h	/^  int outpostPlayed;$/;"	m	struct:gameState	typeref:typename:int
 outpostTurn	dominion/dominion.h	/^  int outpostTurn;$/;"	m	struct:gameState	typeref:typename:int
 outpostTurn	projects/roberwen/dominion/dominion.h	/^  int outpostTurn;$/;"	m	struct:gameState	typeref:typename:int
-passed	dominion/myAssert.c	/^void passed(char *expression, int line, char *file)$/;"	f	typeref:typename:void
+passed	dominion/myAssert.c	/^void passed(char *expression, int line, char *file, int color)$/;"	f	typeref:typename:void
 phase	dominion/dominion.h	/^  int phase;$/;"	m	struct:gameState	typeref:typename:int
 phase	projects/roberwen/dominion/dominion.h	/^  int phase;$/;"	m	struct:gameState	typeref:typename:int
 phaseNumToName	dominion/interface.c	/^void phaseNumToName(int phase, char *name) {$/;"	f	typeref:typename:void
@@ -473,6 +482,9 @@ scoreFor	dominion/dominion.c	/^int scoreFor (int player, struct gameState *state
 scoreFor	projects/roberwen/dominion/dominion.c	/^int scoreFor (int player, struct gameState *state) {$/;"	f	typeref:typename:int
 sea_hag	dominion/dominion.h	/^   sea_hag,$/;"	e	enum:CARD
 sea_hag	projects/roberwen/dominion/dominion.h	/^   sea_hag,$/;"	e	enum:CARD
+sec:charinputchar	projects/quiz/randomstring.tex	/^\\label{sec:charinputchar}$/;"	l
+sec:charinputstring	projects/quiz/randomstring.tex	/^\\label{sec:charinputstring}$/;"	l
+sec:implementations	projects/quiz/randomstring.tex	/^\\label{sec:implementations}$/;"	l
 sec:org12dbbad	dominion/Assignment-2.tex	/^\\label{sec:org12dbbad}$/;"	l
 sec:org1809fad	dominion/Assignment-2.tex	/^\\label{sec:org1809fad}$/;"	l
 sec:org24710bb	dominion/Assignment-2.tex	/^\\label{sec:org24710bb}$/;"	l
@@ -506,6 +518,8 @@ supplyCount	dominion/dominion.h	/^  int supplyCount[treasure_map+1];  \/\/this i
 supplyCount	projects/roberwen/dominion/dominion.c	/^int supplyCount(int card, struct gameState *state) {$/;"	f	typeref:typename:int
 supplyCount	projects/roberwen/dominion/dominion.h	/^  int supplyCount[treasure_map+1];  \/\/this is the amount of a specific type of card given a sp/;"	m	struct:gameState	typeref:typename:int[]
 supplyCountTest	dominion/unittest2.c	/^void supplyCountTest(struct gameState testGame)$/;"	f	typeref:typename:void
+test1	dominion/unittest4.c	/^void test1(int player, struct gameState *testGame)$/;"	f	typeref:typename:void
+test2	dominion/unittest4.c	/^void test2(int player, struct gameState *testGame)$/;"	f	typeref:typename:void
 testAll	dominion/Makefile	/^testAll: dominion.o testSuite.c$/;"	t
 testAll	projects/roberwen/dominion/Makefile	/^testAll: dominion.o testSuite.c$/;"	t
 testBuyCard	dominion/Makefile	/^testBuyCard: testDrawCard.c dominion.o rngs.o$/;"	t
@@ -516,7 +530,7 @@ treasure_map	dominion/dominion.h	/^   treasure_map$/;"	e	enum:CARD
 treasure_map	projects/roberwen/dominion/dominion.h	/^   treasure_map$/;"	e	enum:CARD
 tribute	dominion/dominion.h	/^   tribute,$/;"	e	enum:CARD
 tribute	projects/roberwen/dominion/dominion.h	/^   tribute,$/;"	e	enum:CARD
-unittests	dominion/Makefile	/^unittests: myAssert.h myAssert.c$/;"	t
+unittestresults	dominion/Makefile	/^unittestresults: myAssert.h myAssert.c$/;"	t
 updateCoins	dominion/dominion.c	/^int updateCoins(int player, struct gameState *state, int bonus)$/;"	f	typeref:typename:int
 updateCoins	projects/roberwen/dominion/dominion.c	/^int updateCoins(int player, struct gameState *state, int bonus)$/;"	f	typeref:typename:int
 village	dominion/dominion.h	/^   village,$/;"	e	enum:CARD

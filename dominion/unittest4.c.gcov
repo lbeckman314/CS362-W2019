@@ -1,0 +1,63 @@
+        -:    0:Source:unittest4.c
+        -:    0:Graph:unittest4.gcno
+        -:    0:Data:unittest4.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "myAssert.h"
+        -:    2:#include "dominion.c"
+        -:    3:#include <stdio.h>
+        -:    4:
+        -:    5:void test1(int player, struct gameState *testGame);
+        -:    6:void test2(int player, struct gameState *testGame);
+        -:    7:
+function main called 1 returned 100% blocks executed 100%
+        1:    8:int main(int argc, char* argv[])
+        -:    9:{
+        1:   10:    struct gameState *testGame = newGame();
+call    0 returned 100%
+        1:   11:    int player = 0;
+        -:   12:
+        1:   13:    test1(player, testGame);
+call    0 returned 100%
+        1:   14:    test2(player, testGame);
+call    0 returned 100%
+        -:   15:}
+        -:   16:
+        -:   17:
+function test1 called 1 returned 100% blocks executed 80%
+        1:   18:void test1(int player, struct gameState *testGame)
+        -:   19:{
+        1:   20:    int bonus = 0;
+        1:   21:    testGame->handCount[player] = 5;
+        1:   22:    testGame->hand[player][0] = copper;
+        1:   23:    testGame->hand[player][1] = copper;
+        1:   24:    testGame->hand[player][2] = silver;
+        1:   25:    testGame->hand[player][3] = silver;
+        1:   26:    testGame->hand[player][4] = gold;
+        -:   27:
+        1:   28:    updateCoins(player, testGame, bonus);
+call    0 returned 100%
+       1*:   29:    myAssert(testGame->coins == 9);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+call    2 returned 100%
+call    3 never executed
+        1:   30:}
+        -:   31:
+function test2 called 1 returned 100% blocks executed 80%
+        1:   32:void test2(int player, struct gameState *testGame)
+        -:   33:{
+        1:   34:    int bonus = 2;
+        1:   35:    testGame->handCount[player] = 3;
+        1:   36:    testGame->hand[player][0] = copper;
+        1:   37:    testGame->hand[player][1] = silver;
+        1:   38:    testGame->hand[player][2] = gold;
+        -:   39:
+        1:   40:    updateCoins(player, testGame, bonus);
+call    0 returned 100%
+       1*:   41:    myAssert(testGame->coins == 8);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+call    2 returned 100%
+call    3 never executed
+        1:   42:}

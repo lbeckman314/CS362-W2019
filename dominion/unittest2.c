@@ -1,5 +1,6 @@
 #include "myAssert.h"
 #include "dominion_helpers.h"
+#include "dominion.c"
 #include <stdio.h>
 
 void supplyCountTest(struct gameState testGame);
@@ -7,12 +8,7 @@ void provinceCountTest(struct gameState testGame);
 
 int main(int argc, char* argv[])
 {
-    // false, should fail
-    // myAssert(1 == 0);    
-
-    // true, should pass
-    // myAssert(1 == 1);    
-
+    // isGameOver function
     struct gameState testGame;
 
     int i;

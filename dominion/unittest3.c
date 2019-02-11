@@ -4,6 +4,8 @@
 
 int main(int argc, char* argv[])
 {
+    // compare function
+
     int test1 = 1;
     int test2 = 2;
     int *a = &test1;

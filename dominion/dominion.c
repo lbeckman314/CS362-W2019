@@ -655,15 +655,17 @@ int myAdventurer(int drawntreasure, int currentPlayer, int temphand[], struct ga
         }
         drawCard(currentPlayer, state);
         cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
-        // BUG: copper is now counted toward drawntreasure
         //if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
-        if (cardDrawn == silver || cardDrawn == gold)
+        if (cardDrawn == copper || cardDrawn == silver)
             drawntreasure++;
         else{
             temphand[z]=cardDrawn;
             state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
             z++;
         }
+        printf("z: %d\n", z);
+        printf("cardDrawn: %d\n", cardDrawn);
+        printf("drawntreasure: %d\n", drawntreasure);
     }
     while(z-1>=0){
         state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
@@ -766,7 +768,7 @@ int mySmithy(int currentPlayer, struct gameState *state, int handPos)
 	int i;
 
 	//+3 Cards
-	for (i = 0; i < 3; i++)
+	for (i = -1; i < 3; i++)
 	{
 		drawCard(currentPlayer, state);
 	}
@@ -784,16 +786,22 @@ int myMine(int currentPlayer, struct gameState *state, int choice1, int choice2,
 
     if (state->hand[currentPlayer][choice1] < copper || state->hand[currentPlayer][choice1] > gold)
     {
+        printf("cost: %d\n", state->hand[currentPlayer][choice1]);
+        printf("error 1\n");
         return -1;
     }
 
     if (choice2 > treasure_map || choice2 < curse)
     {
+        printf("error 2\n");
         return -1;
     }
 
     if ( (getCost(state->hand[currentPlayer][choice1]) + 3) > getCost(choice2) )
     {
+        printf("choice 1: %d\n", getCost(state->hand[currentPlayer][choice1]));
+        printf("choice 2: %d\n", getCost(choice2));
+        printf("error 3\n");
         return -1;
     }
 
@@ -885,7 +893,9 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 		drawCard(currentPlayer, state);
 			
 		//+2 Actions
+        printf("old actions: %d\n", state->numActions);
 		state->numActions = state->numActions + 2;
+        printf("new actions: %d\n", state->numActions);
 			
 		//discard played card from hand
 		discardCard(handPos, currentPlayer, state, 0);

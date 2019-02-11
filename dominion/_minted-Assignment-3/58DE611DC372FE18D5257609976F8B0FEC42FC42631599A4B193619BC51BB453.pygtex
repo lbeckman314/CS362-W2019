@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}define myAssert(expression)                          \PYGZbs{}}
+\PYG{c+cp}{    if (expression)                                   \PYGZbs{}}
+\PYG{c+cp}{        (passed)(\PYGZsh{}expression, \PYGZus{}\PYGZus{}LINE\PYGZus{}\PYGZus{}, \PYGZus{}\PYGZus{}FILE\PYGZus{}\PYGZus{}, 0); \PYGZbs{}}
+\PYG{c+cp}{    else                                              \PYGZbs{}}
+\PYG{c+cp}{        (failed)(\PYGZsh{}expression, \PYGZus{}\PYGZus{}LINE\PYGZus{}\PYGZus{}, \PYGZus{}\PYGZus{}FILE\PYGZus{}\PYGZus{}, 0); \PYGZbs{}}
+
+\PYG{c+c1}{// outputs \PYGZdq{}TEST FAILED\PYGZdq{} message}
+\PYG{k+kt}{void} \PYG{n+nf}{failed}\PYG{p}{(}\PYG{k+kt}{char} \PYG{o}{*}\PYG{n}{expression}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{line}\PYG{p}{,} \PYG{k+kt}{char} \PYG{o}{*}\PYG{n}{file}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{color}\PYG{p}{);}
+
+\PYG{c+c1}{// outputs \PYGZdq{}TEST PASSED\PYGZdq{} message}
+\PYG{k+kt}{void} \PYG{n+nf}{passed}\PYG{p}{(}\PYG{k+kt}{char} \PYG{o}{*}\PYG{n}{expression}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{line}\PYG{p}{,} \PYG{k+kt}{char} \PYG{o}{*}\PYG{n}{file}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{color}\PYG{p}{);}
+\end{Verbatim}

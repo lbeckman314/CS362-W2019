@@ -1,9 +1,12 @@
 #include "myAssert.h"
 #include "dominion_helpers.h"
+#include "dominion.c"
 #include <stdio.h>
 
 int main(int argc, char* argv[])
 {
+    // getCost function
+
     // false, should fail
     // myAssert(1 == 0);    
 

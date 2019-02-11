@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// initialize hand and deck counts}
+\PYG{n}{testGame}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{deckCount}\PYG{p}{[}\PYG{n}{player}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{5}\PYG{p}{;}
+\PYG{n}{testGame}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{handCount}\PYG{p}{[}\PYG{n}{player}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{5}\PYG{p}{;}
+
+\PYG{c+c1}{// check successful exit of function}
+\PYG{n}{myAssert}\PYG{p}{(}\PYG{n}{mySmithy}\PYG{p}{(}\PYG{n}{player}\PYG{p}{,} \PYG{n}{testGame}\PYG{p}{,} \PYG{n}{handPos}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{);}
+
+\PYG{c+c1}{// check successful}
+\PYG{n}{myAssert}\PYG{p}{(}\PYG{n}{testGame}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{deckCount}\PYG{p}{[}\PYG{n}{player}\PYG{p}{]} \PYG{o}{==} \PYG{l+m+mi}{2}\PYG{p}{);}
+\PYG{n}{myAssert}\PYG{p}{(}\PYG{n}{testGame}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{handCount}\PYG{p}{[}\PYG{n}{player}\PYG{p}{]} \PYG{o}{==} \PYG{l+m+mi}{7}\PYG{p}{);}
+\end{Verbatim}

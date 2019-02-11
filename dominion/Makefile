@@ -1,4 +1,5 @@
 CFLAGS= -Wall -fpic -coverage -lm -std=c99
+COVFLAGS = -fprofile-arcs -ftest-coverage
 
 rngs.o: rngs.h rngs.c
 	gcc -c rngs.c -g  $(CFLAGS)
@@ -29,11 +30,40 @@ runtests: testDrawCard
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
 
-unittests: myAssert.h myAssert.c
-	gcc -o unittest1 unittest1.c myAssert.c -g dominion.o rngs.o interface.o $(CFLAGS)
-	gcc -o unittest2 unittest2.c myAssert.c -g dominion.o rngs.o interface.o $(CFLAGS)
-	gcc -o unittest3 unittest3.c myAssert.c -g rngs.o interface.o $(CFLAGS)
-	gcc -o unittest4 unittest4.c myAssert.c -g dominion.o rngs.o interface.o $(CFLAGS)
+unittestresults: myAssert.h myAssert.c
+	> unittestresult.out
+	echo "####################" >> unittestresult.out; \
+	echo "Beginning Unit Tests" >> unittestresult.out; \
+	echo "####################" >> unittestresult.out; \
+	for number in 1 2 3 4; \
+	do \
+		gcc -o unittest$$number unittest$$number.c myAssert.c -g rngs.o interface.o $(CFLAGS) $(COVFLAGS); \
+		echo "####################" >> unittestresult.out; \
+		echo "Beginning unittest$$number" >> unittestresult.out; \
+		echo "####################" >> unittestresult.out; \
+		./unittest$$number >> unittestresult.out; \
+		gcov -b unittest$$number.c >> unittestresult.out; \
+		cat unittest$$number.c.gcov >> unittestresult.out; \
+	done
+	echo "####################" >> unittestresult.out; \
+	echo "Beginning Card Tests" >> unittestresult.out; \
+	echo "####################" >> unittestresult.out; \
+	for number in 1 2 3 4; \
+	do \
+		gcc -o cardtest$$number cardtest$$number.c myAssert.c -g rngs.o interface.o $(CFLAGS) $(COVFLAGS); \
+		echo "####################" >> unittestresult.out; \
+		echo "Beginning cardtest$$number" >> unittestresult.out; \
+		echo "####################" >> unittestresult.out; \
+		./cardtest$$number >> unittestresult.out; \
+		gcov -b cardtest$$number.c >> unittestresult.out; \
+		cat cardtest$$number.c.gcov >> unittestresult.out; \
+	done
+
+cleanunittest:
+	rm -f unittest*.gcda
+	rm -f unittest*.gcno
+	rm -f unittest*.c.gcov
+	rm -f unittestresult.out
 
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)

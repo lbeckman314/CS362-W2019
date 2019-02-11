@@ -1,0 +1,614 @@
+####################
+Beginning Unit Tests
+####################
+####################
+Beginning unittest1
+####################
+unittest1.c:17 TEST SUCCESSFULLY COMPLETED -> getCost(0) == 0
+unittest1.c:20 TEST SUCCESSFULLY COMPLETED -> getCost(1) == 2
+unittest1.c:23 TEST SUCCESSFULLY COMPLETED -> getCost(2) == 5
+unittest1.c:26 TEST SUCCESSFULLY COMPLETED -> getCost(3) == 8
+unittest1.c:29 TEST SUCCESSFULLY COMPLETED -> getCost(4) == 0
+File 'unittest1.c'
+Lines executed:100.00% of 6
+Branches executed:100.00% of 10
+Taken at least once:50.00% of 10
+Calls executed:66.67% of 15
+Creating 'unittest1.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.95% of 616
+Branches executed:6.75% of 415
+Taken at least once:1.20% of 415
+Calls executed:0.00% of 108
+Creating 'dominion.c.gcov'
+
+        -:    0:Source:unittest1.c
+        -:    0:Graph:unittest1.gcno
+        -:    0:Data:unittest1.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "myAssert.h"
+        -:    2:#include "dominion_helpers.h"
+        -:    3:#include "dominion.c"
+        -:    4:#include <stdio.h>
+        -:    5:
+function main called 1 returned 100% blocks executed 77%
+        1:    6:int main(int argc, char* argv[])
+        -:    7:{
+        -:    8:    // getCost function
+        -:    9:
+        -:   10:    // false, should fail
+        -:   11:    // myAssert(1 == 0);    
+        -:   12:
+        -:   13:    // true, should pass
+        -:   14:    // myAssert(1 == 1);    
+        -:   15:
+        -:   16:    // curse
+       1*:   17:    myAssert(getCost(0) == 0);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0%
+call    3 returned 100%
+call    4 never executed
+        -:   18:    
+        -:   19:    // estate
+       1*:   20:    myAssert(getCost(1) == 2);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0%
+call    3 returned 100%
+call    4 never executed
+        -:   21:    
+        -:   22:    // duchy
+       1*:   23:    myAssert(getCost(2) == 5);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0%
+call    3 returned 100%
+call    4 never executed
+        -:   24:    
+        -:   25:    // province
+       1*:   26:    myAssert(getCost(3) == 8);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0%
+call    3 returned 100%
+call    4 never executed
+        -:   27:    
+        -:   28:    // copper
+       1*:   29:    myAssert(getCost(4) == 0);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0%
+call    3 returned 100%
+call    4 never executed
+        -:   30:}
+####################
+Beginning unittest2
+####################
+unittest2.c:27 TEST SUCCESSFULLY COMPLETED -> isGameOver(&testGame) == 0
+unittest2.c:34 TEST SUCCESSFULLY COMPLETED -> isGameOver(&testGame) == 1
+unittest2.c:42 TEST SUCCESSFULLY COMPLETED -> isGameOver(&testGame) == 0
+unittest2.c:45 TEST SUCCESSFULLY COMPLETED -> isGameOver(&testGame) == 1
+File 'unittest2.c'
+Lines executed:100.00% of 17
+Branches executed:100.00% of 12
+Taken at least once:66.67% of 12
+Calls executed:71.43% of 14
+Creating 'unittest2.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.62% of 616
+Branches executed:1.93% of 415
+Taken at least once:1.93% of 415
+Calls executed:0.00% of 108
+Creating 'dominion.c.gcov'
+
+        -:    0:Source:unittest2.c
+        -:    0:Graph:unittest2.gcno
+        -:    0:Data:unittest2.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "myAssert.h"
+        -:    2:#include "dominion_helpers.h"
+        -:    3:#include "dominion.c"
+        -:    4:#include <stdio.h>
+        -:    5:
+        -:    6:void supplyCountTest(struct gameState testGame);
+        -:    7:void provinceCountTest(struct gameState testGame);
+        -:    8:
+function main called 1 returned 100% blocks executed 100%
+        1:    9:int main(int argc, char* argv[])
+        -:   10:{
+        -:   11:    struct gameState testGame;
+        -:   12:
+        -:   13:    int i;
+       26:   14:    for (i = 0; i < 25; i++)
+branch  0 taken 96%
+branch  1 taken 4% (fallthrough)
+        -:   15:    {
+       25:   16:        testGame.supplyCount[i] = 1;
+        -:   17:    }
+        -:   18:
+        1:   19:    supplyCountTest(testGame);
+call    0 returned 100%
+        1:   20:    provinceCountTest(testGame);
+call    0 returned 100%
+        -:   21:}
+        -:   22:
+        -:   23:
+function supplyCountTest called 1 returned 100% blocks executed 83%
+        1:   24:void supplyCountTest(struct gameState testGame)
+        -:   25:{
+        -:   26:    int i;
+       1*:   27:    myAssert(isGameOver(&testGame) == 0);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0%
+call    3 returned 100%
+call    4 never executed
+        -:   28:
+        4:   29:    for (i = 0; i < 3; i++)
+branch  0 taken 75%
+branch  1 taken 25% (fallthrough)
+        -:   30:    {
+        3:   31:        testGame.supplyCount[i] = 0;
+        -:   32:    }
+        -:   33:
+       1*:   34:    myAssert(isGameOver(&testGame) == 1);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0%
+call    3 returned 100%
+call    4 never executed
+        1:   35:}
+        -:   36:
+        -:   37:
+function provinceCountTest called 1 returned 100% blocks executed 78%
+        1:   38:void provinceCountTest(struct gameState testGame)
+        -:   39:{
+        -:   40:
+        1:   41:    testGame.supplyCount[province] = 100;
+       1*:   42:    myAssert(isGameOver(&testGame) == 0);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0%
+call    3 returned 100%
+call    4 never executed
+        -:   43:
+        1:   44:    testGame.supplyCount[province] = 0;
+       1*:   45:    myAssert(isGameOver(&testGame) == 1);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0%
+call    3 returned 100%
+call    4 never executed
+        1:   46:}
+####################
+Beginning unittest3
+####################
+unittest3.c:14 TEST SUCCESSFULLY COMPLETED -> compare(b, a) == 1
+unittest3.c:15 TEST SUCCESSFULLY COMPLETED -> compare(a, b) == -1
+unittest3.c:16 TEST SUCCESSFULLY COMPLETED -> compare(a, a) == 0
+unittest3.c:17 TEST SUCCESSFULLY COMPLETED -> compare(b, b) == 0
+File 'unittest3.c'
+Lines executed:100.00% of 9
+Branches executed:100.00% of 8
+Taken at least once:50.00% of 8
+Calls executed:66.67% of 12
+Creating 'unittest3.c.gcov'
+
+File 'dominion.c'
+Lines executed:0.97% of 616
+Branches executed:0.96% of 415
+Taken at least once:0.96% of 415
+Calls executed:0.00% of 108
+Creating 'dominion.c.gcov'
+
+        -:    0:Source:unittest3.c
+        -:    0:Graph:unittest3.gcno
+        -:    0:Data:unittest3.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "myAssert.h"
+        -:    2:#include "dominion.c"
+        -:    3:#include <stdio.h>
+        -:    4:
+function main called 1 returned 100% blocks executed 78%
+        1:    5:int main(int argc, char* argv[])
+        -:    6:{
+        -:    7:    // compare function
+        -:    8:
+        1:    9:    int test1 = 1;
+        1:   10:    int test2 = 2;
+        1:   11:    int *a = &test1;
+        1:   12:    int *b = &test2;
+        -:   13:
+       1*:   14:    myAssert(compare(b, a) == 1);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0%
+call    3 returned 100%
+call    4 never executed
+       1*:   15:    myAssert(compare(a, b) == -1);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0%
+call    3 returned 100%
+call    4 never executed
+       1*:   16:    myAssert(compare(a, a) == 0);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0%
+call    3 returned 100%
+call    4 never executed
+       1*:   17:    myAssert(compare(b, b) == 0);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0%
+call    3 returned 100%
+call    4 never executed
+        -:   18:}
+####################
+Beginning unittest4
+####################
+unittest4.c:29 TEST SUCCESSFULLY COMPLETED -> testGame->coins == 9
+unittest4.c:41 TEST SUCCESSFULLY COMPLETED -> testGame->coins == 8
+File 'unittest4.c'
+Lines executed:100.00% of 25
+Branches executed:100.00% of 4
+Taken at least once:50.00% of 4
+Calls executed:77.78% of 9
+Creating 'unittest4.c.gcov'
+
+File 'dominion.c'
+Lines executed:2.27% of 616
+Branches executed:1.93% of 415
+Taken at least once:1.69% of 415
+Calls executed:0.00% of 108
+Creating 'dominion.c.gcov'
+
+        -:    0:Source:unittest4.c
+        -:    0:Graph:unittest4.gcno
+        -:    0:Data:unittest4.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "myAssert.h"
+        -:    2:#include "dominion.c"
+        -:    3:#include <stdio.h>
+        -:    4:
+        -:    5:void test1(int player, struct gameState *testGame);
+        -:    6:void test2(int player, struct gameState *testGame);
+        -:    7:
+function main called 1 returned 100% blocks executed 100%
+        1:    8:int main(int argc, char* argv[])
+        -:    9:{
+        1:   10:    struct gameState *testGame = newGame();
+call    0 returned 100%
+        1:   11:    int player = 0;
+        -:   12:
+        1:   13:    test1(player, testGame);
+call    0 returned 100%
+        1:   14:    test2(player, testGame);
+call    0 returned 100%
+        -:   15:}
+        -:   16:
+        -:   17:
+function test1 called 1 returned 100% blocks executed 80%
+        1:   18:void test1(int player, struct gameState *testGame)
+        -:   19:{
+        1:   20:    int bonus = 0;
+        1:   21:    testGame->handCount[player] = 5;
+        1:   22:    testGame->hand[player][0] = copper;
+        1:   23:    testGame->hand[player][1] = copper;
+        1:   24:    testGame->hand[player][2] = silver;
+        1:   25:    testGame->hand[player][3] = silver;
+        1:   26:    testGame->hand[player][4] = gold;
+        -:   27:
+        1:   28:    updateCoins(player, testGame, bonus);
+call    0 returned 100%
+       1*:   29:    myAssert(testGame->coins == 9);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+call    2 returned 100%
+call    3 never executed
+        1:   30:}
+        -:   31:
+function test2 called 1 returned 100% blocks executed 80%
+        1:   32:void test2(int player, struct gameState *testGame)
+        -:   33:{
+        1:   34:    int bonus = 2;
+        1:   35:    testGame->handCount[player] = 3;
+        1:   36:    testGame->hand[player][0] = copper;
+        1:   37:    testGame->hand[player][1] = silver;
+        1:   38:    testGame->hand[player][2] = gold;
+        -:   39:
+        1:   40:    updateCoins(player, testGame, bonus);
+call    0 returned 100%
+       1*:   41:    myAssert(testGame->coins == 8);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+call    2 returned 100%
+call    3 never executed
+        1:   42:}
+####################
+Beginning Card Tests
+####################
+####################
+Beginning cardtest1
+####################
+cardtest1.c:14 TEST SUCCESSFULLY COMPLETED -> mySmithy(player, testGame, handPos) == 0
+cardtest1.c:15 TEST FAILED: -> testGame->deckCount[player] == 2
+cardtest1.c:16 TEST FAILED: -> testGame->handCount[player] == 7
+cardtest1.c:19 TEST SUCCESSFULLY COMPLETED -> testGame->deckCount[player] == 0
+cardtest1.c:20 TEST SUCCESSFULLY COMPLETED -> testGame->handCount[player] == 8
+File 'cardtest1.c'
+Lines executed:100.00% of 12
+Branches executed:100.00% of 10
+Taken at least once:50.00% of 10
+Calls executed:61.54% of 13
+Creating 'cardtest1.c.gcov'
+
+File 'dominion.c'
+Lines executed:6.49% of 616
+Branches executed:3.86% of 415
+Taken at least once:2.41% of 415
+Calls executed:2.78% of 108
+Creating 'dominion.c.gcov'
+
+        -:    0:Source:cardtest1.c
+        -:    0:Graph:cardtest1.gcno
+        -:    0:Data:cardtest1.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "myAssert.h"
+        -:    2:#include "dominion.c"
+        -:    3:#include <stdio.h>
+        -:    4:
+function main called 1 returned 100% blocks executed 75%
+        1:    5:int main(int argc, char* argv[])
+        -:    6:{
+        -:    7:    // smithy
+        1:    8:    int player = 0;
+        1:    9:    struct gameState *testGame = newGame();
+call    0 returned 100%
+        1:   10:    int handPos = 0;
+        1:   11:    testGame->deckCount[player] = 5;
+        1:   12:    testGame->handCount[player] = 5;
+        -:   13:
+       1*:   14:    myAssert(mySmithy(player, testGame, handPos) == 0); 
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0%
+call    3 returned 100%
+call    4 never executed
+       1*:   15:    myAssert(testGame->deckCount[player] == 2);
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+call    2 never executed
+call    3 returned 100%
+       1*:   16:    myAssert(testGame->handCount[player] == 7);
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+call    2 never executed
+call    3 returned 100%
+        -:   17:
+        1:   18:    mySmithy(player, testGame, handPos); 
+call    0 returned 100%
+       1*:   19:    myAssert(testGame->deckCount[player] == 0);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+call    2 returned 100%
+call    3 never executed
+       1*:   20:    myAssert(testGame->handCount[player] == 8);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+call    2 returned 100%
+call    3 never executed
+        -:   21:    //printf("deck count: %d\n", testGame->deckCount[player]);
+        -:   22:    //printf("hand count: %d\n", testGame->handCount[player]);
+        -:   23:}
+####################
+Beginning cardtest2
+####################
+z: 0
+cardDrawn: 4
+drawntreasure: 1
+z: 0
+cardDrawn: 4
+drawntreasure: 2
+cardtest2.c:19 TEST SUCCESSFULLY COMPLETED -> myAdventurer(drawntreasure, player, temphand, testGame) == 0
+cardtest2.c:22 TEST SUCCESSFULLY COMPLETED -> lastCard == copper || lastCard == silver || lastCard == gold
+File 'cardtest2.c'
+Lines executed:100.00% of 13
+Branches executed:50.00% of 8
+Taken at least once:25.00% of 8
+Calls executed:71.43% of 7
+Creating 'cardtest2.c.gcov'
+
+File 'dominion.c'
+Lines executed:17.05% of 616
+Branches executed:17.83% of 415
+Taken at least once:13.98% of 415
+Calls executed:10.19% of 108
+Creating 'dominion.c.gcov'
+
+        -:    0:Source:cardtest2.c
+        -:    0:Graph:cardtest2.gcno
+        -:    0:Data:cardtest2.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "myAssert.h"
+        -:    2:#include "dominion.c"
+        -:    3:#include <stdio.h>
+        -:    4:
+function main called 1 returned 100% blocks executed 69%
+        1:    5:int main(int argc, char* argv[])
+        1:    6:{
+        -:    7:    // adventurer
+        1:    8:    int player = 0;
+        1:    9:    int drawntreasure = 0;
+        1:   10:    struct gameState *testGame = newGame();
+call    0 returned 100%
+        -:   11:
+        1:   12:    testGame->deckCount[player] = 5;
+        1:   13:    testGame->handCount[player] = 5;
+        -:   14:
+        1:   15:    int temphand[testGame->handCount[player]];
+        1:   16:    int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, sea_hag, tribute, smithy};
+        1:   17:    initializeGame(2, k, 10, testGame);
+call    0 returned 100%
+        -:   18:
+       1*:   19:    myAssert(myAdventurer(drawntreasure, player, temphand, testGame) == 0);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0%
+call    3 returned 100%
+call    4 never executed
+        -:   20:
+        1:   21:    int lastCard = testGame->hand[player][testGame->handCount[player]-1];
+       1*:   22:    myAssert(lastCard == copper || lastCard == silver || lastCard == gold);
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+branch  2 never executed
+branch  3 never executed
+branch  4 never executed
+branch  5 never executed
+call    6 returned 100%
+call    7 never executed
+        -:   23:    //printf("card: %d\n", testGame->hand[player][testGame->handCount[player]-1]);
+        -:   24:}
+        -:   25:
+####################
+Beginning cardtest3
+####################
+old actions: 1
+new actions: 3
+cardtest3.c:31 TEST SUCCESSFULLY COMPLETED -> cardEffect(card, choice1, choice2, choice3, testGame, handPos, bonus) == 0
+cardtest3.c:35 TEST SUCCESSFULLY COMPLETED -> actions == actionsOld + 2
+File 'cardtest3.c'
+Lines executed:100.00% of 19
+Branches executed:100.00% of 4
+Taken at least once:50.00% of 4
+Calls executed:71.43% of 7
+Creating 'cardtest3.c.gcov'
+
+File 'dominion.c'
+Lines executed:19.32% of 616
+Branches executed:22.89% of 415
+Taken at least once:13.98% of 415
+Calls executed:11.11% of 108
+Creating 'dominion.c.gcov'
+
+        -:    0:Source:cardtest3.c
+        -:    0:Graph:cardtest3.gcno
+        -:    0:Data:cardtest3.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "myAssert.h"
+        -:    2:#include "dominion.c"
+        -:    3:#include <stdio.h>
+        -:    4:
+function main called 1 returned 100% blocks executed 82%
+        1:    5:int main(int argc, char* argv[])
+        -:    6:{
+        -:    7:    // village
+        1:    8:    int player = 0;
+        1:    9:    struct gameState *testGame = newGame();
+call    0 returned 100%
+        -:   10:
+        1:   11:    testGame->deckCount[player] = 5;
+        1:   12:    testGame->handCount[player] = 5;
+        -:   13:
+        -:   14:
+        1:   15:    int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, sea_hag, tribute, smithy};
+        1:   16:    initializeGame(2, k, 10, testGame);
+call    0 returned 100%
+        -:   17:
+        1:   18:    int actions = testGame->numActions;
+        1:   19:    int actionsOld = actions;
+        -:   20:    //int hand = testGame->handCount[player];
+        -:   21:    //int handOld = hand;
+        -:   22:
+        1:   23:    int card = village;
+        1:   24:    int choice1 = 0;
+        1:   25:    int choice2 = 0;
+        1:   26:    int choice3 = 0;
+        1:   27:    int handPos = 0;
+        1:   28:    int bonusVal = 0;
+        1:   29:    int *bonus = &bonusVal;
+        -:   30:
+       1*:   31:    myAssert(cardEffect(card, choice1, choice2, choice3, testGame, handPos, bonus) == 0);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0%
+call    3 returned 100%
+call    4 never executed
+        -:   32:
+        1:   33:    actions = testGame->numActions;
+        -:   34:    //hand = testGame->handCount[player];
+       1*:   35:    myAssert(actions == actionsOld + 2);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+call    2 returned 100%
+call    3 never executed
+        -:   36:    //myAssert(hand == handOld - 1);
+        -:   37:    //myAssert(testGame->handCount[player][handPos] == -1);
+        -:   38:    //printf("handPos: %d\n", testGame->handCount[player][handPos]);
+        -:   39:    ///printf("actions: %d, actionsOld: %d\n", actions, actionsOld);
+        -:   40:    //printf("hand: %d, handOld: %d\n", hand, handOld);
+        -:   41:}
+####################
+Beginning cardtest4
+####################
+cardtest4.c:21 TEST SUCCESSFULLY COMPLETED -> myMine(player, testGame, choice1, choice2, handPos) == 0
+File 'cardtest4.c'
+Lines executed:100.00% of 11
+Branches executed:100.00% of 2
+Taken at least once:50.00% of 2
+Calls executed:80.00% of 5
+Creating 'cardtest4.c.gcov'
+
+File 'dominion.c'
+Lines executed:21.27% of 616
+Branches executed:28.92% of 415
+Taken at least once:16.63% of 415
+Calls executed:12.04% of 108
+Creating 'dominion.c.gcov'
+
+        -:    0:Source:cardtest4.c
+        -:    0:Graph:cardtest4.gcno
+        -:    0:Data:cardtest4.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "myAssert.h"
+        -:    2:#include "dominion.c"
+        -:    3:#include <stdio.h>
+        -:    4:
+function main called 1 returned 100% blocks executed 88%
+        1:    5:int main(int argc, char* argv[])
+        -:    6:{
+        -:    7:    // mine
+        1:    8:    int player = 0;
+        1:    9:    struct gameState *testGame = newGame();
+call    0 returned 100%
+        -:   10:
+        1:   11:    testGame->deckCount[player] = 5;
+        1:   12:    testGame->handCount[player] = 5;
+        -:   13:
+        1:   14:    int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, sea_hag, tribute, smithy};
+        1:   15:    initializeGame(2, k, 10, testGame);
+call    0 returned 100%
+        -:   16:
+        1:   17:    int choice1 = copper;
+        1:   18:    int choice2 = silver;
+        1:   19:    int handPos = 0;
+        -:   20:
+       1*:   21:    myAssert(myMine(player, testGame, choice1, choice2, handPos) == 0);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0%
+call    3 returned 100%
+call    4 never executed
+        -:   22:}

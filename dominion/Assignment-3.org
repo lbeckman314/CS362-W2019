@@ -1,0 +1,182 @@
+#+TITLE: Assignment 3
+#+SETUPFILE: ~/main.org
+
+* Bugs
+
+A prominent bug is one I introduced in Assignment 2 within the ~myAdventurer~ function.
+
+#+CAPTION: myAdventurer Bug that doesn't count gold toward treasure.
+#+BEGIN_SRC c
+int myAdventurer(int drawntreasure, int currentPlayer, int temphand[], struct gameState *state)
+{
+    // ...
+
+    // BUG: gold is not counted toward drawntreasure
+    //if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+    if (cardDrawn == copper || cardDrawn == silver)
+        drawntreasure++;
+    
+    // ...
+}
+#+END_SRC
+  
+* Unit Testing
+
+** Unit Tests
+   
+The four unit tests covered the following four functions:
+1) getCost
+2) isGameOver
+3) compare
+4) updateCoins
+   
+#+CAPTION: Coverage for Function Tests
+| function    | statement coverage | branch coverage |
+|-------------+--------------------+-----------------|
+| getCost     |              1.95% |           6.75% |
+| isGameOver  |              1.62% |           1.93% |
+| compare     |              0.97% |           0.96% |
+| updateCoins |              2.27% |           1.93% |
+
+*** unittest1 (getCost function)
+
+#+BEGIN_EXAMPLE
+Lines executed:1.95% of 616
+Branches executed:6.75% of 415
+Taken at least once:1.20% of 415
+Calls executed:0.00% of 108
+#+END_EXAMPLE
+
+*** unittest2 (isGameOver function)
+
+#+BEGIN_EXAMPLE
+Lines executed:1.62% of 616
+Branches executed:1.93% of 415
+Taken at least once:1.93% of 415
+Calls executed:0.00% of 108
+#+END_EXAMPLE
+
+*** unittest3 (compare function)
+
+#+BEGIN_EXAMPLE
+Lines executed:0.97% of 616
+Branches executed:0.96% of 415
+Taken at least once:0.96% of 415
+Calls executed:0.00% of 108
+#+END_EXAMPLE
+
+*** unittest4 (updateCoins function)
+
+#+BEGIN_EXAMPLE
+Lines executed:2.27% of 616
+Branches executed:1.93% of 415
+Taken at least once:1.69% of 415
+Calls executed:0.00% of 108
+#+END_EXAMPLE
+
+** Card Tests
+
+The four card tests covered the following four card types:
+1) smithy
+2) adventurer
+3) village
+4) mine
+   
+#+CAPTION: Coverage for Card Tests
+| card       | statement coverage | branch coverage |
+|------------+--------------------+-----------------|
+| Smithy     |              6.49% |           3.86% |
+| Adventurer |             17.05% |          17.83% |
+| Village    |             19.32% |          22.89% |
+| Mine       |             21.27% |          28.92% |
+
+*** cardtest1 (smithy)
+
+#+BEGIN_EXAMPLE
+Lines executed:6.49% of 616
+Branches executed:3.86% of 415
+Taken at least once:2.41% of 415
+Calls executed:2.78% of 108
+#+END_EXAMPLE
+
+*** cardtest2 (adventurer)
+
+#+BEGIN_EXAMPLE
+Lines executed:17.05% of 616
+Branches executed:17.83% of 415
+Taken at least once:13.98% of 415
+Calls executed:10.19% of 108
+#+END_EXAMPLE
+
+*** cardtest3 (village)
+
+#+BEGIN_EXAMPLE
+Lines executed:19.32% of 616
+Branches executed:22.89% of 415
+Taken at least once:13.98% of 415
+Calls executed:11.11% of 108
+#+END_EXAMPLE
+
+*** cardtest4 (mine)
+
+#+BEGIN_EXAMPLE
+Lines executed:21.27% of 616
+Branches executed:28.92% of 415
+Taken at least once:16.63% of 415
+Calls executed:12.04% of 108
+#+END_EXAMPLE
+
+* Unit Testing Efforts
+  
+** Function Testing  
+
+Funciton testing involved confirming that a given function had the desired effect. For example, testing the ~isGameOver~ function involved first confirming that a given game is still continuing, then changing a given value to trigger an end to the game (e.g. changing three supply counts to 0), and finally testing for a successful end of game value:
+ 
+#+CAPTION: Function testing example.
+#+BEGIN_SRC c
+myAssert(isGameOver(&testGame) == 0);
+
+for (i = 0; i < 3; i++)
+{
+    testGame.supplyCount[i] = 0;
+}
+
+myAssert(isGameOver(&testGame) == 1);
+#+END_SRC
+
+** Card Testing
+   
+Testing cards involved two steps:
+1) Confirming that the implementation exited correctly by asserting that the relevant function returned 0 (as opposed to -1 for an unsuccessful exit).
+2) Confirming that the actions of the card had the desired effect. For the following smithy example, this means that if a player started with five cards in both their hands and decks, then the smithy card would result in a deck count of two and a hand count of seven.
+
+#+CAPTION: Card testing example.
+#+BEGIN_SRC c
+// initialize hand and deck counts
+testGame->deckCount[player] = 5;
+testGame->handCount[player] = 5;
+
+// check successful exit of function
+myAssert(mySmithy(player, testGame, handPos) == 0); 
+
+// check successful 
+myAssert(testGame->deckCount[player] == 2);
+myAssert(testGame->handCount[player] == 7);
+#+END_SRC  
+
+As per the instructor recommendation all of the unit tests and the card tests utilized a custom assert implementation, so as to be able to collect coverage information even when a crash fails (this behavior is not included in the standard C ~assert~ function).
+
+#+CAPTION: Custom assert macro for use in the test suite.
+#+BEGIN_SRC c
+#define myAssert(expression)                          \
+    if (expression)                                   \
+        (passed)(#expression, __LINE__, __FILE__, 0); \
+    else                                              \
+        (failed)(#expression, __LINE__, __FILE__, 0); \
+
+// outputs "TEST FAILED" message
+void failed(char *expression, int line, char *file, int color);
+
+// outputs "TEST PASSED" message
+void passed(char *expression, int line, char *file, int color);
+#+END_SRC

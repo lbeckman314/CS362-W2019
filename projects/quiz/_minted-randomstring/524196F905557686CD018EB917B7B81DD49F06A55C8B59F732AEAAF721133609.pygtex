@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int} \PYG{n}{random}\PYG{p}{;}
+\PYG{k+kt}{char} \PYG{n}{character}\PYG{p}{;}
+
+\PYG{n}{random} \PYG{o}{=} \PYG{n}{rand}\PYG{p}{()} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{127}\PYG{p}{;}
+\PYG{n}{character} \PYG{o}{=} \PYG{p}{(}\PYG{k+kt}{char}\PYG{p}{)} \PYG{n}{random}\PYG{p}{;}
+
+\PYG{k}{return} \PYG{n}{character}\PYG{p}{;}
+\end{Verbatim}
