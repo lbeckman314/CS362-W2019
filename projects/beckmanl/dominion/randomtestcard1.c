@@ -57,20 +57,37 @@ int main(int argc, char* argv[]) {
 
     printf("----------------- Testing Card: %s ----------------\n", TESTCARD);
 
-int mySmithy(int currentPlayer, struct gameState *state, int handPos)
-{
-	int i;
+    int mySmithy(int currentPlayer, struct gameState *state, int handPos)
+    {
+        int i;
 
-	//+3 Cards
-	for (i = 0; i < 3; i++)
-	{
-		drawCard(currentPlayer, state);
-	}
-			
-	//discard card from hand
-	discardCard(handPos, currentPlayer, state, 0);
-	return 0;
-}
+        //+3 Cards
+        for (i = 0; i < 3; i++)
+        {
+            drawCard(currentPlayer, state);
+        }
+                
+        //discard card from hand
+        discardCard(handPos, currentPlayer, state, 0);
+        return 0;
+    }
+
+    // smithy
+    int player = 0;
+    struct gameState *testGame = newGame();
+    int handPos = 0;
+    testGame->deckCount[player] = 5;
+    testGame->handCount[player] = 5;
+
+    myAssert(mySmithy(player, testGame, handPos) == 0); 
+    myAssert(testGame->deckCount[player] == 2);
+    myAssert(testGame->handCount[player] == 7);
+
+    mySmithy(player, testGame, handPos); 
+    myAssert(testGame->deckCount[player] == 0);
+    myAssert(testGame->handCount[player] == 8);
+    //printf("deck count: %d\n", testGame->deckCount[player]);
+    //printf("hand count: %d\n", testGame->handCount[player]);
 
 
     // ----------- TEST 1: choice1 = 1 = +2 cards --------------
