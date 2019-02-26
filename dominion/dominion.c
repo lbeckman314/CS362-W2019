@@ -768,6 +768,8 @@ int mySmithy(int currentPlayer, struct gameState *state, int handPos)
 	//+3 Cards
 	for (i = 0; i < 3; i++)
 	{
+        //printf("drawing card\n");
+        //printf("hand size: %d\n", state->handCount[currentPlayer]);
 		drawCard(currentPlayer, state);
 	}
 			

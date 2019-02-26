@@ -765,14 +765,20 @@ int mySmithy(int currentPlayer, struct gameState *state, int handPos)
 {
 	int i;
 
+    printf("SMITHY hand: %d\n", state->handCount[currentPlayer]);
+    printf("SMITHY deck: %d\n", state->deckCount[currentPlayer]);
 	//+3 Cards
 	for (i = 0; i < 3; i++)
 	{
 		drawCard(currentPlayer, state);
 	}
+    printf("SMITHY hand: %d\n", state->handCount[currentPlayer]);
+    printf("SMITHY deck: %d\n", state->deckCount[currentPlayer]);
 			
 	//discard card from hand
 	discardCard(handPos, currentPlayer, state, 0);
+    printf("SMITHY hand: %d\n", state->handCount[currentPlayer]);
+    printf("SMITHY deck: %d\n", state->deckCount[currentPlayer]);
 	return 0;
 }
 

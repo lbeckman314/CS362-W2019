@@ -33,10 +33,24 @@ You also need to improve your oracles (step 5) (i.e., assertions "if/print in ou
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 #define TESTCARD "smithy"
+#define MAXPLAYERS 4
 
 int main(int argc, char* argv[]) {
+    // seed the random generator
+    srand(time(NULL));
+    int numPlayersRandom = -5;
+    int thisPlayerRandom = -5;
+    numPlayersRandom = rand() % MAXPLAYERS;
+    if (numPlayersRandom < 2) {
+        numPlayersRandom += 2;
+    }
+    thisPlayerRandom = rand() % numPlayersRandom; 
+    printf("numPlayers: %d\n", numPlayersRandom);
+    printf("thisPlayer: %d\n", thisPlayerRandom);
+
     int newCards = 0;
     int discarded = 1;
     int xtraCoins = 0;
@@ -52,52 +66,60 @@ int main(int argc, char* argv[]) {
     int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
             sea_hag, tribute, smithy, council_room};
 
+    //numPlayersRandom = 2;
     // initialize a game state and player cards
-    initializeGame(numPlayers, k, seed, &G);
+    initializeGame(numPlayersRandom, k, seed, &G);
+
 
     printf("----------------- Testing Card: %s ----------------\n", TESTCARD);
 
-    int mySmithy(int currentPlayer, struct gameState *state, int handPos)
-    {
-        int i;
+    // ----------- TEST 1: random test --------------
 
-        //+3 Cards
-        for (i = 0; i < 3; i++)
-        {
-            drawCard(currentPlayer, state);
-        }
-                
-        //discard card from hand
-        discardCard(handPos, currentPlayer, state, 0);
-        return 0;
-    }
+    //printf("deck count: %d\n", G->deckCount[thisPlayer]);
+    //printf("hand count: %d\n", G->handCount[thisPlayer]);
 
-    // smithy
-    int player = 0;
-    struct gameState *testGame = newGame();
-    int handPos = 0;
-    testGame->deckCount[player] = 5;
-    testGame->handCount[player] = 5;
-
-    myAssert(mySmithy(player, testGame, handPos) == 0); 
-    myAssert(testGame->deckCount[player] == 2);
-    myAssert(testGame->handCount[player] == 7);
-
-    mySmithy(player, testGame, handPos); 
-    myAssert(testGame->deckCount[player] == 0);
-    myAssert(testGame->handCount[player] == 8);
-    //printf("deck count: %d\n", testGame->deckCount[player]);
-    //printf("hand count: %d\n", testGame->handCount[player]);
-
-
-    // ----------- TEST 1: choice1 = 1 = +2 cards --------------
-    printf("TEST 1: choice1 = 1 = +2 cards\n");
+    printf("TEST 1: random test\n");
 
     // copy the game state to a test case
     memcpy(&testG, &G, sizeof(struct gameState));
     choice1 = 1;
-    cardEffect(steward, choice1, choice2, choice3, &testG, handpos, &bonus);
+    // printf("handcount: %d\n", testG.handCount[thisPlayer]);
+    // printf("deck: %d\n", testG.deckCount[thisPlayer]);
+    // printf("newCards: %d\n", newCards);
+    // printf("discarded: %d\n", discarded);
+    // printf("shuffledCards: %d\n", shuffledCards);
+    // printf("-----\n");
+    cardEffect(smithy, choice1, choice2, choice3, &testG, handpos, &bonus);
+    // printf("handcount: %d\n", testG.handCount[thisPlayer]);
+    // printf("deck: %d\n", testG.deckCount[thisPlayer]);
+    // printf("newCards: %d\n", newCards);
+    // printf("discarded: %d\n", discarded);
+    // printf("shuffledCards: %d\n", shuffledCards);
+    printf("hand count = %d, expected = %d\n", testG.handCount[thisPlayer], G.handCount[thisPlayer] + 2);
+    printf("deck count = %d, expected = %d\n", testG.deckCount[thisPlayer], G.deckCount[thisPlayer] - 4);
+    assert(testG.handCount[thisPlayer] == G.handCount[thisPlayer] + 2);
+    assert(testG.deckCount[thisPlayer] == G.deckCount[thisPlayer] + 3);
 
+    printf("-----\n");
+    //cardEffect(smithy, choice1, choice2, choice3, &testG, handpos, &bonus);
+
+    // printf("handcount: %d\n", testG.handCount[thisPlayerRandom]);
+    // printf("deck: %d\n", testG.deckCount[thisPlayerRandom]);
+    // printf("newCards: %d\n", newCards);
+    // printf("discarded: %d\n", discarded);
+    // printf("shuffledCards: %d\n", shuffledCards);
+
+
+    // tests that the removed cards are no longer in the player's hand
+    /*
+    for (m=0; m<testG.handCount[thisPlayer]; m++) {
+        printf("(%d)", testG.hand[thisPlayer][m]);
+        assert(testG.hand[thisPlayer][m] != remove1);
+        assert(testG.hand[thisPlayer][m] != remove2);
+    }
+    
+
+    /*
     newCards = 2;
     xtraCoins = 0;
     printf("hand count = %d, expected = %d\n", testG.handCount[thisPlayer], G.handCount[thisPlayer] + newCards - discarded);
@@ -184,6 +206,7 @@ int main(int argc, char* argv[]) {
         }
 
     }
+    */
 
     printf("\n >>>>> SUCCESS: Testing complete %s <<<<<\n\n", TESTCARD);
 
