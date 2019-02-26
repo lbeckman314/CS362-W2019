@@ -12,18 +12,12 @@ Starting game.
 1: bought adventurer
 1: endTurn
 0: smithy played from position 1
-SMITHY: 5
-SMITHY: 8
-SMITHY: 7
 smithy played.
 0: bought gold
 0: end turn
 1: bought silver
 1: endTurn
 0: smithy played from position 3
-SMITHY: 5
-SMITHY: 8
-SMITHY: 7
 smithy played.
 0: bought province
 0: end turn

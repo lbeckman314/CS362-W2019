@@ -21,13 +21,14 @@ You also need to improve your oracles (step 5) (i.e., assertions "if/print in ou
 /*
  * Include the following lines in your makefile:
  *
- * randomtestcard1: randomtestcard1.c randomtestcard2.c randomtestcardadventurer.c 
+ * randomtestcard1: randomtestcard1.c 
  *      gcc -o randomtestcard1 -g randomtestcard1.c dominion.o rngs.o $(CFLAGS)
  */
 
 
 #include "dominion.h"
 #include "dominion_helpers.h"
+#include "myAssert.c"
 #include "rngs.h"
 #include <assert.h>
 #include <stdio.h>
@@ -97,8 +98,8 @@ int main(int argc, char* argv[]) {
     // printf("shuffledCards: %d\n", shuffledCards);
     printf("hand count = %d, expected = %d\n", testG.handCount[thisPlayer], G.handCount[thisPlayer] + 2);
     printf("deck count = %d, expected = %d\n", testG.deckCount[thisPlayer], G.deckCount[thisPlayer] - 4);
-    assert(testG.handCount[thisPlayer] == G.handCount[thisPlayer] + 2);
-    assert(testG.deckCount[thisPlayer] == G.deckCount[thisPlayer] + 3);
+    myAssert(testG.handCount[thisPlayer] == G.handCount[thisPlayer] + 2);
+    myAssert(testG.deckCount[thisPlayer] == G.deckCount[thisPlayer] - 4);
 
     printf("-----\n");
     //cardEffect(smithy, choice1, choice2, choice3, &testG, handpos, &bonus);
