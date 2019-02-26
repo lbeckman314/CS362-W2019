@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} compile and run the testme program}
+make \PYG{o}{\PYGZam{}\PYGZam{}} make run
+\end{Verbatim}
