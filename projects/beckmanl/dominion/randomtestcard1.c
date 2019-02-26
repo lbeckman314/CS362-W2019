@@ -57,6 +57,22 @@ int main(int argc, char* argv[]) {
 
     printf("----------------- Testing Card: %s ----------------\n", TESTCARD);
 
+int mySmithy(int currentPlayer, struct gameState *state, int handPos)
+{
+	int i;
+
+	//+3 Cards
+	for (i = 0; i < 3; i++)
+	{
+		drawCard(currentPlayer, state);
+	}
+			
+	//discard card from hand
+	discardCard(handPos, currentPlayer, state, 0);
+	return 0;
+}
+
+
     // ----------- TEST 1: choice1 = 1 = +2 cards --------------
     printf("TEST 1: choice1 = 1 = +2 cards\n");
 
