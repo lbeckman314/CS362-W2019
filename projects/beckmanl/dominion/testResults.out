@@ -1,0 +1,54 @@
+numPlayers: 4
+thisPlayer: 2
+----------------- Testing Card: smithy ----------------
+TEST 1: random test
+hand count = 7, expected = 7
+deck count = 1, expected = 1
+randomtestcard1.c:65 TEST SUCCESSFULLY COMPLETED -> testG.handCount[thisPlayer] == G.handCount[thisPlayer] + 2
+randomtestcard1.c:66 TEST SUCCESSFULLY COMPLETED -> testG.deckCount[thisPlayer] == G.deckCount[thisPlayer] - 4
+
+ >>>>> SUCCESS: Testing complete smithy <<<<<
+
+----------------- Testing Card: mine ----------------
+TEST 1: random test
+randomtestcard2.c:56 TEST SUCCESSFULLY COMPLETED -> getCost(testG.hand[thisPlayer][choice1]) + 3 <= getCost(choice2)
+-1 :: 26
+randomtestcard2.c:61 TEST SUCCESSFULLY COMPLETED -> testG.handCount[thisPlayer] == G.handCount[thisPlayer] - 1
+4 :: 5
+randomtestcard2.c:65 TEST SUCCESSFULLY COMPLETED -> testG.supplyCount[choice2] == G.supplyCount[choice2]
+-1 :: -1
+
+ >>>>> SUCCESS: Testing complete mine <<<<<
+
+numPlayers: 4
+thisPlayer: 2
+----------------- Testing Card: adventurer ----------------
+TEST 1: random test
+randomtestcardadventurer.c:87 TEST SUCCESSFULLY COMPLETED -> drawntreasure == drawntreasurePre + 2
+
+ >>>>> SUCCESS: Testing complete adventurer <<<<<
+
+File 'randomtestcard1.c'
+Lines executed:100.00% of 25
+Creating 'randomtestcard1.c.gcov'
+
+File 'myAssert.c'
+Lines executed:35.71% of 14
+Creating 'myAssert.c.gcov'
+
+File 'randomtestcard2.c'
+Lines executed:100.00% of 23
+Creating 'randomtestcard2.c.gcov'
+
+File 'myAssert.c'
+Lines executed:35.71% of 14
+Creating 'myAssert.c.gcov'
+
+File 'randomtestcardadventurer.c'
+Lines executed:100.00% of 34
+Creating 'randomtestcardadventurer.c.gcov'
+
+File 'myAssert.c'
+Lines executed:35.71% of 14
+Creating 'myAssert.c.gcov'
+

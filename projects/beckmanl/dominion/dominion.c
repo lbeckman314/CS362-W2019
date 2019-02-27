@@ -655,9 +655,9 @@ int myAdventurer(int drawntreasure, int currentPlayer, int temphand[], struct ga
         }
         drawCard(currentPlayer, state);
         cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
-        // BUG: copper is now counted toward drawntreasure
-        //if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
-        if (cardDrawn == silver || cardDrawn == gold)
+        // BUG: copper is not counted toward drawntreasure
+        if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+        //if (cardDrawn == silver || cardDrawn == gold)
             drawntreasure++;
         else{
             temphand[z]=cardDrawn;
@@ -665,11 +665,13 @@ int myAdventurer(int drawntreasure, int currentPlayer, int temphand[], struct ga
             z++;
         }
     }
+
     while(z-1>=0){
         state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
         z=z-1;
     }
     return 0;
+
 }		
 
 int myCouncil_room(int currentPlayer, int handPos, struct gameState *state)

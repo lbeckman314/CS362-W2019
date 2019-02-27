@@ -38,6 +38,18 @@ randomtestcard2: randomtestcard2.c
 randomtestcardadventurer: randomtestcardadventurer.c 
 	gcc -o randomtestcardadventurer -g randomtestcardadventurer.c  dominion.o rngs.o $(CFLAGS)
 
+randomtestcardAll: randomtestcard1.c randomtestcard2.c randomtestcardadventurer.c
+	gcc -o randomtestcard1 -g randomtestcard1.c dominion.o rngs.o $(CFLAGS)
+	gcc -o randomtestcard2 -g randomtestcard2.c dominion.o rngs.o $(CFLAGS)
+	gcc -o randomtestcardadventurer -g randomtestcardadventurer.c  dominion.o rngs.o $(CFLAGS)
+	> testResults.out
+	./randomtestcard1 >> testResults.out
+	gcov randomtestcard1.c >> testResults.out
+	./randomtestcard2 >> testResults.out
+	gcov randomtestcard2.c >> testResults.out
+	./randomtestcardadventurer >> testResults.out
+	gcov randomtestcardadventurer.c >> testResults.out
+
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 
