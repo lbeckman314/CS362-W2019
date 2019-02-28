@@ -10,7 +10,7 @@
  */
 
 
-#include "dominion.h"
+#include "dominion.c"
 #include "dominion_helpers.h"
 #include "myAssert.c"
 #include "rngs.h"
@@ -27,17 +27,15 @@
 int main(int argc, char* argv[]) {
     // seed the random generator
     srand(time(NULL));
-    int numPlayersRandom = -5;
-    int thisPlayerRandom = -5;
-    numPlayersRandom = rand() % (MAXPLAYERS - 1 - MINPLAYERS) + MAXPLAYERS;
-    thisPlayerRandom = rand() % numPlayersRandom; 
-    printf("numPlayers: %d\n", numPlayersRandom);
-    printf("thisPlayer: %d\n", thisPlayerRandom);
+    int numPlayers = -5;
+    int thisPlayer = -5;
+    numPlayers = rand() % (MAXPLAYERS - 1 - MINPLAYERS) + MAXPLAYERS;
+    thisPlayer = rand() % numPlayers; 
+    printf("numPlayers: %d\n", numPlayers);
+    printf("thisPlayer: %d\n", thisPlayer);
 
     int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
     int seed = 1000;
-    int numPlayers = 2;
-    int thisPlayer = 0;
     struct gameState G, testG;
     int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
             sea_hag, tribute, smithy, council_room};
@@ -65,9 +63,7 @@ int main(int argc, char* argv[]) {
     myAssert(testG.handCount[thisPlayer] == G.handCount[thisPlayer] + 2);
     myAssert(testG.deckCount[thisPlayer] == G.deckCount[thisPlayer] - 4);
 
-
     printf("\n >>>>> SUCCESS: Testing complete %s <<<<<\n\n", TESTCARD);
-
 
     return 0;
 }

@@ -10,7 +10,7 @@
  */
 
 
-#include "dominion.h"
+#include "dominion.c"
 #include "dominion_helpers.h"
 #include "myAssert.c"
 #include "rngs.h"

@@ -10,7 +10,7 @@
  */
 
 
-#include "dominion.h"
+#include "dominion.c"
 #include "dominion_helpers.h"
 #include "myAssert.c"
 #include "rngs.h"
@@ -21,30 +21,28 @@
 #include <time.h>
 
 #define TESTCARD "adventurer"
-#define MAXPLAYERS 4
-#define MINPLAYERS 2
+#define maxplayers 4
+#define minplayers 2
 
 int main(int argc, char* argv[]) {
     // seed the random generator
-    srand(time(NULL));
-    int numPlayersRandom = -5;
-    int thisPlayerRandom = -5;
-    numPlayersRandom = rand() % (MAXPLAYERS - 1 - MINPLAYERS) + MAXPLAYERS;
+    srand(time(null));
+    int numplayers = -5;
+    int thisplayer = -5;
+    numplayers = rand() % (maxplayers - 1 - minplayers) + maxplayers;
 
-    //choice1 = rand() % (gold + 1 - copper) + gold;
-    thisPlayerRandom = rand() % numPlayersRandom;
-    printf("numPlayers: %d\n", numPlayersRandom);
-    printf("thisPlayer: %d\n", thisPlayerRandom);
+    thisplayer = rand() % numplayers;
+    printf("numplayers: %d\n", numplayers);
+    printf("thisplayer: %d\n", thisplayer);
 
     int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
     int seed = 1000;
-    int thisPlayer = 0;
     struct gameState G, testG;
     int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
             sea_hag, tribute, smithy, council_room};
 
     // initialize a game state and player cards
-    initializeGame(numPlayersRandom, k, seed, &G);
+    initializeGame(numPlayers, k, seed, &G);
     
 
     printf("----------------- Testing Card: %s ----------------\n", TESTCARD);

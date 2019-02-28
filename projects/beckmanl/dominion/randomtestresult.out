@@ -1,0 +1,93 @@
+numPlayers: 4
+thisPlayer: 3
+----------------- Testing Card: smithy ----------------
+TEST 1: random test
+hand count = 7, expected = 7
+deck count = 1, expected = 1
+randomtestcard1.c:65 TEST SUCCESSFULLY COMPLETED -> testG.handCount[thisPlayer] == G.handCount[thisPlayer] + 2
+randomtestcard1.c:66 TEST SUCCESSFULLY COMPLETED -> testG.deckCount[thisPlayer] == G.deckCount[thisPlayer] - 4
+
+ >>>>> SUCCESS: Testing complete smithy <<<<<
+
+File 'randomtestcard1.c'
+Lines executed:100.00% of 25
+Branches executed:100.00% of 4
+Taken at least once:50.00% of 4
+Calls executed:88.24% of 17
+Creating 'randomtestcard1.c.gcov'
+
+File 'myAssert.c'
+Lines executed:35.71% of 14
+Branches executed:50.00% of 8
+Taken at least once:25.00% of 8
+Calls executed:16.67% of 6
+Creating 'myAssert.c.gcov'
+
+File 'dominion.c'
+Lines executed:19.67% of 605
+Branches executed:22.78% of 417
+Taken at least once:13.91% of 417
+Calls executed:13.68% of 95
+Creating 'dominion.c.gcov'
+
+----------------- Testing Card: mine ----------------
+TEST 1: random test
+randomtestcard2.c:56 TEST SUCCESSFULLY COMPLETED -> getCost(testG.hand[thisPlayer][choice1]) + 3 <= getCost(choice2)
+-1 :: 26
+randomtestcard2.c:61 TEST SUCCESSFULLY COMPLETED -> testG.handCount[thisPlayer] == G.handCount[thisPlayer] - 1
+4 :: 5
+randomtestcard2.c:65 TEST SUCCESSFULLY COMPLETED -> testG.supplyCount[choice2] == G.supplyCount[choice2]
+-1 :: -1
+
+ >>>>> SUCCESS: Testing complete mine <<<<<
+
+File 'randomtestcard2.c'
+Lines executed:100.00% of 23
+Branches executed:100.00% of 8
+Taken at least once:62.50% of 8
+Calls executed:86.36% of 22
+Creating 'randomtestcard2.c.gcov'
+
+File 'myAssert.c'
+Lines executed:35.71% of 14
+Branches executed:50.00% of 8
+Taken at least once:25.00% of 8
+Calls executed:16.67% of 6
+Creating 'myAssert.c.gcov'
+
+File 'dominion.c'
+Lines executed:21.98% of 605
+Branches executed:31.41% of 417
+Taken at least once:15.59% of 417
+Calls executed:14.74% of 95
+Creating 'dominion.c.gcov'
+
+numPlayers: 4
+thisPlayer: 3
+----------------- Testing Card: adventurer ----------------
+TEST 1: random test
+randomtestcardadventurer.c:87 TEST SUCCESSFULLY COMPLETED -> drawntreasure == drawntreasurePre + 2
+
+ >>>>> SUCCESS: Testing complete adventurer <<<<<
+
+File 'randomtestcardadventurer.c'
+Lines executed:100.00% of 34
+Branches executed:100.00% of 18
+Taken at least once:72.22% of 18
+Calls executed:92.31% of 13
+Creating 'randomtestcardadventurer.c.gcov'
+
+File 'myAssert.c'
+Lines executed:35.71% of 14
+Branches executed:50.00% of 8
+Taken at least once:25.00% of 8
+Calls executed:16.67% of 6
+Creating 'myAssert.c.gcov'
+
+File 'dominion.c'
+Lines executed:28.60% of 605
+Branches executed:37.17% of 417
+Taken at least once:19.90% of 417
+Calls executed:22.11% of 95
+Creating 'dominion.c.gcov'
+
