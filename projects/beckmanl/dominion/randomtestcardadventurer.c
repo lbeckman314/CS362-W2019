@@ -26,7 +26,7 @@
 
 int main(int argc, char* argv[]) {
     // seed the random generator
-    srand(time(null));
+    srand(time(NULL));
     int numplayers = -5;
     int thisplayer = -5;
     numplayers = rand() % (maxplayers - 1 - minplayers) + maxplayers;
@@ -42,7 +42,7 @@ int main(int argc, char* argv[]) {
             sea_hag, tribute, smithy, council_room};
 
     // initialize a game state and player cards
-    initializeGame(numPlayers, k, seed, &G);
+    initializeGame(numplayers, k, seed, &G);
     
 
     printf("----------------- Testing Card: %s ----------------\n", TESTCARD);
@@ -63,8 +63,8 @@ int main(int argc, char* argv[]) {
     int cardDrawn = -5;
 
     int n;
-    for (n = 0; n < testG.handCount[thisPlayer]; n++) {
-        cardDrawn = testG.hand[thisPlayer][n];
+    for (n = 0; n < testG.handCount[thisplayer]; n++) {
+        cardDrawn = testG.hand[thisplayer][n];
         if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold) {
             drawntreasure++;
         }
@@ -75,8 +75,8 @@ int main(int argc, char* argv[]) {
 
     cardEffect(adventurer, choice1, choice2, choice3, &testG, handpos, &bonus);
 
-    for (n = 0; n < testG.handCount[thisPlayer]; n++) {
-        cardDrawn = testG.hand[thisPlayer][n];
+    for (n = 0; n < testG.handCount[thisplayer]; n++) {
+        cardDrawn = testG.hand[thisplayer][n];
         if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold) {
             drawntreasure++;
         }

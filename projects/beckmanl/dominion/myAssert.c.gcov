@@ -7,40 +7,40 @@
         -:    2:#include "color.h"
         -:    3:#include <stdio.h>
         -:    4:
-function passed called 1 returned 100% blocks executed 67%
-        1:    5:void passed(char *expression, int line, char *file, int color)
+function passed called 0 returned 0% blocks executed 0%
+    #####:    5:void passed(char *expression, int line, char *file, int color)
         -:    6:{
-        1:    7:    if (color)
-branch  0 taken 0% (fallthrough)
-branch  1 taken 100%
+    #####:    7:    if (color)
+branch  0 never executed
+branch  1 never executed
     #####:    8:        printf("%s%s", boldon, green);
 call    0 never executed
         -:    9:
-        1:   10:    printf("%s:%d TEST SUCCESSFULLY COMPLETED -> %s\n", file, line, expression);
-call    0 returned 100%
-        -:   11:
-        1:   12:    if (color)
-branch  0 taken 0% (fallthrough)
-branch  1 taken 100%
-    #####:   13:        printf("%s%s", normal, boldoff);
+    #####:   10:    printf("%s:%d TEST SUCCESSFULLY COMPLETED -> %s\n", file, line, expression);
 call    0 never executed
-        1:   14:}
-        -:   15:
-function failed called 0 returned 0% blocks executed 0%
-    #####:   16:void failed(char *expression, int line, char *file, int color)
-        -:   17:{
-    #####:   18:    if (color)
+        -:   11:
+    #####:   12:    if (color)
 branch  0 never executed
 branch  1 never executed
+    #####:   13:        printf("%s%s", normal, boldoff);
+call    0 never executed
+    #####:   14:}
+        -:   15:
+function failed called 1 returned 100% blocks executed 67%
+        1:   16:void failed(char *expression, int line, char *file, int color)
+        -:   17:{
+        1:   18:    if (color)
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
     #####:   19:        printf("%s%s", boldon, red);
 call    0 never executed
         -:   20:
-    #####:   21:    printf("%s:%d TEST FAILED: -> %s\n", file, line, expression);
-call    0 never executed
+        1:   21:    printf("%s:%d TEST FAILED: -> %s\n", file, line, expression);
+call    0 returned 100%
         -:   22:
-    #####:   23:    if (color)
-branch  0 never executed
-branch  1 never executed
+        1:   23:    if (color)
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
     #####:   24:        printf("%s%s", normal, boldoff);
 call    0 never executed
-    #####:   25:}
+        1:   25:}

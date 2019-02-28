@@ -1,16 +1,16 @@
 numPlayers: 4
-thisPlayer: 3
+thisPlayer: 2
 ----------------- Testing Card: smithy ----------------
 TEST 1: random test
-hand count = 7, expected = 7
-deck count = 1, expected = 1
-randomtestcard1.c:65 TEST SUCCESSFULLY COMPLETED -> testG.handCount[thisPlayer] == G.handCount[thisPlayer] + 2
-randomtestcard1.c:66 TEST SUCCESSFULLY COMPLETED -> testG.deckCount[thisPlayer] == G.deckCount[thisPlayer] - 4
+hand count = 0, expected = 2
+deck count = 10, expected = 6
+randomtestcard1.c:63 TEST FAILED: -> testG.handCount[thisPlayer] == G.handCount[thisPlayer] + 2
+randomtestcard1.c:64 TEST FAILED: -> testG.deckCount[thisPlayer] == G.deckCount[thisPlayer] - 4
 
  >>>>> SUCCESS: Testing complete smithy <<<<<
 
 File 'randomtestcard1.c'
-Lines executed:100.00% of 25
+Lines executed:100.00% of 23
 Branches executed:100.00% of 4
 Taken at least once:50.00% of 4
 Calls executed:88.24% of 17
@@ -24,9 +24,9 @@ Calls executed:16.67% of 6
 Creating 'myAssert.c.gcov'
 
 File 'dominion.c'
-Lines executed:19.67% of 605
-Branches executed:22.78% of 417
-Taken at least once:13.91% of 417
+Lines executed:19.83% of 605
+Branches executed:23.26% of 417
+Taken at least once:14.15% of 417
 Calls executed:13.68% of 95
 Creating 'dominion.c.gcov'
 
@@ -62,18 +62,18 @@ Taken at least once:15.59% of 417
 Calls executed:14.74% of 95
 Creating 'dominion.c.gcov'
 
-numPlayers: 4
-thisPlayer: 3
+numplayers: 4
+thisplayer: 2
 ----------------- Testing Card: adventurer ----------------
 TEST 1: random test
-randomtestcardadventurer.c:87 TEST SUCCESSFULLY COMPLETED -> drawntreasure == drawntreasurePre + 2
+randomtestcardadventurer.c:85 TEST FAILED: -> drawntreasure == drawntreasurePre + 2
 
  >>>>> SUCCESS: Testing complete adventurer <<<<<
 
 File 'randomtestcardadventurer.c'
-Lines executed:100.00% of 34
-Branches executed:100.00% of 18
-Taken at least once:72.22% of 18
+Lines executed:87.88% of 33
+Branches executed:66.67% of 18
+Taken at least once:38.89% of 18
 Calls executed:92.31% of 13
 Creating 'randomtestcardadventurer.c.gcov'
 
