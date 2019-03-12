@@ -1,5 +1,3 @@
-
-
 import junit.framework.TestCase;
 import java.util.Random;
 import java.lang.Math;
@@ -10,11 +8,7 @@ import java.nio.charset.Charset;
 // Again, it is up to you to use this file or not!
 
 
-
-
-
 public class UrlValidatorTest extends TestCase {
-
 
 	public UrlValidatorTest(String testName) {
 		super(testName);
@@ -27,6 +21,24 @@ public class UrlValidatorTest extends TestCase {
 		assertTrue(!urlChecker.isValid("http://server/~foldername"));  
 	}
 
+   
+   
+   public void testManualTest() {
+       UrlValidator urlChecker = new UrlValidator(null,null,UrlValidator.ALLOW_ALL_SCHEMES);
+
+       assertTrue(urlChecker.isValid("http://localhost"));
+       assertTrue(urlChecker.isValid("http://localhost/"));
+       assertTrue(urlChecker.isValid("http://www.oregonstate.edu"));
+       assertTrue(urlChecker.isValid("http://www.oregonstate.edu/"));
+       assertTrue(urlChecker.isValid("http://www.oregonstate.edu/future"));
+       assertTrue(urlChecker.isValid("http://oregonstate.edu"));
+       assertTrue(urlChecker.isValid("http://oregonstate.edu?key=value"));
+       //assertTrue(urlChecker.isValid("http://web.engr.oregonstate.edu/~kovskye/"));
+       //assertTrue(urlChecker.isValid("https://oregonstate.instructure.com/"));
+       assertTrue(urlChecker.isValid("http://classes.engr.oregonstate.edu"));
+   }
+  
+  
 	// scheme partition (e.g. https) 
 	public void testYourFirstPartition()
 	{
@@ -92,13 +104,5 @@ public class UrlValidatorTest extends TestCase {
 	public void testYourFifthPartition(){
 
 	}
-
-	public void testIsValid()
-	{
-		//You can use this function for programming based testing
-
-	}
-
-
 
 }
