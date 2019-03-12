@@ -1,5 +1,3 @@
-
-
 import junit.framework.TestCase;
 
 //You can use this as a skeleton for your 3 different test approach
@@ -19,10 +17,19 @@ public class UrlValidatorTest extends TestCase {
 
    
    
-   public void testManualTest()
-   {
-//You can use this function to implement your manual testing	   
-	   
+   public void testManualTest() {
+       UrlValidator urlChecker = new UrlValidator(null,null,UrlValidator.ALLOW_ALL_SCHEMES);
+
+       assertTrue(urlChecker.isValid("http://localhost"));
+       assertTrue(urlChecker.isValid("http://localhost/"));
+       assertTrue(urlChecker.isValid("http://www.oregonstate.edu"));
+       assertTrue(urlChecker.isValid("http://www.oregonstate.edu/"));
+       assertTrue(urlChecker.isValid("http://www.oregonstate.edu/future"));
+       assertTrue(urlChecker.isValid("http://oregonstate.edu"));
+       assertTrue(urlChecker.isValid("http://oregonstate.edu?key=value"));
+       //assertTrue(urlChecker.isValid("http://web.engr.oregonstate.edu/~kovskye/"));
+       //assertTrue(urlChecker.isValid("https://oregonstate.instructure.com/"));
+       assertTrue(urlChecker.isValid("http://classes.engr.oregonstate.edu"));
    }
    
    
@@ -44,6 +51,4 @@ public class UrlValidatorTest extends TestCase {
 
    }
    
-
-
 }
