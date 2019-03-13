@@ -4,6 +4,7 @@ import java.util.Vector;
 import java.lang.Math;
 import java.nio.charset.Charset; 
 
+
 //You can use this as a skeleton for your 3 different test approach
 //It is an optional to use this file, you can generate your own test file(s) to test the target function!
 // Again, it is up to you to use this file or not!
@@ -15,15 +16,12 @@ public class UrlValidatorTest extends TestCase {
 		super(testName);
 	}
 
-	public void testManualTest()
-	{
-		//You can use this function to implement your manual testing	   
-		UrlValidator urlChecker = new UrlValidator();
-		//assertTrue(urlChecker.isValid("http://server/~foldername"));  
-	}
+   public UrlValidatorTest(String testName) {
+       super(testName);
+   }
 
-   
-   
+
+
    public void testManualTest() {
        UrlValidator urlChecker = new UrlValidator(null,null,UrlValidator.ALLOW_ALL_SCHEMES);
 
@@ -37,8 +35,7 @@ public class UrlValidatorTest extends TestCase {
        //assertTrue(urlChecker.isValid("http://web.engr.oregonstate.edu/~kovskye/"));
        //assertTrue(urlChecker.isValid("https://oregonstate.instructure.com/"));
        assertTrue(urlChecker.isValid("http://classes.engr.oregonstate.edu"));
-   }
-  
+   }  
   
 	// scheme partition (e.g. https) 
 	// valid characters: [a-zA-Z0-9\-\+]
@@ -151,4 +148,7 @@ public class UrlValidatorTest extends TestCase {
 
 	}
 
+   public void testIsValid() {
+
+   }
 }
