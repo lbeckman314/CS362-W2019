@@ -15,100 +15,95 @@ public class UrlValidatorTest extends TestCase {
 		super(testName);
 	}
 
-	public void testManualTest()
-	{
-		//You can use this function to implement your manual testing	   
-		UrlValidator urlChecker = new UrlValidator();
-		//assertTrue(urlChecker.isValid("http://server/~foldername"));  
+	public void testManualTest() {
+		UrlValidator urlChecker = new UrlValidator(null,null,UrlValidator.ALLOW_ALL_SCHEMES);
+
+		assertTrue(urlChecker.isValid("http://localhost"));
+		assertTrue(urlChecker.isValid("http://localhost/"));
+		assertTrue(urlChecker.isValid("http://www.oregonstate.edu"));
+		assertTrue(urlChecker.isValid("http://www.oregonstate.edu/"));
+		assertTrue(urlChecker.isValid("http://www.oregonstate.edu/future"));
+		assertTrue(urlChecker.isValid("http://oregonstate.edu"));
+		assertTrue(urlChecker.isValid("http://oregonstate.edu?key=value"));
+		//assertTrue(urlChecker.isValid("http://web.engr.oregonstate.edu/~kovskye/"));
+		//assertTrue(urlChecker.isValid("https://oregonstate.instructure.com/"));
+		assertTrue(urlChecker.isValid("http://classes.engr.oregonstate.edu"));
 	}
 
-   
-   
-   public void testManualTest() {
-       UrlValidator urlChecker = new UrlValidator(null,null,UrlValidator.ALLOW_ALL_SCHEMES);
 
-       assertTrue(urlChecker.isValid("http://localhost"));
-       assertTrue(urlChecker.isValid("http://localhost/"));
-       assertTrue(urlChecker.isValid("http://www.oregonstate.edu"));
-       assertTrue(urlChecker.isValid("http://www.oregonstate.edu/"));
-       assertTrue(urlChecker.isValid("http://www.oregonstate.edu/future"));
-       assertTrue(urlChecker.isValid("http://oregonstate.edu"));
-       assertTrue(urlChecker.isValid("http://oregonstate.edu?key=value"));
-       //assertTrue(urlChecker.isValid("http://web.engr.oregonstate.edu/~kovskye/"));
-       //assertTrue(urlChecker.isValid("https://oregonstate.instructure.com/"));
-       assertTrue(urlChecker.isValid("http://classes.engr.oregonstate.edu"));
-   }
-  
-  
 	// scheme partition (e.g. https) 
 	// valid characters: [a-zA-Z0-9\-\+]
 	// invalid characters: all other characters.
-	// https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml
+	// https://www.iana.org/assignments/uri-schemes/uri-schemes.html
 	// https://tools.ietf.org/html/rfc7595
+	@SuppressWarnings("unchecked")
 	public void testYourFirstPartition()
 	{
 		UrlValidator urlChecker = new UrlValidator();
 		String VALID_URL = "coolsite.org";
-        Random random = new Random(); 	
-        int stringLengthMin = 0;
-        int stringLengthMax = 10;
-        int stringNum = 100;
-        
-        Vector chars = new Vector();
+		Random random = new Random(); 	
+		int stringLengthMin = 0;
+		int stringLengthMax = 10;
+		int stringNum = 100;
 
-        // add all valid characters
-        for (int i = (int) 'a'; i < (int) 'z'; i++) {
-        	chars.add(i);
-        }
-        for (int i = (int) 'A'; i < (int) 'Z'; i++) {
-        	chars.add(i);
-        }
-        for (int i = (int) '0'; i < (int) '9'; i++) {
-        	chars.add(i);
-        }
-        chars.add((int) '-');
-        chars.add((int) '+');
+		Vector chars = new Vector();
 
-        // add some invalid characters
-        chars.add((int) ' ');
-        chars.add((int) '/');
-        chars.add((int) ':');
+		// add all valid characters
+		for (int i = (int) 'a'; i < (int) 'z'; i++) {
+			chars.add(i);
+		}
+		for (int i = (int) 'A'; i < (int) 'Z'; i++) {
+			chars.add(i);
+		}
+		for (int i = (int) '0'; i < (int) '9'; i++) {
+			chars.add(i);
+		}
+		chars.add((int) '-');
+		chars.add((int) '+');
 
-        int limitLeft = 0;
-        int limitRight = chars.size() - 1;
+		// add some invalid characters
+		chars.add((int) ' ');
+		chars.add((int) '/');
+		chars.add((int) ':');
 
-        for (int i = 0; i < stringNum; i++) {
-        	int randLength = stringLengthMin + (int) (random.nextFloat() * (stringLengthMax - stringLengthMin + 1));
-        	StringBuilder buffer = new StringBuilder(randLength);
-        	for (int n = 0; n < randLength; n++) {
-        		int rand = limitLeft + (int) (random.nextFloat() * (limitRight - limitLeft + 1));
-        		char randChar = (char)(int)(chars.get(rand));
-        		//System.out.println(chars.get(rand));
-        		//System.out.println("test:" + test);
-        		buffer.append(randChar);
-        	}
-        	String scheme = buffer.toString();
-        	System.out.println("scheme:" + scheme);
+		int limitLeft = 0;
+		int limitRight = chars.size() - 1;
 
-        	// assert false for all invalid schemes
-        	if (scheme.length() == 0) {
+		for (int i = 0; i < stringNum; i++) {
+			int randLength = stringLengthMin + (int) (random.nextFloat() * (stringLengthMax - stringLengthMin + 1));
+			StringBuilder buffer = new StringBuilder(randLength);
+			for (int n = 0; n < randLength; n++) {
+				int rand = limitLeft + (int) (random.nextFloat() * (limitRight - limitLeft + 1));
+				char randChar = (char)(int)(chars.get(rand));
+				//System.out.println(chars.get(rand));
+				//System.out.println("test:" + test);
+				buffer.append(randChar);
+			}
+			String scheme = buffer.toString();
+			System.out.println("scheme:" + scheme);
+
+			// assert false for all invalid schemes
+			if (scheme.length() == 0) {
 				assertFalse(urlChecker.isValid(scheme + "://" + VALID_URL));
-        	}
-        	if (scheme.contains(" ") || scheme.contains("/") || scheme.contains(":")) {
-				assertFalse(urlChecker.isValid(scheme + "://" + VALID_URL));
-        	}
+			}
 
-        	// assert true for all valid schemes
-        	else {
+			if (scheme.contains(" ") || scheme.contains("/") || scheme.contains(":")) {
+				assertFalse(urlChecker.isValid(scheme + "://" + VALID_URL));
+			}
+
+			// assert true for all valid schemes
+			else {
 				assertTrue(urlChecker.isValid(scheme + "://" + VALID_URL));
-        	}
-        	
-        }
+			}
+		}
 	}
 
-	// authority partition (e.g. 192.168.107.123) 
+	// authority partition (e.g. 192.168.107.123:8080) 
 	public void testYourSecondPartition(){
-
+		Random random = new Random(); 	
+		int limitLeft = 0;
+		int limitRight = 10;
+		int rand = limitLeft + (int) (random.nextFloat() * (limitRight - limitLeft + 1));
 	}
 
 	// port partition (e.g. 443) 
@@ -119,36 +114,63 @@ public class UrlValidatorTest extends TestCase {
 		UrlValidator urlValidator = new UrlValidator();
 
 		// limit valid ports from 0 to 65536 exclusive (2^16)
-        for (int i = 1; i < RANDOM_TESTS; i++) {
-        	
-        	// Generate random integers in range (-2 * 65536 - 1) to (2 * 65536 - 1)
-        	// This should result in one quarter of the resulting values being
-        	// valid port numbers (0 to 65536 exclusive).
-        	int leftLimit = (int) (-2 * Math.pow(2,16) - 1);
-        	int rightLimit = (int) (2 * Math.pow(2,16) - 1);
-        	int rand = leftLimit + (int) (new Random().nextFloat() * (rightLimit - leftLimit));
+		for (int i = 1; i < RANDOM_TESTS; i++) {
 
-        	// valid port
-        	if (rand >= 0 && rand < (int)(Math.pow(2, 16))) {
+			// Generate random integers in range (-2 * 65536 - 1) to (2 * 65536 - 1)
+			// This should result in one quarter of the resulting values being
+			// valid port numbers (0 to 65536 exclusive).
+			int leftLimit = (int) (-2 * Math.pow(2,16) - 1);
+			int rightLimit = (int) (2 * Math.pow(2,16) - 1);
+			int rand = leftLimit + (int) (new Random().nextFloat() * (rightLimit - leftLimit));
+
+			// valid port
+			if (rand >= 0 && rand < (int)(Math.pow(2, 16))) {
 				System.out.println(VALID_URL + ":" + rand); 
 				assertTrue(urlValidator.isValid(VALID_URL + ":" + rand));
-        	}
-        	
-        	// invalid port
-        	else {
-				assertFalse(urlValidator.isValid(VALID_URL + ":" + rand));
-        	}
-        }
-	}
-	
-	// path partition (e.g. /cool/new/book.html)
-	public void testYourFourthPartition(){
+			}
 
+			// invalid port
+			else {
+				assertFalse(urlValidator.isValid(VALID_URL + ":" + rand));
+			}
+		}
+	}
+
+	// path partition (e.g. /cool/new/book.html)
+	// https://tools.ietf.org/html/rfc1738
+	public void testYourFourthPartition() {
+		Random random = new Random(); 	
+
+		// number of directories and subdirectories
+		int dirNumMin = 0;
+		int dirNumMax = 10;
+		int dirNumRand = dirNumMin + (int) (random.nextFloat() * (dirNumMax - dirNumMin + 1));
+
+		// number of characters in each directory
+		int dirLengthMin = 0;
+		int dirLengthMax = 10;
+		int dirLengthRand = dirLengthMin + (int) (random.nextFloat() * (dirLengthMax - dirLengthMin + 1));
+
+		// filetype extension (e.g. html)
+		int filenameLengthMin = 0;
+		int filenameLengthMax = 10;
+		int filenameLengthRand = filenameLengthMin + (int) (random.nextFloat() * (filenameLengthMax - filenameLengthMin + 1));
+
+		for (int i = 0; i < dirNumRand; i++) {
+			for (int n = 0; n < dirLengthRand; n++) {
+				for (int k = 0; k < filenameLengthRand; k++) {
+					System.out.println("cool!");
+				}
+			}
+		}
 	}
 
 	// queries partition (e.g. ?chapter=1)
-	public void testYourFifthPartition(){
+	public void testYourFifthPartition() {
+		Random random = new Random(); 	
+		int limitLeft = 0;
+		int limitRight = 10;
+		int rand = limitLeft + (int) (random.nextFloat() * (limitRight - limitLeft + 1));
 
 	}
-
 }
