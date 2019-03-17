@@ -1,0 +1,81 @@
+        -:    0:Source:unittest2.c
+        -:    0:Graph:unittest2.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    0:Programs:0
+        -:    1:#include "myAssert.h"
+        -:    2:#include "dominion_helpers.h"
+        -:    3:#include "dominion.c"
+        -:    4:#include <stdio.h>
+        -:    5:
+        -:    6:void supplyCountTest(struct gameState testGame);
+        -:    7:void provinceCountTest(struct gameState testGame);
+        -:    8:
+function main called 0 returned 0% blocks executed 0%
+    #####:    9:int main(int argc, char* argv[])
+        -:   10:{
+        -:   11:    // isGameOver function
+        -:   12:    struct gameState testGame;
+        -:   13:
+        -:   14:    int i;
+    #####:   15:    for (i = 0; i < 25; i++)
+branch  0 never executed
+branch  1 never executed
+        -:   16:    {
+    #####:   17:        testGame.supplyCount[i] = 1;
+        -:   18:    }
+        -:   19:
+    #####:   20:    supplyCountTest(testGame);
+call    0 never executed
+    #####:   21:    provinceCountTest(testGame);
+call    0 never executed
+        -:   22:}
+        -:   23:
+        -:   24:
+function supplyCountTest called 0 returned 0% blocks executed 0%
+    #####:   25:void supplyCountTest(struct gameState testGame)
+        -:   26:{
+        -:   27:    int i;
+    #####:   28:    myAssert(isGameOver(&testGame) == 0);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+call    4 never executed
+        -:   29:
+    #####:   30:    for (i = 0; i < 3; i++)
+branch  0 never executed
+branch  1 never executed
+        -:   31:    {
+    #####:   32:        testGame.supplyCount[i] = 0;
+        -:   33:    }
+        -:   34:
+    #####:   35:    myAssert(isGameOver(&testGame) == 1);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+call    4 never executed
+    #####:   36:}
+        -:   37:
+        -:   38:
+function provinceCountTest called 0 returned 0% blocks executed 0%
+    #####:   39:void provinceCountTest(struct gameState testGame)
+        -:   40:{
+        -:   41:
+    #####:   42:    testGame.supplyCount[province] = 100;
+    #####:   43:    myAssert(isGameOver(&testGame) == 0);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+call    4 never executed
+        -:   44:
+    #####:   45:    testGame.supplyCount[province] = 0;
+    #####:   46:    myAssert(isGameOver(&testGame) == 1);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+call    4 never executed
+    #####:   47:}

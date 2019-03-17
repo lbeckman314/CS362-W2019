@@ -1,0 +1,61 @@
+        -:    0:Source:unittest1.c
+        -:    0:Graph:unittest1.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    0:Programs:0
+        -:    1:#include "myAssert.h"
+        -:    2:#include "dominion_helpers.h"
+        -:    3:#include "dominion.c"
+        -:    4:#include <stdio.h>
+        -:    5:
+function main called 0 returned 0% blocks executed 0%
+    #####:    6:int main(int argc, char* argv[])
+        -:    7:{
+        -:    8:    // getCost function
+        -:    9:
+        -:   10:    // false, should fail
+        -:   11:    // myAssert(1 == 0);    
+        -:   12:
+        -:   13:    // true, should pass
+        -:   14:    // myAssert(1 == 1);    
+        -:   15:
+        -:   16:    // curse
+    #####:   17:    myAssert(getCost(0) == 0);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+call    4 never executed
+        -:   18:    
+        -:   19:    // estate
+    #####:   20:    myAssert(getCost(1) == 2);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+call    4 never executed
+        -:   21:    
+        -:   22:    // duchy
+    #####:   23:    myAssert(getCost(2) == 5);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+call    4 never executed
+        -:   24:    
+        -:   25:    // province
+    #####:   26:    myAssert(getCost(3) == 8);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+call    4 never executed
+        -:   27:    
+        -:   28:    // copper
+    #####:   29:    myAssert(getCost(4) == 0);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+call    4 never executed
+        -:   30:}

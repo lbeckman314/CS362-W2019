@@ -1,0 +1,65 @@
+        -:    0:Source:unittest4.c
+        -:    0:Graph:unittest4.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    0:Programs:0
+        -:    1:#include "myAssert.h"
+        -:    2:#include "dominion.c"
+        -:    3:#include <stdio.h>
+        -:    4:
+        -:    5:void test1(int player, struct gameState *testGame);
+        -:    6:void test2(int player, struct gameState *testGame);
+        -:    7:
+function main called 0 returned 0% blocks executed 0%
+    #####:    8:int main(int argc, char* argv[])
+        -:    9:{
+        -:   10:    // updateCoins function
+        -:   11:
+    #####:   12:    struct gameState *testGame = newGame();
+call    0 never executed
+    #####:   13:    int player = 0;
+        -:   14:
+    #####:   15:    test1(player, testGame);
+call    0 never executed
+    #####:   16:    test2(player, testGame);
+call    0 never executed
+        -:   17:}
+        -:   18:
+        -:   19:
+function test1 called 0 returned 0% blocks executed 0%
+    #####:   20:void test1(int player, struct gameState *testGame)
+        -:   21:{
+    #####:   22:    int bonus = 0;
+    #####:   23:    testGame->handCount[player] = 5;
+    #####:   24:    testGame->hand[player][0] = copper;
+    #####:   25:    testGame->hand[player][1] = copper;
+    #####:   26:    testGame->hand[player][2] = silver;
+    #####:   27:    testGame->hand[player][3] = silver;
+    #####:   28:    testGame->hand[player][4] = gold;
+        -:   29:
+    #####:   30:    updateCoins(player, testGame, bonus);
+call    0 never executed
+    #####:   31:    myAssert(testGame->coins == 9);
+branch  0 never executed
+branch  1 never executed
+call    2 never executed
+call    3 never executed
+    #####:   32:}
+        -:   33:
+function test2 called 0 returned 0% blocks executed 0%
+    #####:   34:void test2(int player, struct gameState *testGame)
+        -:   35:{
+    #####:   36:    int bonus = 2;
+    #####:   37:    testGame->handCount[player] = 3;
+    #####:   38:    testGame->hand[player][0] = copper;
+    #####:   39:    testGame->hand[player][1] = silver;
+    #####:   40:    testGame->hand[player][2] = gold;
+        -:   41:
+    #####:   42:    updateCoins(player, testGame, bonus);
+call    0 never executed
+    #####:   43:    myAssert(testGame->coins == 8);
+branch  0 never executed
+branch  1 never executed
+call    2 never executed
+call    3 never executed
+    #####:   44:}

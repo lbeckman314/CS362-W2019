@@ -1,0 +1,44 @@
+        -:    0:Source:unittest3.c
+        -:    0:Graph:unittest3.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    0:Programs:0
+        -:    1:#include "myAssert.h"
+        -:    2:#include "dominion.c"
+        -:    3:#include <stdio.h>
+        -:    4:
+function main called 0 returned 0% blocks executed 0%
+    #####:    5:int main(int argc, char* argv[])
+        -:    6:{
+        -:    7:    // compare function
+        -:    8:
+    #####:    9:    int test1 = 1;
+    #####:   10:    int test2 = 2;
+    #####:   11:    int *a = &test1;
+    #####:   12:    int *b = &test2;
+        -:   13:
+    #####:   14:    myAssert(compare(b, a) == 1);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+call    4 never executed
+    #####:   15:    myAssert(compare(a, b) == -1);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+call    4 never executed
+    #####:   16:    myAssert(compare(a, a) == 0);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+call    4 never executed
+    #####:   17:    myAssert(compare(b, b) == 0);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+call    4 never executed
+        -:   18:}

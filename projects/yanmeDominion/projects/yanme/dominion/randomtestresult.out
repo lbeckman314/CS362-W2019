@@ -1,0 +1,79 @@
+numPlayers: 4
+thisPlayer: 2
+----------------- Testing Card: smithy ----------------
+TEST 1: random test
+hand count = 0, expected = 2
+deck count = 10, expected = 7
+hand count = 0, expected = 2
+deck count = 10, expected = 7
+randomtestcard1.c:65 TEST FAILED: -> testG.handCount[thisPlayer] == G.handCount[thisPlayer] + 2
+randomtestcard1.c:66 TEST FAILED: -> testG.deckCount[thisPlayer] == G.deckCount[thisPlayer] - 3
+
+ >>>>> SUCCESS: Testing complete smithy <<<<<
+
+File 'randomtestcard1.c'
+Lines executed:100.00% of 25
+Branches executed:100.00% of 4
+Taken at least once:50.00% of 4
+Calls executed:89.47% of 19
+Creating 'randomtestcard1.c.gcov'
+
+File 'myAssert.c'
+Lines executed:35.71% of 14
+Branches executed:50.00% of 8
+Taken at least once:25.00% of 8
+Calls executed:16.67% of 6
+Creating 'myAssert.c.gcov'
+
+----------------- Testing Card: mine ----------------
+TEST 1: random test
+randomtestcard2.c:56 TEST SUCCESSFULLY COMPLETED -> getCost(testG.hand[thisPlayer][choice1]) + 3 <= getCost(choice2)
+5 :: 5
+randomtestcard2.c:65 TEST SUCCESSFULLY COMPLETED -> testG.handCount[thisPlayer] == G.handCount[thisPlayer]
+5 :: 5
+randomtestcard2.c:71 TEST SUCCESSFULLY COMPLETED -> testG.supplyCount[choice2] == G.supplyCount[choice2]
+
+ >>>>> SUCCESS: Testing complete mine <<<<<
+
+File 'randomtestcard2.c'
+Lines executed:100.00% of 22
+Branches executed:100.00% of 8
+Taken at least once:62.50% of 8
+Calls executed:85.71% of 21
+Creating 'randomtestcard2.c.gcov'
+
+File 'myAssert.c'
+Lines executed:35.71% of 14
+Branches executed:50.00% of 8
+Taken at least once:25.00% of 8
+Calls executed:16.67% of 6
+Creating 'myAssert.c.gcov'
+
+numplayers: 4
+thisplayer: 0
+----------------- Testing Card: adventurer ----------------
+hand count: 5
+hand count: 0
+hand count: 0
+hand count: 0
+TEST 1: random test
+testhand: 7
+randomtestcardadventurer.c:91 TEST SUCCESSFULLY COMPLETED -> drawntreasure == drawntreasurePre + 2
+6 :: 4
+
+ >>>>> SUCCESS: Testing complete adventurer <<<<<
+
+File 'randomtestcardadventurer.c'
+Lines executed:97.62% of 42
+Branches executed:90.91% of 22
+Taken at least once:63.64% of 22
+Calls executed:85.71% of 21
+Creating 'randomtestcardadventurer.c.gcov'
+
+File 'myAssert.c'
+Lines executed:35.71% of 14
+Branches executed:50.00% of 8
+Taken at least once:25.00% of 8
+Calls executed:16.67% of 6
+Creating 'myAssert.c.gcov'
+

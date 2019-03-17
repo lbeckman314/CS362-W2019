@@ -1,0 +1,47 @@
+        -:    0:Source:myAssert.c
+        -:    0:Graph:randomtestcardadventurer.gcno
+        -:    0:Data:randomtestcardadventurer.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "myAssert.h"
+        -:    2:#include "color.h"
+        -:    3:#include <stdio.h>
+        -:    4:#include "dominion_helpers.h"
+        -:    5:
+function passed called 1 returned 100% blocks executed 67%
+        1:    6:void passed(char *expression, int line, char *file, int color)
+        -:    7:{
+        1:    8:    if (color)
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+    #####:    9:        printf("%s%s", boldon, green);
+call    0 never executed
+        -:   10:
+        1:   11:    printf("%s:%d TEST SUCCESSFULLY COMPLETED -> %s\n", file, line, expression);
+call    0 returned 100%
+        -:   12:
+        1:   13:    if (color)
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+    #####:   14:        printf("%s%s", normal, boldoff);
+call    0 never executed
+        1:   15:}
+        -:   16:
+function failed called 0 returned 0% blocks executed 0%
+    #####:   17:void failed(char *expression, int line, char *file, int color)
+        -:   18:{
+    #####:   19:    if (color)
+branch  0 never executed
+branch  1 never executed
+    #####:   20:        printf("%s%s", boldon, red);
+call    0 never executed
+        -:   21:
+    #####:   22:    printf("%s:%d TEST FAILED: -> %s\n", file, line, expression);
+call    0 never executed
+        -:   23:
+    #####:   24:    if (color)
+branch  0 never executed
+branch  1 never executed
+    #####:   25:        printf("%s%s", normal, boldoff);
+call    0 never executed
+    #####:   26:}
