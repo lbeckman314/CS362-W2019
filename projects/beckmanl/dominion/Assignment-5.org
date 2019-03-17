@@ -2,7 +2,7 @@
 #+SETUPFILE: ~/main.org
 
 
-* Bugs Report
+* Bug-Reports
 ** Bug 1
    
 - Title: Wrong Smithy draw card value. 
@@ -14,7 +14,7 @@
 - Environment: NVIM v0.3.4 (Build type: Release)
 - Description:
 
-The Smithy card (implemented in the ~play_smithy~ function) drew a totoal of four cards, instead of the correct amount of three cards. This is likely due to the incorrect termination expression of ~i < 4~ in the primary for loop.
+The Smithy card (implemented in the ~play_smithy~ function) drew a total of four cards, instead of the correct amount of three cards. This is likely due to the incorrect termination expression of ~i < 4~ in the primary for loop.
 
  #+BEGIN_SRC c -n
 int play_smithy(int currentPlayer, int handPos, struct gameState *state)
@@ -42,7 +42,7 @@ int play_smithy(int currentPlayer, int handPos, struct gameState *state)
 - Environment: NVIM v0.3.4 (Build type: Release)
 - Description:
 
-    Uninitialized variable ~z~ in ~play_adventurer~ function within the ~temphand[z]=cardDrawn~ statement. Furthermore, the ~z~ variable is not incremented after the ~temphand[z]=cardDrawn~ statement, so the first temphand card will continualy be overwritten every iteration of the ~while(drawntreasure<2)~ statement.
+    Uninitialized variable ~z~ in ~play_adventurer~ function within the ~temphand[z]=cardDrawn~ statement. Furthermore, the ~z~ variable is not incremented after the ~temphand[z]=cardDrawn~ statement, so the first ~temphand~ card will continually be overwritten every iteration of the ~while(drawntreasure<2)~ statement.
 
     #+BEGIN_SRC c -n
 while(drawntreasure<2)
@@ -61,7 +61,7 @@ while(drawntreasure<2)
 
     #+END_SRC
 
-* Test Report
+* Test-Report
   
 I chose to use Yan Ming's branch for their second assignment (yanme-assignment-2), as her later branches were such that no prominent bugs could be found. Thus, I am confident in saying that their code is reliable and well executed, as I was forced to analyze code with purposeful bugs implemented.
 
@@ -92,7 +92,7 @@ while(drawntreasure<2)
     // ...
     #+END_SRC
 
-    Uninitialized variable ~z~ in ~play_adventurer~ function within the ~temphand[z]=cardDrawn~ statement. Furthermore, the ~z~ variable is not incremented after the ~temphand[z]=cardDrawn~ statement, so the first temphand card will continualy be overwritten every iteration of the ~while(drawntreasure<2)~ statement.
+    Uninitialized variable ~z~ in ~play_adventurer~ function within the ~temphand[z]=cardDrawn~ statement. Furthermore, the ~z~ variable is not incremented after the ~temphand[z]=cardDrawn~ statement, so the first ~temphand~ card will continually be overwritten every iteration of the ~while(drawntreasure<2)~ statement.
 
 
     #+BEGIN_SRC c -n
@@ -523,7 +523,7 @@ Creating 'myAssert.c.gcov'
 * Debugging
 ** gdb
    
-The GNU Debugger was used to track down a bug in the Smithy card in dominion.c (implemented in the ~play_smithy~ function). By creating a breakpoint at the ~play_smithy~ function, we were able to first confirm the initial values of the variables (hand count and deck count), and then step into the ~play_smithy~ function. In this case the example was readily apparent, as the ~for (int i = 0; i < 4; i++)~ statement should be ~for (int i = 0; i < 3; i++)~ for the Smithy card to draw the correct amount of three cards (and not four as the previous version had it doing).
+The GNU Debugger was used to track down a bug in the Smithy card in dominion.c (implemented in the ~play_smithy~ function). By creating a break point at the ~play_smithy~ function, we were able to first confirm the initial values of the variables (hand count and deck count), and then step into the ~play_smithy~ function. In this case the example was readily apparent, as the ~for (int i = 0; i < 4; i++)~ statement should be ~for (int i = 0; i < 3; i++)~ for the Smithy card to draw the correct amount of three cards (and not four as the previous version had it doing).
 
 #+BEGIN_EXAMPLE -n
 $ gdb cardtest1
