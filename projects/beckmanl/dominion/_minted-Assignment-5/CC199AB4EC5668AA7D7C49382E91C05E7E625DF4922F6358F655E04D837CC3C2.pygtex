@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{while}\PYG{p}{(}\PYG{n}{drawntreasure}\PYG{o}{\PYGZlt{}}\PYG{l+m+mi}{2}\PYG{p}{)}
+
+\PYG{c+c1}{//...}
+
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{cardDrawn} \PYG{o}{==} \PYG{n}{copper} \PYG{o}{||} \PYG{n}{cardDrawn} \PYG{o}{==} \PYG{n}{silver} \PYG{o}{||} \PYG{n}{cardDrawn} \PYG{o}{==} \PYG{n}{gold}\PYG{p}{)}
+        \PYG{n}{drawntreasure}\PYG{o}{++}\PYG{p}{;}
+\end{Verbatim}

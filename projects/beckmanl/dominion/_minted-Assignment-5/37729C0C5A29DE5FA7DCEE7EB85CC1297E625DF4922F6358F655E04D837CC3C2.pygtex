@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int} \PYG{n+nf}{play\PYGZus{}mine} \PYG{p}{(} \PYG{k+kt}{int} \PYG{n}{currentPlayer}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{choice1}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{choice2}\PYG{p}{,} \PYG{k}{struct} \PYG{n}{gameState} \PYG{o}{*}\PYG{n}{state}\PYG{p}{)}
+
+    \PYG{n}{j} \PYG{o}{=} \PYG{n}{state}\PYG{o}{\PYGZhy{}\PYGZgt{}}
+    \PYG{n}{hand}\PYG{p}{[}\PYG{n}{currentPlayer}\PYG{p}{][}\PYG{n}{choice1}\PYG{p}{];}  \PYG{c+c1}{//store card we will trash}
+
+\PYG{c+c1}{// ...}
+
+\PYG{c+c1}{//discard trashed card}
+\PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{state}\PYG{o}{\PYGZhy{}\PYGZgt{}}
+    \PYG{n}{handCount}\PYG{p}{[}\PYG{n}{currentPlayer}\PYG{p}{];} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{state}\PYG{o}{\PYGZhy{}\PYGZgt{}}
+    \PYG{n}{hand}\PYG{p}{[}\PYG{n}{currentPlayer}\PYG{p}{][}\PYG{n}{i}\PYG{p}{]} \PYG{o}{==} \PYG{n}{j}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{discardCard}\PYG{p}{(}\PYG{n}{i}\PYG{p}{,} \PYG{n}{currentPlayer}\PYG{p}{,} \PYG{n}{state}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{);}
+        \PYG{k}{break}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\end{Verbatim}

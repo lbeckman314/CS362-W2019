@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int} \PYG{n+nf}{play\PYGZus{}smithy}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{currentPlayer}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{handPos}\PYG{p}{,} \PYG{k}{struct} \PYG{n}{gameState} \PYG{o}{*}\PYG{n}{state}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+        \PYG{c+c1}{//+3 Cards}
+        \PYG{c+c1}{// changed \PYGZdq{}i \PYGZlt{} 4\PYGZdq{} to \PYGZdq{}i \PYGZlt{} 3\PYGZdq{}}
+      \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{3}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+      \PYG{n}{drawCard}\PYG{p}{(}\PYG{n}{currentPlayer}\PYG{p}{,} \PYG{n}{state}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+
+      \PYG{c+c1}{//discard card from hand}
+      \PYG{n}{discardCard}\PYG{p}{(}\PYG{n}{handPos}\PYG{p}{,} \PYG{n}{currentPlayer}\PYG{p}{,} \PYG{n}{state}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{);}
+      \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

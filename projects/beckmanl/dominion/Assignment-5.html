@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-03-16 Sat 23:26 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Assignment 5</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="liam beckman" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+<link rel="stylesheet" type="text/css" href="assets/css/code.css"/>
+<link rel="stylesheet" type="text/css" href="assets/css/dark.css">
+<link rel="stylesheet" type="text/css" href="assets/css/dracula.css">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Assignment 5</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#bugsreport">1. Bugs Report</a>
+<ul>
+<li><a href="#bug">1.1. Bug 1</a></li>
+<li><a href="#bug1">1.2. Bug 2</a></li>
+</ul>
+</li>
+<li><a href="#testreport">2. Test Report</a>
+<ul>
+<li><a href="#manualreview">2.1. Manual Review</a>
+<ul>
+<li><a href="#cardeffect">2.1.1. cardEffect</a></li>
+<li><a href="#playadventurer">2.1.2. play_adventurer</a></li>
+<li><a href="#playsmithy">2.1.3. play_smithy</a></li>
+<li><a href="#playmine">2.1.4. play_mine</a></li>
+<li><a href="#playcouncil">2.1.5. play_council</a></li>
+</ul>
+</li>
+<li><a href="#unittesting">2.2. Unit Testing</a>
+<ul>
+<li><a href="#testresults">2.2.1. Test Results</a></li>
+<li><a href="#codecoverage">2.2.2. Code Coverage</a></li>
+</ul>
+</li>
+<li><a href="#randomtesting">2.3. Random Testing</a>
+<ul>
+<li><a href="#testresults1">2.3.1. Test Results</a></li>
+<li><a href="#codecoverage1">2.3.2. Code Coverage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#debugging">3. Debugging</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-bugsreport" class="outline-2">
+<h2 id="bugsreport"><span class="section-number-2">1</span> Bugs Report <a href="#bugsreport"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-bug" class="outline-3">
+<h3 id="bug"><span class="section-number-3">1.1</span> Bug 1 <a href="#bug"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Title: Wrong Smithy draw card value. 
+Project: dominion
+Reporter: liam beckman
+Date: 16 March 2019
+Type: Bug
+File Name: dominion.c
+Environment: NVIM v0.3.4 (Build type: Release)
+Description:
+</p>
+
+<p>
+The Smithy card (implemented in the <code>play_smithy</code> function) drew a totoal of four cards, instead of the correct amount of three cards. This is likely due to the incorrect termination expression of <code>i &lt; 4</code> in the primary for loop.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c"><span class="linenr"> 1: </span><span class="org-type">int</span> <span class="org-function-name">play_smithy</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-type">int</span> <span class="org-variable-name">currentPlayer</span>, <span class="org-type">int</span> <span class="org-variable-name">handPos</span>, <span class="org-keyword">struct</span> <span class="org-type">gameState</span> *<span class="org-variable-name">state</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="linenr"> 2: </span><span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 3: </span>        <span class="org-comment-delimiter">//</span><span class="org-comment">+3 Cards</span>
+<span class="linenr"> 4: </span>      <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; 4; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 5: </span>    <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr"> 6: </span>      drawCard<span class="org-rainbow-delimiters-depth-3">(</span>currentPlayer, state<span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr"> 7: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr"> 8: </span>            
+<span class="linenr"> 9: </span>      <span class="org-comment-delimiter">//</span><span class="org-comment">discard card from hand</span>
+<span class="linenr">10: </span>      discardCard<span class="org-rainbow-delimiters-depth-2">(</span>handPos, currentPlayer, state, 0<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">11: </span>      <span class="org-keyword">return</span> 0;
+<span class="linenr">12: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-bug1" class="outline-3">
+<h3 id="bug1"><span class="section-number-3">1.2</span> Bug 2 <a href="#bug1"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Title: Adventurer Card Error
+Project: dominion
+Reporter: liam beckman
+Date: 16 March 2019
+Type: Bug
+File Name: dominion.c
+Environment: NVIM v0.3.4 (Build type: Release)
+Description:
+</p>
+
+<p>
+Uninitialized variable <code>z</code> in <code>play_adventurer</code> function within the <code>temphand[z]=cardDrawn</code> statement. Furthermore, the <code>z</code> variable is not incremented after the <code>temphand[z]=cardDrawn</code> statement, so the first temphand card will continualy be overwritten every iteration of the <code>while(drawntreasure&lt;2)</code> statement.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c"><span class="linenr"> 1: </span><span class="org-keyword">while</span><span class="org-rainbow-delimiters-depth-1">(</span>drawntreasure&lt;2<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-comment-delimiter">//</span><span class="org-comment">...</span>
+<span class="linenr"> 4: </span>
+<span class="linenr"> 5: </span>    <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-1">(</span>cardDrawn == copper || cardDrawn == silver || cardDrawn == gold<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="linenr"> 6: </span>        drawntreasure++;
+<span class="linenr"> 7: </span>    <span class="org-keyword">else</span>
+<span class="linenr"> 8: </span>    <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 9: </span>        temphand<span class="org-rainbow-delimiters-depth-2">[</span>z<span class="org-rainbow-delimiters-depth-2">]</span>=cardDrawn;
+<span class="linenr">10: </span>        state-&gt;\\handCount<span class="org-rainbow-delimiters-depth-2">[</span>currentPlayer<span class="org-rainbow-delimiters-depth-2">]</span>--; <span class="org-comment-delimiter">//</span><span class="org-comment">this should just remove the top card (the most recently drawn one).</span>
+<span class="linenr">11: </span>    <span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="linenr">12: </span>
+<span class="linenr">13: </span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-testreport" class="outline-2">
+<h2 id="testreport"><span class="section-number-2">2</span> Test Report <a href="#testreport"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-manualreview" class="outline-3">
+<h3 id="manualreview"><span class="section-number-3">2.1</span> Manual Review <a href="#manualreview"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-cardeffect" class="outline-4">
+<h4 id="cardeffect"><span class="section-number-4">2.1.1</span> cardEffect <a href="#cardeffect"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+Missing end bracket in <code>cardEffect</code> function.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c"><span class="linenr">1: </span><span class="org-type">int</span> <span class="org-function-name">cardEffect</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-type">int</span> <span class="org-variable-name">card</span>, <span class="org-type">int</span> <span class="org-variable-name">choice1</span>, <span class="org-type">int</span> <span class="org-variable-name">choice2</span>, <span class="org-type">int</span> <span class="org-variable-name">choice3</span>, <span class="org-keyword">struct</span> <span class="org-type">gameState</span> *<span class="org-variable-name">state</span>, <span class="org-type">int</span> <span class="org-variable-name">handPos</span>, <span class="org-type">int</span> *<span class="org-variable-name">bonus</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="linenr">2: </span>
+<span class="linenr">3: </span><span class="org-comment-delimiter">// </span><span class="org-comment">...</span>
+</pre>
+</div>
+
+
+<p>
+Variable misspelling of <code>drawnteasure</code> variable in <code>play_adventurer</code> function. Initialized as <code>drawnteasure</code>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-playadventurer" class="outline-4">
+<h4 id="playadventurer"><span class="section-number-4">2.1.2</span> play_adventurer <a href="#playadventurer"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<div class="outline-text-4" id="text-2-1-2">
+<div class="org-src-container">
+<pre class="src src-c"><span class="linenr">1: </span><span class="org-type">int</span> <span class="org-function-name">play_adventurer</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-type">int</span> <span class="org-variable-name">currentPlayer</span>, <span class="org-type">int</span> <span class="org-variable-name">temphand</span><span class="org-rainbow-delimiters-depth-2">[</span>MAX_HAND<span class="org-rainbow-delimiters-depth-2">]</span>,  <span class="org-keyword">struct</span> <span class="org-type">gameState</span> *<span class="org-variable-name">state</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="linenr">2: </span>
+<span class="linenr">3: </span>
+<span class="linenr">4: </span><span class="org-type">int</span> <span class="org-variable-name">drawnteasure</span> = 0;
+<span class="linenr">5: </span><span class="org-type">int</span> <span class="org-variable-name">cardDrawn</span>;
+<span class="linenr">6: </span><span class="org-keyword">while</span><span class="org-rainbow-delimiters-depth-1">(</span>drawntreasure&lt;2<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="linenr">7: </span>
+<span class="linenr">8: </span>    <span class="org-comment-delimiter">// </span><span class="org-comment">...</span>
+</pre>
+</div>
+
+<p>
+Uninitialized variable <code>z</code> in <code>play_adventurer</code> function within the <code>temphand[z]=cardDrawn</code> statement. Furthermore, the <code>z</code> variable is not incremented after the <code>temphand[z]=cardDrawn</code> statement, so the first temphand card will continualy be overwritten every iteration of the <code>while(drawntreasure&lt;2)</code> statement.
+</p>
+
+
+<div class="org-src-container">
+<pre class="src src-c"><span class="linenr"> 1: </span><span class="org-keyword">while</span><span class="org-rainbow-delimiters-depth-1">(</span>drawntreasure&lt;2<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-comment-delimiter">//</span><span class="org-comment">...</span>
+<span class="linenr"> 4: </span>
+<span class="linenr"> 5: </span>    <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-1">(</span>cardDrawn == copper || cardDrawn == silver || cardDrawn == gold<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="linenr"> 6: </span>        drawntreasure++;
+<span class="linenr"> 7: </span>    <span class="org-keyword">else</span>
+<span class="linenr"> 8: </span>    <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 9: </span>        temphand<span class="org-rainbow-delimiters-depth-2">[</span>z<span class="org-rainbow-delimiters-depth-2">]</span>=cardDrawn;
+<span class="linenr">10: </span>        state-&gt;\\handCount<span class="org-rainbow-delimiters-depth-2">[</span>currentPlayer<span class="org-rainbow-delimiters-depth-2">]</span>--; <span class="org-comment-delimiter">//</span><span class="org-comment">this should just remove the top card (the most recently drawn one).</span>
+<span class="linenr">11: </span>    <span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="linenr">12: </span>
+<span class="linenr">13: </span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-playsmithy" class="outline-4">
+<h4 id="playsmithy"><span class="section-number-4">2.1.3</span> play_smithy <a href="#playsmithy"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<div class="outline-text-4" id="text-2-1-3">
+<p>
+Uninitialized variable <code>i</code> in <code>play_smithy</code> function.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c"><span class="linenr">1: </span><span class="org-type">int</span> <span class="org-function-name">play_smithy</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-type">int</span> <span class="org-variable-name">currentPlayer</span>, <span class="org-type">int</span> <span class="org-variable-name">handPos</span>, <span class="org-keyword">struct</span> <span class="org-type">gameState</span> *<span class="org-variable-name">state</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="linenr">2: </span>
+<span class="linenr">3: </span><span class="org-comment-delimiter">//</span><span class="org-comment">+3 Cards</span>
+<span class="linenr">4: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-1">(</span>i = 0; i &lt; 4; i++<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="linenr">5: </span>
+<span class="linenr">6: </span>        <span class="org-comment-delimiter">// </span><span class="org-comment">...</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-playmine" class="outline-4">
+<h4 id="playmine"><span class="section-number-4">2.1.4</span> play_mine <a href="#playmine"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<div class="outline-text-4" id="text-2-1-4">
+<p>
+Uninitialized variables <code>j</code> and <code>i</code> in <code>play_mine</code> function.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c"><span class="linenr"> 1: </span><span class="org-type">nt</span> <span class="org-function-name">play_mine</span> <span class="org-rainbow-delimiters-depth-1">(</span> <span class="org-type">int</span> <span class="org-variable-name">currentPlayer</span>, <span class="org-type">int</span> <span class="org-variable-name">choice1</span>, <span class="org-type">int</span> <span class="org-variable-name">choice2</span>, <span class="org-keyword">struct</span> <span class="org-type">gameState</span> *<span class="org-variable-name">state</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>    j = state-&gt;\\hand<span class="org-rainbow-delimiters-depth-1">[</span>currentPlayer<span class="org-rainbow-delimiters-depth-1">][</span>choice1<span class="org-rainbow-delimiters-depth-1">]</span>;  <span class="org-comment-delimiter">//</span><span class="org-comment">store card we will trash</span>
+<span class="linenr"> 4: </span>
+<span class="linenr"> 5: </span><span class="org-comment-delimiter">// </span><span class="org-comment">...</span>
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span><span class="org-comment-delimiter">//</span><span class="org-comment">discard trashed card</span>
+<span class="linenr"> 8: </span><span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-1">(</span>i = 0; i &lt; state-&gt;\\handCount<span class="org-rainbow-delimiters-depth-2">[</span>currentPlayer<span class="org-rainbow-delimiters-depth-2">]</span>; i++<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="linenr"> 9: </span><span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr">10: </span>    <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-2">(</span>state-&gt;\\hand<span class="org-rainbow-delimiters-depth-3">[</span>currentPlayer<span class="org-rainbow-delimiters-depth-3">][</span>i<span class="org-rainbow-delimiters-depth-3">]</span> == j<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">11: </span>    <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr">12: </span>        discardCard<span class="org-rainbow-delimiters-depth-3">(</span>i, currentPlayer, state, 0<span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">13: </span>        <span class="org-keyword">break</span>;
+<span class="linenr">14: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">15: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="linenr">16: </span>
+<span class="linenr">17: </span><span class="org-keyword">return</span> 0;
+<span class="linenr">18: </span>
+</pre>
+</div>
+
+<p>
+Undeclared variable <code>handPos</code> in <code>play_mine</code> function.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c"><span class="linenr">1: </span><span class="org-type">int</span> <span class="org-function-name">play_mine</span> <span class="org-rainbow-delimiters-depth-1">(</span> <span class="org-type">int</span> <span class="org-variable-name">currentPlayer</span>, <span class="org-type">int</span> <span class="org-variable-name">choice1</span>, <span class="org-type">int</span> <span class="org-variable-name">choice2</span>, <span class="org-keyword">struct</span> <span class="org-type">gameState</span> *<span class="org-variable-name">state</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="linenr">2: </span>
+<span class="linenr">3: </span><span class="org-comment-delimiter">// </span><span class="org-comment">...</span>
+<span class="linenr">4: </span>
+<span class="linenr">5: </span><span class="org-comment-delimiter">//</span><span class="org-comment">discard card from hand</span>
+<span class="linenr">6: </span>    <span class="org-function-name">discardCard</span><span class="org-rainbow-delimiters-depth-1">(</span>handPos, currentPlayer, state, 0<span class="org-rainbow-delimiters-depth-1">)</span>;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-playcouncil" class="outline-4">
+<h4 id="playcouncil"><span class="section-number-4">2.1.5</span> play_council <a href="#playcouncil"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<div class="outline-text-4" id="text-2-1-5">
+<p>
+Uninitialized variable <code>i</code> in <code>play_council</code> function.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c"><span class="linenr">1: </span><span class="org-type">int</span> <span class="org-function-name">play_council</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-type">int</span> <span class="org-variable-name">currentPlayer</span>, <span class="org-type">int</span> <span class="org-variable-name">handPos</span>, <span class="org-keyword">struct</span> <span class="org-type">gameState</span> *<span class="org-variable-name">state</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="linenr">2: </span><span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr">3: </span>    <span class="org-comment-delimiter">//</span><span class="org-comment">+4 Cards</span>
+<span class="linenr">4: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span>i = 0; i &lt; 4; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">5: </span>
+<span class="linenr">6: </span>        <span class="org-comment-delimiter">// </span><span class="org-comment">...</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-unittesting" class="outline-3">
+<h3 id="unittesting"><span class="section-number-3">2.2</span> Unit Testing <a href="#unittesting"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-testresults" class="outline-4">
+<h4 id="testresults"><span class="section-number-4">2.2.1</span> Test Results <a href="#testresults"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<div class="outline-text-4" id="text-2-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="getcostfunction"></a>getCost Function <a href="#getcostfunction"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-5" id="text-2-2-1-1">
+<pre class="example">
+<span class="linenr">1: </span>unittest1.c:17 TEST SUCCESSFULLY COMPLETED -&gt;\\ getCost(0) == 0
+<span class="linenr">2: </span>unittest1.c:20 TEST SUCCESSFULLY COMPLETED -&gt;\\ getCost(1) == 2
+<span class="linenr">3: </span>unittest1.c:23 TEST SUCCESSFULLY COMPLETED -&gt;\\ getCost(2) == 5
+<span class="linenr">4: </span>unittest1.c:26 TEST SUCCESSFULLY COMPLETED -&gt;\\ getCost(3) == 8
+<span class="linenr">5: </span>unittest1.c:29 TEST SUCCESSFULLY COMPLETED -&gt;\\ getCost(4) == 0
+</pre>
+</div>
+</li>
+
+<li><a id="isgameoverfunction"></a>isGameOver Function <a href="#isgameoverfunction"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-5" id="text-2-2-1-2">
+<pre class="example">
+<span class="linenr">1: </span>unittest2.c:28 TEST SUCCESSFULLY COMPLETED -&gt;\\ isGameOver(&amp;testGame) == 0
+<span class="linenr">2: </span>unittest2.c:35 TEST SUCCESSFULLY COMPLETED -&gt;\\ isGameOver(&amp;testGame) == 1
+<span class="linenr">3: </span>unittest2.c:43 TEST SUCCESSFULLY COMPLETED -&gt;\\ isGameOver(&amp;testGame) == 0
+<span class="linenr">4: </span>unittest2.c:46 TEST SUCCESSFULLY COMPLETED -&gt;\\ isGameOver(&amp;testGame) == 1
+</pre>
+</div>
+</li>
+
+<li><a id="comparefunction"></a>compare Function <a href="#comparefunction"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-5" id="text-2-2-1-3">
+<pre class="example">
+<span class="linenr">1: </span>unittest3.c:14 TEST SUCCESSFULLY COMPLETED -&gt;\\ compare(b, a) == 1
+<span class="linenr">2: </span>unittest3.c:15 TEST SUCCESSFULLY COMPLETED -&gt;\\ compare(a, b) == -1
+<span class="linenr">3: </span>unittest3.c:16 TEST SUCCESSFULLY COMPLETED -&gt;\\ compare(a, a) == 0
+<span class="linenr">4: </span>unittest3.c:17 TEST SUCCESSFULLY COMPLETED -&gt;\\ compare(b, b) == 0
+</pre>
+</div>
+</li>
+
+<li><a id="updatecoinsfunction"></a>updateCoins Function <a href="#updatecoinsfunction"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-5" id="text-2-2-1-4">
+<pre class="example">
+<span class="linenr">1: </span>unittest4.c:31 TEST SUCCESSFULLY COMPLETED -&gt;\\ testGame-&gt;coins == 9
+<span class="linenr">2: </span>unittest4.c:43 TEST SUCCESSFULLY COMPLETED -&gt;\\ testGame-&gt;coins == 8
+</pre>
+</div>
+</li>
+
+<li><a id="smithycard"></a>Smithy Card <a href="#smithycard"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<ol class="org-ol">
+<li><a id="failedtests"></a>Failed Tests <a href="#failedtests"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-6" id="text-2-2-1-5-1">
+<pre class="example">
+<span class="linenr">1: </span>cardtest1.c:14 TEST SUCCESSFULLY COMPLETED -&gt;\\ play_smithy(player, handPos, testGame) == 0
+<span class="linenr">2: </span>cardtest1.c:15 TEST FAILED: -&gt;\\ testGame-&gt;deckCount[player] == 2
+<span class="linenr">3: </span>cardtest1.c:16 TEST FAILED: -&gt;\\ testGame-&gt;handCount[player] == 7
+<span class="linenr">4: </span>cardtest1.c:19 TEST SUCCESSFULLY COMPLETED -&gt;\\ testGame-&gt;deckCount[player] == 0
+<span class="linenr">5: </span>cardtest1.c:20 TEST SUCCESSFULLY COMPLETED -&gt;\\ testGame-&gt;handCount[player] == 8
+</pre>
+</div>
+</li>
+
+
+<li><a id="successfultests"></a>Successful Tests <a href="#successfultests"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-6" id="text-2-2-1-5-2">
+<pre class="example">
+<span class="linenr">1: </span>cardtest1.c:14 TEST SUCCESSFULLY COMPLETED -&gt;\\ play_smithy(player, handPos, testGame) == 0
+<span class="linenr">2: </span>cardtest1.c:15 TEST FAILED: -&gt;\\ testGame-&gt;deckCount[player] == 2
+<span class="linenr">3: </span>cardtest1.c:16 TEST FAILED: -&gt;\\ testGame-&gt;handCount[player] == 7
+<span class="linenr">4: </span>cardtest1.c:19 TEST SUCCESSFULLY COMPLETED -&gt;\\ testGame-&gt;deckCount[player] == 0
+<span class="linenr">5: </span>cardtest1.c:20 TEST SUCCESSFULLY COMPLETED -&gt;\\ testGame-&gt;handCount[player] == 8
+</pre>
+</div>
+</li>
+
+<li><a id="codechanged"></a>Code Changed <a href="#codechanged"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-6" id="text-2-2-1-5-3">
+<div class="org-src-container">
+<pre class="src src-c"><span class="linenr"> 1: </span><span class="org-type">int</span> <span class="org-function-name">play_smithy</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-type">int</span> <span class="org-variable-name">currentPlayer</span>, <span class="org-type">int</span> <span class="org-variable-name">handPos</span>, <span class="org-keyword">struct</span> <span class="org-type">gameState</span> *<span class="org-variable-name">state</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="linenr"> 2: </span><span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 3: </span>        <span class="org-comment-delimiter">//</span><span class="org-comment">+3 Cards</span>
+<span class="linenr"> 4: </span>        <span class="org-comment-delimiter">// </span><span class="org-comment">changed "i &lt; 4" to "i &lt; 3"</span>
+<span class="linenr"> 5: </span>      <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; 3; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 6: </span>    <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr"> 7: </span>      drawCard<span class="org-rainbow-delimiters-depth-3">(</span>currentPlayer, state<span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr"> 8: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr"> 9: </span>            
+<span class="linenr">10: </span>      <span class="org-comment-delimiter">//</span><span class="org-comment">discard card from hand</span>
+<span class="linenr">11: </span>      discardCard<span class="org-rainbow-delimiters-depth-2">(</span>handPos, currentPlayer, state, 0<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">12: </span>      <span class="org-keyword">return</span> 0;
+<span class="linenr">13: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</li>
+</ol>
+</li>
+
+
+<li><a id="adventurercard"></a>Adventurer Card <a href="#adventurercard"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-5" id="text-2-2-1-6">
+<pre class="example">
+<span class="linenr">1: </span>cardtest2.c:19 TEST SUCCESSFULLY COMPLETED -&gt;\\ play_adventurer(player, temphand, testGame) == 0
+<span class="linenr">2: </span>cardtest2.c:22 TEST SUCCESSFULLY COMPLETED -&gt;\\ lastCard == copper || lastCard == silver || lastCard == gold
+</pre>
+</div>
+</li>
+
+<li><a id="villagecard"></a>Village Card <a href="#villagecard"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-5" id="text-2-2-1-7">
+<pre class="example">
+<span class="linenr">1: </span>cardtest3.c:31 TEST SUCCESSFULLY COMPLETED -&gt;\\ cardEffect(card, choice1, choice2, choice3, testGame, handPos, bonus) == 0
+<span class="linenr">2: </span>cardtest3.c:35 TEST SUCCESSFULLY COMPLETED -&gt;\\ actions == actionsOld + 2
+</pre>
+</div>
+</li>
+
+<li><a id="minecard"></a>Mine Card <a href="#minecard"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-5" id="text-2-2-1-8">
+<pre class="example">
+<span class="linenr">1: </span>cardtest4.c:21 TEST SUCCESSFULLY COMPLETED -&gt;\\ play_mine(player, choice1, choice2, testGame, handPos) == 0
+</pre>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-codecoverage" class="outline-4">
+<h4 id="codecoverage"><span class="section-number-4">2.2.2</span> Code Coverage <a href="#codecoverage"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<div class="outline-text-4" id="text-2-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="getcostfunction1"></a>getCost Function <a href="#getcostfunction1"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-5" id="text-2-2-2-1">
+<pre class="example">
+<span class="linenr"> 1: </span>File 'unittest1.c'
+<span class="linenr"> 2: </span>Lines executed:100.00% of 6
+<span class="linenr"> 3: </span>Branches executed:100.00% of 10
+<span class="linenr"> 4: </span>Taken at least once:50.00% of 10
+<span class="linenr"> 5: </span>Calls executed:66.67% of 15
+<span class="linenr"> 6: </span>Creating 'unittest1.c.gcov'
+<span class="linenr"> 7: </span>
+<span class="linenr"> 8: </span>File 'dominion.c'
+<span class="linenr"> 9: </span>Lines executed:2.00% of 599
+<span class="linenr">10: </span>Branches executed:6.85% of 409
+<span class="linenr">11: </span>Taken at least once:1.22% of 409
+<span class="linenr">12: </span>Calls executed:0.00% of 92
+<span class="linenr">13: </span>Creating 'dominion.c.gcov'
+</pre>
+</div>
+</li>
+
+<li><a id="isgameoverfunction1"></a>isGameOver Function <a href="#isgameoverfunction1"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-5" id="text-2-2-2-2">
+<pre class="example">
+<span class="linenr"> 1: </span>File 'unittest2.c'
+<span class="linenr"> 2: </span>Lines executed:100.00% of 17
+<span class="linenr"> 3: </span>Branches executed:100.00% of 12
+<span class="linenr"> 4: </span>Taken at least once:66.67% of 12
+<span class="linenr"> 5: </span>Calls executed:71.43% of 14
+<span class="linenr"> 6: </span>Creating 'unittest2.c.gcov'
+<span class="linenr"> 7: </span>
+<span class="linenr"> 8: </span>File 'dominion.c'
+<span class="linenr"> 9: </span>Lines executed:1.67% of 599
+<span class="linenr">10: </span>Branches executed:1.96% of 409
+<span class="linenr">11: </span>Taken at least once:1.96% of 409
+<span class="linenr">12: </span>Calls executed:0.00% of 92
+<span class="linenr">13: </span>Creating 'dominion.c.gcov'
+</pre>
+</div>
+</li>
+
+<li><a id="comparefunction1"></a>compare Function <a href="#comparefunction1"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-5" id="text-2-2-2-3">
+<pre class="example">
+<span class="linenr"> 1: </span>File 'unittest3.c'
+<span class="linenr"> 2: </span>Lines executed:100.00% of 9
+<span class="linenr"> 3: </span>Branches executed:100.00% of 8
+<span class="linenr"> 4: </span>Taken at least once:50.00% of 8
+<span class="linenr"> 5: </span>Calls executed:66.67% of 12
+<span class="linenr"> 6: </span>Creating 'unittest3.c.gcov'
+<span class="linenr"> 7: </span>
+<span class="linenr"> 8: </span>File 'dominion.c'
+<span class="linenr"> 9: </span>Lines executed:1.00% of 599
+<span class="linenr">10: </span>Branches executed:0.98% of 409
+<span class="linenr">11: </span>Taken at least once:0.98% of 409
+<span class="linenr">12: </span>Calls executed:0.00% of 92
+<span class="linenr">13: </span>Creating 'dominion.c.gcov'
+</pre>
+</div>
+</li>
+
+<li><a id="updatecoinsfunction1"></a>updateCoins Function <a href="#updatecoinsfunction1"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-5" id="text-2-2-2-4">
+<pre class="example">
+<span class="linenr"> 1: </span>File 'unittest4.c'
+<span class="linenr"> 2: </span>Lines executed:100.00% of 25
+<span class="linenr"> 3: </span>Branches executed:100.00% of 4
+<span class="linenr"> 4: </span>Taken at least once:50.00% of 4
+<span class="linenr"> 5: </span>Calls executed:77.78% of 9
+<span class="linenr"> 6: </span>Creating 'unittest4.c.gcov'
+<span class="linenr"> 7: </span>
+<span class="linenr"> 8: </span>File 'dominion.c'
+<span class="linenr"> 9: </span>Lines executed:2.34% of 599
+<span class="linenr">10: </span>Branches executed:1.96% of 409
+<span class="linenr">11: </span>Taken at least once:1.71% of 409
+<span class="linenr">12: </span>Calls executed:0.00% of 92
+<span class="linenr">13: </span>Creating 'dominion.c.gcov'
+</pre>
+</div>
+</li>
+
+<li><a id="smithycard1"></a>Smithy Card <a href="#smithycard1"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-5" id="text-2-2-2-5">
+<pre class="example">
+<span class="linenr">1: </span>File 'cardtest1.c'
+<span class="linenr">2: </span>Lines executed:100.00% of 12
+<span class="linenr">3: </span>Branches executed:100.00% of 10
+<span class="linenr">4: </span>Taken at least once:50.00% of 10
+<span class="linenr">5: </span>Calls executed:61.54% of 13
+<span class="linenr">6: </span>Creating 'cardtest1.c.gcov'
+</pre>
+</div>
+</li>
+
+<li><a id="adventurercard1"></a>Adventurer Card <a href="#adventurercard1"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-5" id="text-2-2-2-6">
+<pre class="example">
+<span class="linenr">1: </span>File 'cardtest2.c'
+<span class="linenr">2: </span>Lines executed:100.00% of 13
+<span class="linenr">3: </span>Branches executed:50.00% of 8
+<span class="linenr">4: </span>Taken at least once:25.00% of 8
+<span class="linenr">5: </span>Calls executed:71.43% of 7
+<span class="linenr">6: </span>Creating 'cardtest2.c.gcov'
+</pre>
+</div>
+</li>
+
+<li><a id="villagecard1"></a>Village Card <a href="#villagecard1"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-5" id="text-2-2-2-7">
+<pre class="example">
+<span class="linenr">1: </span>File 'cardtest3.c'
+<span class="linenr">2: </span>Lines executed:100.00% of 19
+<span class="linenr">3: </span>Branches executed:100.00% of 4
+<span class="linenr">4: </span>Taken at least once:50.00% of 4
+<span class="linenr">5: </span>Calls executed:71.43% of 7
+<span class="linenr">6: </span>Creating 'cardtest3.c.gcov'
+</pre>
+</div>
+</li>
+
+<li><a id="minecard1"></a>Mine Card <a href="#minecard1"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-5" id="text-2-2-2-8">
+<pre class="example">
+<span class="linenr">1: </span>File 'cardtest4.c'
+<span class="linenr">2: </span>Lines executed:100.00% of 11
+<span class="linenr">3: </span>Branches executed:100.00% of 2
+<span class="linenr">4: </span>Taken at least once:50.00% of 2
+<span class="linenr">5: </span>Calls executed:80.00% of 5
+<span class="linenr">6: </span>Creating 'cardtest4.c.gcov'
+</pre>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-randomtesting" class="outline-3">
+<h3 id="randomtesting"><span class="section-number-3">2.3</span> Random Testing <a href="#randomtesting"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-testresults1" class="outline-4">
+<h4 id="testresults1"><span class="section-number-4">2.3.1</span> Test Results <a href="#testresults1"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<div class="outline-text-4" id="text-2-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="smithy"></a>Smithy <a href="#smithy"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-5" id="text-2-3-1-1">
+<pre class="example">
+<span class="linenr">1: </span>numPlayers: 4
+<span class="linenr">2: </span>thisPlayer: 3
+<span class="linenr">3: </span>----------------- Testing Card: smithy ----------------
+<span class="linenr">4: </span>TEST 1: random test
+<span class="linenr">5: </span>randomtestcard1.c:65 TEST SUCCESSFULLY COMPLETED -&gt;\\ testG.handCount[thisPlayer] == G.handCount[thisPlayer] + 2
+<span class="linenr">6: </span>randomtestcard1.c:66 TEST SUCCESSFULLY COMPLETED -&gt;\\ testG.deckCount[thisPlayer] == G.deckCount[thisPlayer] - 3
+<span class="linenr">7: </span>
+<span class="linenr">8: </span> &gt;&gt;&gt;&gt;&gt; SUCCESS: Testing complete smithy &lt;&lt;&lt;&lt;&lt;
+</pre>
+</div>
+</li>
+
+<li><a id="mine"></a>Mine <a href="#mine"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-5" id="text-2-3-1-2">
+<pre class="example">
+<span class="linenr">1: </span>----------------- Testing Card: mine ----------------
+<span class="linenr">2: </span>TEST 1: random test
+<span class="linenr">3: </span>randomtestcard2.c:56 TEST SUCCESSFULLY COMPLETED -&gt;\\ getCost(testG.hand[thisPlayer][choice1]) + 3 &lt;= getCost(choice2)
+<span class="linenr">4: </span>randomtestcard2.c:65 TEST SUCCESSFULLY COMPLETED -&gt;\\ testG.handCount[thisPlayer] == G.handCount[thisPlayer]
+<span class="linenr">5: </span>randomtestcard2.c:71 TEST SUCCESSFULLY COMPLETED -&gt;\\ testG.supplyCount[choice2] == G.supplyCount[choice2]
+<span class="linenr">6: </span>
+<span class="linenr">7: </span> &gt;&gt;&gt;&gt;&gt; SUCCESS: Testing complete mine &lt;&lt;&lt;&lt;&lt;
+</pre>
+</div>
+</li>
+
+<li><a id="adventurer"></a>Adventurer <a href="#adventurer"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-5" id="text-2-3-1-3">
+<pre class="example">
+<span class="linenr">1: </span>numplayers: 4
+<span class="linenr">2: </span>thisplayer: 3
+<span class="linenr">3: </span>----------------- Testing Card: adventurer ----------------
+<span class="linenr">4: </span>TEST 1: random test
+<span class="linenr">5: </span>randomtestcardadventurer.c:88 TEST SUCCESSFULLY COMPLETED -&gt;\\ drawntreasure == drawntreasurePre + 2
+<span class="linenr">6: </span>
+<span class="linenr">7: </span> &gt;&gt;&gt;&gt;&gt; SUCCESS: Testing complete adventurer &lt;&lt;&lt;&lt;&lt;
+<span class="linenr">8: </span>    
+</pre>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-codecoverage1" class="outline-4">
+<h4 id="codecoverage1"><span class="section-number-4">2.3.2</span> Code Coverage <a href="#codecoverage1"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<div class="outline-text-4" id="text-2-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="smithy1"></a>Smithy <a href="#smithy1"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-5" id="text-2-3-2-1">
+<pre class="example">
+<span class="linenr"> 1: </span>File 'randomtestcard1.c'
+<span class="linenr"> 2: </span>Lines executed:100.00% of 23
+<span class="linenr"> 3: </span>Branches executed:100.00% of 4
+<span class="linenr"> 4: </span>Taken at least once:50.00% of 4
+<span class="linenr"> 5: </span>Calls executed:88.24% of 17
+<span class="linenr"> 6: </span>Creating 'randomtestcard1.c.gcov'
+<span class="linenr"> 7: </span>
+<span class="linenr"> 8: </span>File 'myAssert.c'
+<span class="linenr"> 9: </span>Lines executed:35.71% of 14
+<span class="linenr">10: </span>Branches executed:50.00% of 8
+<span class="linenr">11: </span>Taken at least once:25.00% of 8
+<span class="linenr">12: </span>Calls executed:16.67% of 6
+<span class="linenr">13: </span>Creating 'myAssert.c.gcov'
+</pre>
+</div>
+</li>
+
+<li><a id="mine1"></a>Mine <a href="#mine1"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-5" id="text-2-3-2-2">
+<pre class="example">
+<span class="linenr"> 1: </span>File 'randomtestcard2.c'
+<span class="linenr"> 2: </span>Lines executed:100.00% of 23
+<span class="linenr"> 3: </span>Branches executed:100.00% of 8
+<span class="linenr"> 4: </span>Taken at least once:62.50% of 8
+<span class="linenr"> 5: </span>Calls executed:86.36% of 22
+<span class="linenr"> 6: </span>Creating 'randomtestcard2.c.gcov'
+<span class="linenr"> 7: </span>
+<span class="linenr"> 8: </span>File 'myAssert.c'
+<span class="linenr"> 9: </span>Lines executed:71.43% of 14
+<span class="linenr">10: </span>Branches executed:100.00% of 8
+<span class="linenr">11: </span>Taken at least once:50.00% of 8
+<span class="linenr">12: </span>Calls executed:33.33% of 6
+<span class="linenr">13: </span>Creating 'myAssert.c.gcov'
+<span class="linenr">14: </span>    
+</pre>
+</div>
+</li>
+
+<li><a id="adventurer1"></a>Adventurer <a href="#adventurer1"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><br />
+<div class="outline-text-5" id="text-2-3-2-3">
+<pre class="example">
+<span class="linenr"> 1: </span>File 'randomtestcardadventurer.c'
+<span class="linenr"> 2: </span>Lines executed:81.82% of 33
+<span class="linenr"> 3: </span>Branches executed:33.33% of 18
+<span class="linenr"> 4: </span>Taken at least once:16.67% of 18
+<span class="linenr"> 5: </span>Calls executed:92.31% of 13
+<span class="linenr"> 6: </span>Creating 'randomtestcardadventurer.c.gcov'
+<span class="linenr"> 7: </span>
+<span class="linenr"> 8: </span>File 'myAssert.c'
+<span class="linenr"> 9: </span>Lines executed:35.71% of 14
+<span class="linenr">10: </span>Branches executed:50.00% of 8
+<span class="linenr">11: </span>Taken at least once:25.00% of 8
+<span class="linenr">12: </span>Calls executed:16.67% of 6
+<span class="linenr">13: </span>Creating 'myAssert.c.gcov'
+</pre>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-debugging" class="outline-2">
+<h2 id="debugging"><span class="section-number-2">3</span> Debugging <a href="#debugging"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: liam beckman</p>
+<p class="date">Created: 2019-03-16 Sat 23:26</p>
+<p class="validation"></p>
+</div>
+</body>
+</html>

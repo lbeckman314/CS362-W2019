@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int} \PYG{n+nf}{play\PYGZus{}smithy}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{currentPlayer}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{handPos}\PYG{p}{,} \PYG{k}{struct} \PYG{n}{gameState} \PYG{o}{*}\PYG{n}{state}\PYG{p}{)}
+
+\PYG{c+c1}{//+3 Cards}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{4}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+
+        \PYG{c+c1}{// ...}
+\end{Verbatim}

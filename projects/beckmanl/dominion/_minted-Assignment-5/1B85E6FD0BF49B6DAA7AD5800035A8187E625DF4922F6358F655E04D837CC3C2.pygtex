@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int} \PYG{n}{cardEffect}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{card}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{choice1}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{choice2}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{choice3}\PYG{p}{,} \PYG{k}{struct} \PYG{n}{gameState} \PYG{o}{*}\PYG{n}{state}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{handPos}\PYG{p}{,} \PYG{k+kt}{int} \PYG{o}{*}\PYG{n}{bonus}\PYG{p}{)}
+
+\PYG{c+c1}{// ...}
+\end{Verbatim}

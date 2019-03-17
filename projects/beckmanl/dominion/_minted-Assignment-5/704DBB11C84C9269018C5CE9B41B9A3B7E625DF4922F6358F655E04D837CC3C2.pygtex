@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int} \PYG{n+nf}{play\PYGZus{}mine} \PYG{p}{(} \PYG{k+kt}{int} \PYG{n}{currentPlayer}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{choice1}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{choice2}\PYG{p}{,} \PYG{k}{struct} \PYG{n}{gameState} \PYG{o}{*}\PYG{n}{state}\PYG{p}{)}
+
+\PYG{c+c1}{// ...}
+
+\PYG{c+c1}{//discard card from hand}
+    \PYG{n}{discardCard}\PYG{p}{(}\PYG{n}{handPos}\PYG{p}{,} \PYG{n}{currentPlayer}\PYG{p}{,} \PYG{n}{state}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{);}
+\end{Verbatim}

@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int} \PYG{n+nf}{play\PYGZus{}adventurer}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{currentPlayer}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{temphand}\PYG{p}{[}\PYG{n}{MAX\PYGZus{}HAND}\PYG{p}{],}  \PYG{k}{struct} \PYG{n}{gameState} \PYG{o}{*}\PYG{n}{state}\PYG{p}{)}
+
+
+\PYG{k+kt}{int} \PYG{n}{drawnteasure} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{k+kt}{int} \PYG{n}{cardDrawn}\PYG{p}{;}
+\PYG{k}{while}\PYG{p}{(}\PYG{n}{drawntreasure}\PYG{o}{\PYGZlt{}}\PYG{l+m+mi}{2}\PYG{p}{)}
+
+    \PYG{c+c1}{// ...}
+\end{Verbatim}
