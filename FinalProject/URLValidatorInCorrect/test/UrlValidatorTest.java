@@ -12,6 +12,7 @@ import java.nio.charset.Charset;
 
 
 public class UrlValidatorTest extends TestCase {
+	
 
 	public UrlValidatorTest(String testName) {
 		super(testName);
@@ -31,41 +32,156 @@ public class UrlValidatorTest extends TestCase {
 		//assertTrue(urlChecker.isValid("https://oregonstate.instructure.com/"));
 		assertTrue(urlChecker.isValid("http://classes.engr.oregonstate.edu"));
 	}
+	
+	// Random Testing
 
-	private int stdMin = 1;
-	private int stdMax = 10;
 	private int stdTests = 100;
 
-	// scheme partition (e.g. https) 
+	// tests scheme partition (e.g. https) 
 	// valid characters: [a-zA-Z0-9\-\+]
 	// invalid characters: all other characters.
-	// https://www.iana.org/assignments/uri-schemes/uri-schemes.html
+	// https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml
 	// https://tools.ietf.org/html/rfc7595
-	@SuppressWarnings("unchecked")
 	public void testYourFirstPartition()
 	{
-		UrlValidator urlChecker = new UrlValidator();
-		String VALID_URL = "coolsite.org";
-		String scheme = genScheme();
-		System.out.println("scheme: " + scheme);
+		UrlValidator urlValidator = new UrlValidator();
+		String VALID_URL = "www.test.org";
+		//assertTrue(urlValidator.isValid(VALID_URL));
 
-		// assert false for all invalid schemes
-		if (scheme.length() == 0) {
-			assertFalse(urlChecker.isValid(scheme + "://" + VALID_URL));
-		}
+		for (int i = 0; i < stdTests; i++) {
+			String scheme = genScheme();
+			System.out.println("scheme: " + scheme);
+			String TEST_URL = scheme + "://" + VALID_URL;
+			System.out.println("TEST_URL: " + TEST_URL);
 
-		if (scheme.contains(" ") || scheme.contains("/") || scheme.contains(":")) {
-			assertFalse(urlChecker.isValid(scheme + "://" + VALID_URL));
-		}
+			// assert false for all invalid schemes
+			if (scheme.length() == 0) {
+				assertFalse(urlValidator.isValid(TEST_URL));
+			}
 
-		// assert true for all valid schemes
-		else {
-			//assertTrue(urlChecker.isValid(scheme + "://" + VALID_URL));
+			if (scheme.contains(" ") || scheme.contains("/") || scheme.contains(":")) {
+				assertFalse(urlValidator.isValid(TEST_URL));
+			}
+
+			// assert true for all valid schemes
+			else {
+				assertTrue(urlValidator.isValid(TEST_URL));
+			}
 		}
 	}
 
-	private String genScheme() {
+	// tests authority partition (e.g. 192.168.107.123)
+	public void testYourSecondPartition(){
+		UrlValidator urlChecker = new UrlValidator();
+		String VALID_URL = "https://";
 
+		for (int i = 0; i < stdTests; i++) {
+			String auth = genAuth();
+			System.out.println("auth: " + auth);
+			String TEST_URL = VALID_URL + auth;
+			System.out.println("TEST_URL: " + TEST_URL);
+
+			// assert false for all invalid authorities
+			if (auth.length() == 0) {
+				assertFalse(urlChecker.isValid(TEST_URL));
+			}
+
+			// assert true for all valid authorities
+			else {
+				assertTrue(urlChecker.isValid(TEST_URL));
+			}
+		}
+	}
+
+
+	// tests port partition (e.g. 443) 
+	public void testYourThirdPartition(){
+		String VALID_URL = "https://www.test.com";
+		UrlValidator urlValidator = new UrlValidator();
+		//assertTrue(urlValidator.isValid(VALID_URL));
+
+		for (int i = 0; i < stdTests; i++) {
+			int rand = genPort();
+			System.out.println("port: " + rand);
+			String TEST_URL = VALID_URL + ":" + rand;
+			System.out.println("TEST_URL: " + TEST_URL);
+
+			// limit valid ports from 0 to 65536 exclusive (2^16)
+			if (rand >= 0 && rand < (int)(Math.pow(2, 16))) {
+				System.out.println(TEST_URL);
+				assertTrue(urlValidator.isValid(TEST_URL));
+			}
+
+			// invalid port
+			else {
+				assertFalse(urlValidator.isValid(TEST_URL));
+			}
+		}
+	}
+
+
+	// tests path partition (e.g. /cool/new/book.html)
+	// source: https://tools.ietf.org/html/rfc1738
+	public void testYourFourthPartition() {
+		UrlValidator urlValidator = new UrlValidator();
+		String VALID_URL = "https://www.test.org";
+		//assertTrue(urlValidator.isValid(VALID_URL));
+
+		for (int i = 0; i < stdTests; i++) {
+			String path = genPath();
+			System.out.println("path: " + path);
+			String TEST_URL = VALID_URL + path;
+			System.out.println("TEST_URL: " + TEST_URL);
+
+			// assert true for all empty paths
+			if (path.length() == 0) {
+				assertTrue(urlValidator.isValid(TEST_URL));
+			}
+
+			// assert true for all other paths
+			else {
+				assertTrue(urlValidator.isValid(TEST_URL));
+			}
+		}
+	}
+
+	
+	// tests queries partition (e.g. ?chapter=1)
+	public void testYourFifthPartition() {
+		UrlValidator urlValidator = new UrlValidator();
+		String VALID_URL = "https://www.test.org";
+		//assertTrue(urlValidator.isValid(VALID_URL));
+
+		for (int i = 0; i < stdTests; i++) {
+			String queries = genQueries();
+			System.out.println("queries: " + queries);
+			String TEST_URL = VALID_URL + "/" + queries;
+			System.out.println("TEST_URL: " + TEST_URL);
+
+			// assert true for all empty queries
+			if (queries.length() == 0) {
+				assertTrue(urlValidator.isValid(TEST_URL));
+			}
+
+			// assert true for all other queries
+			else {
+				System.out.println(VALID_URL + "/" + queries);
+				assertTrue(urlValidator.isValid(TEST_URL));
+			}
+		}
+	}
+
+
+	// Random Generators
+	
+	// minimum length of random strings
+	private int stdMin = 0;
+	
+	// maximum length of random strings
+	private int stdMax = 10;
+
+	// generates a randomized scheme
+	private String genScheme() {
 		Random random = new Random(); 	
 		int stringLenMin = stdMin;
 		int stringLenMax = stdMax;
@@ -80,20 +196,14 @@ public class UrlValidatorTest extends TestCase {
 		for (int n = 0; n < randLen; n++) {
 			int rand = limitLeft + (int) (random.nextFloat() * (limitRight - limitLeft + 1));
 			char randChar = (char)(int)(chars.get(rand));
-			//System.out.println(chars.get(rand));
-			//System.out.println("test:" + test);
 			buffer.append(randChar);
 		}
 		String scheme = buffer.toString();
 		return scheme;
 	}
 
-	// authority partition (e.g. 192.168.107.123)
-	public void testYourSecondPartition(){
-		String auth = genAuth();
-		System.out.println("auth: " + auth);
-	}
 
+	// generates a randomized authority
 	private String genAuth() {
 		// human readable hosts
 		// subdomain
@@ -132,36 +242,10 @@ public class UrlValidatorTest extends TestCase {
 		}
 
 		return auth;
-
-		// IPv4 hosts
 	}
 
-	// port partition (e.g. 443) 
-	public void testYourThirdPartition(){
-		// number of random tests to run
-		int RANDOM_TESTS = stdTests;
-		String VALID_URL = "https://coolsite.org";
-		UrlValidator urlValidator = new UrlValidator();
 
-		int port = genPort();
-		System.out.println("port: " + port);
-
-		// limit valid ports from 0 to 65536 exclusive (2^16)
-		for (int i = 1; i < RANDOM_TESTS; i++) {
-			int rand = genPort();
-			// valid port
-			if (rand >= 0 && rand < (int)(Math.pow(2, 16))) {
-				//System.out.println(VALID_URL + ":" + rand); 
-				//assertTrue(urlValidator.isValid(VALID_URL + ":" + rand));
-			}
-
-			// invalid port
-			else {
-				assertFalse(urlValidator.isValid(VALID_URL + ":" + rand));
-			}
-		}
-	}
-
+	// generates a randomized port number
 	private int genPort() {
 		// Generate random integers in range (-2 * 65536 - 1) to (2 * 65536 - 1)
 		// This should result in one quarter of the resulting values being
@@ -173,13 +257,8 @@ public class UrlValidatorTest extends TestCase {
 		return rand;
 	}
 
-	// path partition (e.g. /cool/new/book.html)
-	// https://tools.ietf.org/html/rfc1738
-	public void testYourFourthPartition() {
-		String path = genPath();
-		System.out.println("path: " + path);
-	}
 
+	// generates a randomized path
 	private String genPath() {
 		Random random = new Random(); 	
 
@@ -204,7 +283,6 @@ public class UrlValidatorTest extends TestCase {
 
 		int limitLeft = stdMin;
 		int limitRight = chars.size() - 1;
-		//System.out.println("limitRight: " + limitRight);
 
 		// number of directories
 		for (int i = 0; i < dirNumRand; i++) {
@@ -217,37 +295,29 @@ public class UrlValidatorTest extends TestCase {
 
 			// length of each of the directories
 			for (int n = 0; n < dirLenRand; n++) {
-				//System.out.println("n: " + n);
-				path += (char)(int) chars.get(randomInRange(0, chars.size()));
+				path += (char)(int) chars.get(randomInRange(0, chars.size() - 1));
 			}
 		}
-
 
 		path += "/";
 
 		// add filename to path
 		for (int k = 0; k < fileLenRand; k++) {
-			path += (char)(int) chars.get(randomInRange(0, chars.size()));
+			path += (char)(int) chars.get(randomInRange(0, chars.size() - 1));
 		}
 
 		path += ".";
 
 		// add filetype/extensions to path
 		for (int k = 0; k < filetypeLenRand; k++) {
-			path += (char)(int) chars.get(randomInRange(0, chars.size()));
+			path += (char)(int) chars.get(randomInRange(0, chars.size() - 1));
 		}
-		//System.out.println(dirNumRand);
-		//System.out.println(dirLenRand);
-		//System.out.println(filetypeLenRand);
+
 		return path;
 	}
 
-	// queries partition (e.g. ?chapter=1)
-	public void testYourFifthPartition() {
-		String queries = genQueries();
-		System.out.println("queries: " + queries);
-	}
 
+	// generates a randomized query
 	private String genQueries() {
 		int queriesMin = stdMin;
 		int queriesMax = stdMax / 2;
@@ -267,7 +337,6 @@ public class UrlValidatorTest extends TestCase {
 				queries += (char) (int) chars.get(randomInRange(0, chars.size() - 1));
 			}
 
-
 			int queriesValueMin = stdMin;
 			int queriesValueMax = stdMax;
 			int queriesValueNum = randomInRange(queriesValueMin, queriesValueMax);
@@ -280,12 +349,19 @@ public class UrlValidatorTest extends TestCase {
 		return queries;
 	}
 
+
+	// returns a random integer within the range of min to max inclusive
 	private int randomInRange(int min, int max) {
 		Random random = new Random(); 	
 		int rand = min + (int) (random.nextFloat() * (max - min + 1));
 		return rand;
 	}
 
+
+	// returns a vector of characters
+	// charType 0: only add alphanumeric characters to the final vector.
+	// charType 1: add the above along with other URI-valid characters (e.g. '-' and '+').
+	// charType 2: add the above along with URI-invalid characters (e.g. ' ', '/', and ':').
 	private Vector<Integer> genChar(int charType) {
 		Vector<Integer> chars = new Vector<Integer>();
 
@@ -316,8 +392,19 @@ public class UrlValidatorTest extends TestCase {
 
 		return chars;
 	}
-  
-   public void testIsValid() {
 
-   }
+
+	// generate a complete URL using all random generator functions.
+	public void genUrl() {
+		String url = genScheme() + genAuth() + genPort() + genPath() + genQueries();
+		//System.out.println("URL: " + url);
+	}
+
+
+	public void testIsValid() {
+		//String url = genScheme() + "://" + genAuth() + ":" + genPort() + genPath() + genQueries();
+		//System.out.println("URL: " + url);
+	}
 }
+
+
